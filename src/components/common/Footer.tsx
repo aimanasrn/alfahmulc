@@ -60,13 +60,13 @@ export default function Footer() {
           </h2>
           <div className="mt-5 space-y-3">
             {quickLinks.map((link) => (
-              <Link
+              <a
                 key={link.href}
                 className="block text-sm text-slate-600 transition hover:text-slate-950"
-                to={link.href}
+                href={link.href}
               >
                 {t(link.key)}
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -77,13 +77,13 @@ export default function Footer() {
           </h2>
           <div className="mt-5 space-y-3">
             {portalLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 className="block text-sm text-slate-600 transition hover:text-slate-950"
-                href={link.href}
+                to={link.href}
               >
                 {t(link.key)}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
