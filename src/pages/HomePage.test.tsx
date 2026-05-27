@@ -1,11 +1,28 @@
 import { render, screen } from "@testing-library/react";
-import { AppRouter } from "../routes/AppRouter";
+import { MemoryRouter } from "react-router-dom";
+import HomePage from "./HomePage";
 import "../i18n";
 
-test("renders the home route headline with app router wiring", () => {
-  render(<AppRouter />);
+class MockIntersectionObserver {
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+}
 
-  expect(
-    screen.getByText("Bantu Anak Lebih Faham, Yakin & Fokus Dalam Pelajaran"),
-  ).toBeInTheDocument();
+Object.defineProperty(window, "IntersectionObserver", {
+  writable: true,
+  value: MockIntersectionObserver,
+});
+
+test("renders core landing page sections", () => {
+  render(
+    <MemoryRouter>
+      <HomePage />
+    </MemoryRouter>,
+  );
+
+  expect(screen.getByRole("navigation")).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /Bantu Anak/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /Subjek/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /Portal digital/i })).toBeInTheDocument();
 });

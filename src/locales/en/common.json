@@ -14,8 +14,127 @@
     "register": "Register Now"
   },
   "hero": {
+    "badge": "Structured programmes for primary and secondary students",
     "title": "Helping Students Learn Better With Confidence",
-    "subtitle": "Structured learning programs designed to improve understanding and academic performance."
+    "subtitle": "Al-Fahmu Learning Centre offers structured, easy-to-follow tuition designed for families who want visible academic progress and calmer learning routines.",
+    "primaryCta": "Chat on WhatsApp",
+    "secondaryCta": "Explore Subjects",
+    "highlights": {
+      "structured": {
+        "title": "Structured learning rhythm",
+        "description": "Weekly lessons are mapped clearly so students always know what they are building next."
+      },
+      "personal": {
+        "title": "Guidance that adapts",
+        "description": "Students receive patient support when they need revision, practice, or confidence rebuilding."
+      },
+      "progress": {
+        "title": "Progress you can feel",
+        "description": "We focus on understanding, confidence, and discipline instead of rushing through content."
+      }
+    },
+    "panel": {
+      "eyebrow": "Premium experience",
+      "title": "A learning environment that feels calm, polished, and reassuring",
+      "tag": "BM + EN",
+      "points": [
+        "Consistent class routines help students arrive better prepared for tests and exams.",
+        "Simple lesson delivery supports students who need stronger foundations before moving faster.",
+        "Quick WhatsApp communication keeps enquiries, schedules, and registration more responsive."
+      ],
+      "quoteLabel": "Our focus",
+      "quote": "Every session is designed to make learning easier to understand, not just more intense."
+    }
+  },
+  "about": {
+    "eyebrow": "Why parents choose Al-Fahmu",
+    "title": "A clear, polished learning approach that students can actually stay with",
+    "description": "We combine strong structure with real attention to understanding so students do not simply attend classes, they steadily grow in confidence and clarity.",
+    "features": {
+      "structured": {
+        "title": "Well-paced syllabus breakdown",
+        "description": "Topics are unpacked in manageable steps so students can strengthen understanding without feeling overloaded."
+      },
+      "confidence": {
+        "title": "Confidence built steadily",
+        "description": "Consistent support helps students ask questions, try again, and improve weak areas without embarrassment."
+      },
+      "guidance": {
+        "title": "Close, student-friendly guidance",
+        "description": "Patient explanations create a classroom atmosphere that feels approachable, focused, and encouraging."
+      },
+      "progress": {
+        "title": "Progress that is easier to notice",
+        "description": "With clear routines and goals, parents can see improvement in both discipline and understanding."
+      }
+    }
+  },
+  "subjects": {
+    "eyebrow": "Core subjects",
+    "title": "Subjects designed to help students feel stronger across the essentials",
+    "description": "From languages to science, every subject is shaped to build understanding, confident practice, and long-term foundations.",
+    "items": {
+      "bahasaMelayu": {
+        "title": "Bahasa Melayu",
+        "description": "Builds reading, writing, and language use with clearer explanations and stronger exam readiness."
+      },
+      "english": {
+        "title": "English",
+        "description": "Supports reading, writing, and spoken confidence through structured daily-use language practice."
+      },
+      "mathematics": {
+        "title": "Mathematics",
+        "description": "Step-by-step practice strengthens numeracy, problem solving, and answer techniques."
+      },
+      "science": {
+        "title": "Science",
+        "description": "Clarifies key concepts with simpler explanations so abstract topics feel more approachable."
+      },
+      "history": {
+        "title": "History",
+        "description": "Helps students organise important facts in ways that are easier to remember and explain."
+      },
+      "islamicStudies": {
+        "title": "Islamic Studies",
+        "description": "Guides both theory and practical topics with a structured approach suited to student needs."
+      }
+    }
+  },
+  "futurePortal": {
+    "eyebrow": "Future portal",
+    "title": "A digital portal experience designed for students, teachers, and operations",
+    "description": "This landing page is built with a longer product vision in mind, ready for a future portal that makes learning operations smoother for every role.",
+    "note": "Coming soon: a modern portal experience for every role.",
+    "cardCta": "View preview",
+    "cards": {
+      "student": {
+        "title": "Student Portal",
+        "description": "Access learning materials, review schedules, and stay on top of assignments from one organised place."
+      },
+      "teacher": {
+        "title": "Teacher Portal",
+        "description": "Manage classes, share resources, and monitor student progress through a cleaner workflow."
+      },
+      "admin": {
+        "title": "Admin Dashboard",
+        "description": "Track tuition-centre operations, registrations, and important information with better visibility."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "A learning centre built to help students understand more deeply, grow in confidence, and stay consistent.",
+    "quickLinks": "Quick links",
+    "portals": "Upcoming portals",
+    "rights": "© 2026 Al-Fahmu Learning Centre. All rights reserved.",
+    "social": {
+      "whatsapp": "Al-Fahmu Learning Centre WhatsApp",
+      "instagram": "Al-Fahmu Learning Centre Instagram",
+      "facebook": "Al-Fahmu Learning Centre Facebook"
+    }
+  },
+  "floatingWhatsApp": {
+    "label": "Open Al-Fahmu Learning Centre WhatsApp",
+    "text": "Ask on WhatsApp"
   },
   "portal": {
     "student": "Student Portal",

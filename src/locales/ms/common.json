@@ -15,8 +15,127 @@
     "registerEn": "Register Now"
   },
   "hero": {
+    "badge": "Program tersusun untuk pelajar sekolah rendah dan menengah",
     "title": "Bantu Anak Lebih Faham, Yakin & Fokus Dalam Pelajaran",
-    "subtitle": "Al-Fahmu Learning Centre menyediakan kelas bimbingan yang tersusun dan mudah difahami."
+    "subtitle": "Al-Fahmu Learning Centre menyediakan kelas bimbingan yang tersusun, mudah difahami, dan dekat dengan ibu bapa yang mahukan kemajuan yang jelas.",
+    "primaryCta": "WhatsApp Kami",
+    "secondaryCta": "Lihat Subjek",
+    "highlights": {
+      "structured": {
+        "title": "Jadual belajar tersusun",
+        "description": "Kelas dibina dengan langkah yang jelas supaya pelajar tahu apa yang perlu dikuasai setiap minggu."
+      },
+      "personal": {
+        "title": "Bimbingan ikut keperluan",
+        "description": "Guru membantu pelajar yang perlukan ulang kaji tambahan tanpa membuat mereka rasa tertinggal."
+      },
+      "progress": {
+        "title": "Fokus pada perubahan sebenar",
+        "description": "Kami utamakan kefahaman, keyakinan, dan disiplin belajar yang boleh dilihat dari semasa ke semasa."
+      }
+    },
+    "panel": {
+      "eyebrow": "Pengalaman premium",
+      "title": "Ruang pembelajaran yang terasa tenang dan meyakinkan",
+      "tag": "BM + EN",
+      "points": [
+        "Rutin kelas yang konsisten supaya pelajar lebih bersedia sebelum ujian dan peperiksaan.",
+        "Aktiviti penerangan yang mudah diikuti untuk membantu pelajar yang perlukan asas yang lebih kukuh.",
+        "Komunikasi yang lebih pantas melalui WhatsApp untuk pertanyaan kelas, jadual, dan pendaftaran."
+      ],
+      "quoteLabel": "Fokus kami",
+      "quote": "Setiap sesi direka untuk menjadikan pelajaran lebih mudah difahami, bukan sekadar lebih padat."
+    }
+  },
+  "about": {
+    "eyebrow": "Kenapa ibu bapa memilih Al-Fahmu",
+    "title": "Pendekatan pembelajaran yang kemas, jelas, dan menyenangkan untuk diikuti",
+    "description": "Kami menggabungkan struktur yang mantap dengan perhatian kepada kefahaman sebenar supaya pelajar tidak hanya hadir ke kelas, tetapi benar-benar berkembang.",
+    "features": {
+      "structured": {
+        "title": "Silibus dipecah dengan kemas",
+        "description": "Topik diajar secara berperingkat supaya pelajar boleh membina kefahaman tanpa rasa terbeban."
+      },
+      "confidence": {
+        "title": "Keyakinan dibina sedikit demi sedikit",
+        "description": "Sokongan yang konsisten membantu pelajar berani bertanya, mencuba, dan memperbaiki kelemahan."
+      },
+      "guidance": {
+        "title": "Bimbingan yang dekat dengan pelajar",
+        "description": "Penerangan yang sabar dan mudah difahami menjadikan suasana kelas lebih mesra dan fokus."
+      },
+      "progress": {
+        "title": "Kemajuan lebih mudah diperhatikan",
+        "description": "Dengan rutin dan sasaran yang jelas, ibu bapa dapat melihat perubahan pada disiplin dan pemahaman anak."
+      }
+    }
+  },
+  "subjects": {
+    "eyebrow": "Subjek teras",
+    "title": "Subjek yang dibimbing untuk bantu pelajar lebih yakin",
+    "description": "Daripada bahasa hingga sains, setiap subjek disusun supaya pelajar boleh faham konsep, berlatih dengan yakin, dan memperkukuh asas mereka.",
+    "items": {
+      "bahasaMelayu": {
+        "title": "Bahasa Melayu",
+        "description": "Fokus pada kefahaman, penulisan, dan penggunaan bahasa yang lebih kemas untuk tugasan dan peperiksaan."
+      },
+      "english": {
+        "title": "English",
+        "description": "Membantu pelajar meningkatkan reading, writing, dan confidence ketika menggunakan English setiap hari."
+      },
+      "mathematics": {
+        "title": "Matematik",
+        "description": "Latihan demi latihan untuk mengukuhkan asas kiraan, penyelesaian masalah, dan teknik menjawab."
+      },
+      "science": {
+        "title": "Sains",
+        "description": "Penjelasan konsep yang ringkas tetapi jelas supaya pelajar lebih mudah memahami topik yang abstrak."
+      },
+      "history": {
+        "title": "Sejarah",
+        "description": "Membantu pelajar menyusun fakta penting dengan cara yang lebih mudah diingat dan diterangkan semula."
+      },
+      "islamicStudies": {
+        "title": "Pendidikan Islam",
+        "description": "Bimbingan untuk topik teori dan amali dengan pendekatan yang teratur dan sesuai untuk pelajar."
+      }
+    }
+  },
+  "futurePortal": {
+    "eyebrow": "Portal masa depan",
+    "title": "Portal digital yang bakal menyatukan ibu bapa, guru, dan pelajar",
+    "description": "Laman ini disediakan dengan hala tuju jangka panjang supaya pengurusan kelas, kemajuan, dan komunikasi boleh menjadi lebih lancar apabila portal dilancarkan.",
+    "note": "Akan datang: pengalaman portal moden untuk semua peranan.",
+    "cardCta": "Lihat pratonton",
+    "cards": {
+      "student": {
+        "title": "Portal Pelajar",
+        "description": "Akses bahan pembelajaran, semak jadual, dan ikuti tugasan dengan lebih teratur di satu tempat."
+      },
+      "teacher": {
+        "title": "Portal Guru",
+        "description": "Urus kelas, kongsi bahan, dan pantau perkembangan pelajar melalui aliran kerja yang lebih kemas."
+      },
+      "admin": {
+        "title": "Dashboard Admin",
+        "description": "Pantau operasi pusat tuisyen, daftar pelajar, dan susun maklumat penting secara lebih menyeluruh."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Pusat bimbingan yang dibina untuk membantu pelajar belajar dengan lebih faham, lebih yakin, dan lebih konsisten.",
+    "quickLinks": "Pautan pantas",
+    "portals": "Portal akan datang",
+    "rights": "© 2026 Al-Fahmu Learning Centre. Semua hak terpelihara.",
+    "social": {
+      "whatsapp": "WhatsApp Al-Fahmu Learning Centre",
+      "instagram": "Instagram Al-Fahmu Learning Centre",
+      "facebook": "Facebook Al-Fahmu Learning Centre"
+    }
+  },
+  "floatingWhatsApp": {
+    "label": "Buka WhatsApp Al-Fahmu Learning Centre",
+    "text": "Tanya di WhatsApp"
   },
   "portal": {
     "student": "Portal Pelajar",
