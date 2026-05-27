@@ -2,6 +2,7 @@ import Footer from "../components/common/Footer";
 import { FloatingWhatsAppButton } from "../components/common/FloatingWhatsAppButton";
 import { Navbar } from "../components/navigation/Navbar";
 import { AboutSection } from "../sections/AboutSection";
+import { ContactSection } from "../sections/ContactSection";
 import { FuturePortalSection } from "../sections/FuturePortalSection";
 import { HeroSection } from "../sections/HeroSection";
 import { SubjectsSection } from "../sections/SubjectsSection";
@@ -15,6 +16,7 @@ export default function HomePage() {
         <AboutSection />
         <SubjectsSection />
         <FuturePortalSection />
+        <ContactSection />
       </main>
       <Footer />
       <FloatingWhatsAppButton />

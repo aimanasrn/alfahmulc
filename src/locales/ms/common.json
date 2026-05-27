@@ -126,11 +126,45 @@
     "tagline": "Pusat bimbingan yang dibina untuk membantu pelajar belajar dengan lebih faham, lebih yakin, dan lebih konsisten.",
     "quickLinks": "Pautan pantas",
     "portals": "Portal akan datang",
-    "rights": "© 2026 Al-Fahmu Learning Centre. Semua hak terpelihara.",
+    "rights": "Copyright 2026 Al-Fahmu Learning Centre. Semua hak terpelihara.",
     "social": {
       "whatsapp": "WhatsApp Al-Fahmu Learning Centre",
       "instagram": "Instagram Al-Fahmu Learning Centre",
       "facebook": "Facebook Al-Fahmu Learning Centre"
+    }
+  },
+  "contact": {
+    "eyebrow": "Hubungi kami",
+    "title": "Mari berbincang tentang kelas yang paling sesuai untuk anak anda",
+    "description": "Hubungi kami untuk pertanyaan jadual, subjek, atau pendaftaran. Jika anda mahukan respons yang lebih pantas, terus mesej kami di WhatsApp.",
+    "phoneLabel": "Telefon / WhatsApp",
+    "phoneValue": "+60 12-345 6789",
+    "emailLabel": "Emel",
+    "emailValue": "hello@alfahmu.example",
+    "addressLabel": "Alamat",
+    "addressValue": "Alamat penuh akan dikemas kini tidak lama lagi.",
+    "whatsAppPrompt": "Ingin jawapan paling cepat? Hantar mesej terus ke WhatsApp kami untuk pertanyaan kelas, jadual, dan pendaftaran.",
+    "whatsAppCta": "Buka WhatsApp",
+    "form": {
+      "name": "Nama",
+      "namePlaceholder": "Nama penuh anda",
+      "phone": "Nombor telefon",
+      "phonePlaceholder": "Contoh: 012-345 6789",
+      "email": "Emel",
+      "emailPlaceholder": "anda@email.com",
+      "message": "Mesej",
+      "messagePlaceholder": "Beritahu kami subjek atau keperluan pembelajaran yang anda cari.",
+      "submit": "Hantar pertanyaan",
+      "submitting": "Menghantar...",
+      "success": "Terima kasih. Pertanyaan anda telah direkodkan dan sedia untuk dihubungkan ke backend kemudian.",
+      "failure": "Maaf, berlaku masalah semasa menghantar. Sila cuba lagi atau hubungi kami di WhatsApp.",
+      "errors": {
+        "requiredName": "Nama diperlukan",
+        "requiredPhone": "Nombor telefon diperlukan",
+        "requiredEmail": "Emel diperlukan",
+        "requiredMessage": "Mesej diperlukan",
+        "invalidEmail": "Masukkan emel yang sah"
+      }
     }
   },
   "floatingWhatsApp": {

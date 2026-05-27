@@ -125,11 +125,45 @@
     "tagline": "A learning centre built to help students understand more deeply, grow in confidence, and stay consistent.",
     "quickLinks": "Quick links",
     "portals": "Upcoming portals",
-    "rights": "© 2026 Al-Fahmu Learning Centre. All rights reserved.",
+    "rights": "Copyright 2026 Al-Fahmu Learning Centre. All rights reserved.",
     "social": {
       "whatsapp": "Al-Fahmu Learning Centre WhatsApp",
       "instagram": "Al-Fahmu Learning Centre Instagram",
       "facebook": "Al-Fahmu Learning Centre Facebook"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact us",
+    "title": "Let’s talk about the right class setup for your child",
+    "description": "Reach out for questions about schedules, subjects, or registration. If you want the quickest reply, send us a WhatsApp message directly.",
+    "phoneLabel": "Phone / WhatsApp",
+    "phoneValue": "+60 12-345 6789",
+    "emailLabel": "Email",
+    "emailValue": "hello@alfahmu.example",
+    "addressLabel": "Address",
+    "addressValue": "Full address details will be updated soon.",
+    "whatsAppPrompt": "Need the fastest response? Message us directly on WhatsApp for class enquiries, schedules, and registration.",
+    "whatsAppCta": "Open WhatsApp",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "phone": "Phone number",
+      "phonePlaceholder": "Example: 012-345 6789",
+      "email": "Email",
+      "emailPlaceholder": "you@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell us which subjects or learning support you are looking for.",
+      "submit": "Send enquiry",
+      "submitting": "Sending...",
+      "success": "Thank you. Your enquiry has been recorded and is ready to connect to a backend later.",
+      "failure": "Sorry, something went wrong while sending. Please try again or contact us on WhatsApp.",
+      "errors": {
+        "requiredName": "Name is required",
+        "requiredPhone": "Phone number is required",
+        "requiredEmail": "Email is required",
+        "requiredMessage": "Message is required",
+        "invalidEmail": "Please enter a valid email address"
+      }
     }
   },
   "floatingWhatsApp": {

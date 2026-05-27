@@ -19,7 +19,7 @@ export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="border-t border-slate-200 bg-white px-4 py-12 sm:px-6" id="contact">
+    <footer className="border-t border-slate-200 bg-white px-4 py-12 sm:px-6">
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[minmax(0,1.2fr)_repeat(2,minmax(0,0.8fr))]">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-500">
