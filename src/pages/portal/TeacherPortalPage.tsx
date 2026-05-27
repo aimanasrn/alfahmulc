@@ -16,7 +16,7 @@ export default function TeacherPortalPage() {
     <section className="space-y-8">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <div className="inline-flex rounded-full border border-amber-300/20 bg-amber-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-amber-100">
+          <div className="inline-flex rounded-full border border-accent-300/25 bg-accent-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-accent-100">
             Future portal
           </div>
           <h1 className="mt-4 text-3xl font-bold sm:text-4xl">{t("portal.teacher")}</h1>
@@ -24,7 +24,7 @@ export default function TeacherPortalPage() {
             {t("portal.teacherDescription")}
           </p>
         </div>
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-4 text-amber-100">
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-4 text-accent-100">
           <Presentation className="h-8 w-8" />
         </div>
       </div>
@@ -37,7 +37,7 @@ export default function TeacherPortalPage() {
               className="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-lg shadow-black/10"
               key={item.key}
             >
-              <div className="inline-flex rounded-2xl bg-amber-300/10 p-3 text-amber-100">
+              <div className="inline-flex rounded-2xl bg-accent-300/10 p-3 text-accent-100">
                 <Icon className="h-5 w-5" />
               </div>
               <p className="mt-4 text-lg font-semibold text-white">{t(item.key)}</p>

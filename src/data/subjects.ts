@@ -20,13 +20,23 @@ export const subjects = [
     icon: "flask-conical",
   },
   {
-    titleKey: "subjects.items.history.title",
-    descriptionKey: "subjects.items.history.description",
-    icon: "scroll-text",
+    titleKey: "subjects.items.belajarMembaca.title",
+    descriptionKey: "subjects.items.belajarMembaca.description",
+    icon: "book-copy",
   },
   {
-    titleKey: "subjects.items.islamicStudies.title",
-    descriptionKey: "subjects.items.islamicStudies.description",
-    icon: "moon-star",
+    titleKey: "subjects.items.kafa.title",
+    descriptionKey: "subjects.items.kafa.description",
+    icon: "badge-check",
+  },
+  {
+    titleKey: "subjects.items.iqra.title",
+    descriptionKey: "subjects.items.iqra.description",
+    icon: "book-marked",
+  },
+  {
+    titleKey: "subjects.items.alQuran.title",
+    descriptionKey: "subjects.items.alQuran.description",
+    icon: "book-open-check",
   },
 ] as const;

@@ -1,10 +1,12 @@
 import {
+  BadgeCheck,
+  BookCopy,
+  BookMarked,
+  BookOpenCheck,
   BookOpenText,
   Calculator,
   FlaskConical,
   Languages,
-  MoonStar,
-  ScrollText,
   type LucideIcon,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -17,12 +19,22 @@ const iconMap: Record<string, LucideIcon> = {
   languages: Languages,
   calculator: Calculator,
   "flask-conical": FlaskConical,
-  "scroll-text": ScrollText,
-  "moon-star": MoonStar,
+  "book-copy": BookCopy,
+  "badge-check": BadgeCheck,
+  "book-marked": BookMarked,
+  "book-open-check": BookOpenCheck,
 };
 
 export function SubjectsSection() {
   const { t } = useTranslation();
+  const supportedLevels = [
+    "subjects.levels.prasekolah",
+    "subjects.levels.rendah",
+    "subjects.levels.menengahRendah",
+    "subjects.levels.spm",
+    "subjects.levels.kafa",
+    "subjects.levels.upkk",
+  ];
 
   return (
     <section className="px-4 py-20 sm:px-6 sm:py-24" id="subjects">
@@ -35,7 +47,7 @@ export function SubjectsSection() {
           />
         </ScrollReveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {subjects.map((subject) => {
             const Icon = iconMap[subject.icon];
 
@@ -54,6 +66,24 @@ export function SubjectsSection() {
             );
           })}
         </div>
+
+        <ScrollReveal>
+          <div className="mt-10 rounded-[2rem] border border-brand-100 bg-gradient-to-r from-brand-50 via-white to-cream-100 p-6 shadow-sm shadow-brand-900/5">
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-700">
+              {t("subjects.levelsTitle")}
+            </p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              {supportedLevels.map((levelKey) => (
+                <span
+                  key={levelKey}
+                  className="rounded-full border border-brand-200 bg-white/90 px-4 py-2 text-sm font-medium text-brand-800 shadow-sm"
+                >
+                  {t(levelKey)}
+                </span>
+              ))}
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

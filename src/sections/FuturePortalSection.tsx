@@ -38,7 +38,7 @@ export function FuturePortalSection() {
         </ScrollReveal>
 
         <div className="mt-4 flex items-center gap-2 text-sm text-slate-300">
-          <Sparkles className="h-4 w-4 text-amber-300" />
+          <Sparkles className="h-4 w-4 text-accent-300" />
           <span>{t("futurePortal.note")}</span>
         </div>
 

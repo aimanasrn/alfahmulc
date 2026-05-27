@@ -70,9 +70,9 @@
     }
   },
   "subjects": {
-    "eyebrow": "Core subjects",
-    "title": "Subjects designed to help students feel stronger across the essentials",
-    "description": "From languages to science, every subject is shaped to build understanding, confident practice, and long-term foundations.",
+    "eyebrow": "Subjects & programmes",
+    "title": "Learning options shaped around what students actually need support with",
+    "description": "From core academics to early reading and Islamic learning support, each class is structured to build understanding, confidence, and stronger study discipline over time.",
     "items": {
       "bahasaMelayu": {
         "title": "Bahasa Melayu",
@@ -90,14 +90,31 @@
         "title": "Science",
         "description": "Clarifies key concepts with simpler explanations so abstract topics feel more approachable."
       },
-      "history": {
-        "title": "History",
-        "description": "Helps students organise important facts in ways that are easier to remember and explain."
+      "belajarMembaca": {
+        "title": "Reading Foundation",
+        "description": "Patient early-reading guidance helps students build literacy basics more comfortably and confidently."
       },
-      "islamicStudies": {
-        "title": "Islamic Studies",
-        "description": "Guides both theory and practical topics with a structured approach suited to student needs."
+      "kafa": {
+        "title": "KAFA",
+        "description": "Structured KAFA support helps students follow lessons more clearly and retain key topics more effectively."
+      },
+      "iqra": {
+        "title": "Iqra'",
+        "description": "Student-friendly Iqra' guidance builds reading familiarity gradually and more consistently."
+      },
+      "alQuran": {
+        "title": "Al-Quran",
+        "description": "Guided Quran reading support focuses on fluency, pronunciation, and student confidence."
       }
+    },
+    "levelsTitle": "Open to learners from",
+    "levels": {
+      "prasekolah": "Preschool",
+      "rendah": "Primary School (Years 1-6)",
+      "menengahRendah": "Lower Secondary (Forms 1-3)",
+      "spm": "SPM (Forms 4 & 5)",
+      "kafa": "KAFA",
+      "upkk": "UPKK"
     }
   },
   "futurePortal": {

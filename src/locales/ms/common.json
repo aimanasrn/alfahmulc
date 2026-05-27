@@ -71,9 +71,9 @@
     }
   },
   "subjects": {
-    "eyebrow": "Subjek teras",
-    "title": "Subjek yang dibimbing untuk bantu pelajar lebih yakin",
-    "description": "Daripada bahasa hingga sains, setiap subjek disusun supaya pelajar boleh faham konsep, berlatih dengan yakin, dan memperkukuh asas mereka.",
+    "eyebrow": "Subjek & program",
+    "title": "Pilihan subjek dan bimbingan yang selari dengan keperluan sebenar pelajar",
+    "description": "Daripada akademik teras hingga asas bacaan dan pengajian Islam, setiap kelas disusun supaya pelajar dapat membina pemahaman, keyakinan, dan disiplin belajar yang lebih kukuh.",
     "items": {
       "bahasaMelayu": {
         "title": "Bahasa Melayu",
@@ -91,14 +91,31 @@
         "title": "Sains",
         "description": "Penjelasan konsep yang ringkas tetapi jelas supaya pelajar lebih mudah memahami topik yang abstrak."
       },
-      "history": {
-        "title": "Sejarah",
-        "description": "Membantu pelajar menyusun fakta penting dengan cara yang lebih mudah diingat dan diterangkan semula."
+      "belajarMembaca": {
+        "title": "Belajar Membaca",
+        "description": "Bimbingan awal membaca yang sabar dan berperingkat untuk membantu pelajar membina asas literasi dengan lebih yakin."
       },
-      "islamicStudies": {
-        "title": "Pendidikan Islam",
-        "description": "Bimbingan untuk topik teori dan amali dengan pendekatan yang teratur dan sesuai untuk pelajar."
+      "kafa": {
+        "title": "KAFA",
+        "description": "Sokongan pembelajaran KAFA dengan penerangan yang lebih tersusun untuk bantu pelajar faham dan mengingat dengan lebih baik."
+      },
+      "iqra": {
+        "title": "Iqra'",
+        "description": "Pendekatan mesra pelajar untuk mengukuhkan bacaan Iqra' secara beransur-ansur dan lebih konsisten."
+      },
+      "alQuran": {
+        "title": "Al-Quran",
+        "description": "Bimbingan bacaan Al-Quran yang kemas dan fokus pada kelancaran, sebutan, dan keyakinan pelajar."
       }
+    },
+    "levelsTitle": "Terbuka kepada pelajar",
+    "levels": {
+      "prasekolah": "Prasekolah",
+      "rendah": "Sekolah Rendah (Tahun 1-6)",
+      "menengahRendah": "Menengah Rendah (Tingkatan 1-3)",
+      "spm": "SPM (Tingkatan 4 & 5)",
+      "kafa": "KAFA",
+      "upkk": "UPKK"
     }
   },
   "futurePortal": {
