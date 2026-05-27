@@ -8,8 +8,8 @@ import { TextAreaField } from "../components/ui/TextAreaField";
 import { useContactForm } from "../hooks/useContactForm";
 
 const contactItems = [
-  { icon: Phone, labelKey: "contact.phoneLabel", valueKey: "contact.phoneValue", href: "tel:+60123456789" },
-  { icon: Mail, labelKey: "contact.emailLabel", valueKey: "contact.emailValue", href: "mailto:hello@alfahmu.example" },
+  { icon: Phone, labelKey: "contact.phoneLabel", valueKey: "contact.phoneValue", href: "tel:+60179535676" },
+  { icon: Mail, labelKey: "contact.emailLabel", valueKey: "contact.emailValue", href: "mailto:aimanasrn@gmail.com" },
   { icon: MapPin, labelKey: "contact.addressLabel", valueKey: "contact.addressValue", href: undefined },
 ] as const;
 
@@ -81,7 +81,7 @@ export function ContactSection() {
               </div>
               <a
                 className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                href="https://wa.me/60123456789"
+                href="https://wa.me/60179535676"
                 rel="noreferrer"
                 target="_blank"
               >

@@ -25,7 +25,7 @@ test("renders core landing page sections", () => {
   expect(screen.getByRole("heading", { name: /Bantu Anak/i })).toBeInTheDocument();
   expect(
     screen.getByRole("heading", {
-      name: /Pendekatan pembelajaran yang kemas, jelas, dan menyenangkan untuk diikuti/i,
+      name: /Pusat bimbingan yang mesra, profesional, dan fokus pada perkembangan sebenar pelajar/i,
     }),
   ).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /Subjek/i })).toBeInTheDocument();

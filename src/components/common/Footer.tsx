@@ -31,26 +31,26 @@ export default function Footer() {
             <a
               aria-label={t("footer.social.whatsapp")}
               className="rounded-full border border-slate-200 p-3 text-slate-600 transition hover:border-brand-200 hover:text-brand-600"
-              href="https://wa.me/60123456789"
+              href="https://wa.me/60179535676"
               rel="noreferrer"
               target="_blank"
             >
               <MessageCircleMore className="h-5 w-5" />
             </a>
-            <a
+            <span
               aria-label={t("footer.social.instagram")}
-              className="rounded-full border border-slate-200 p-3 text-slate-600 transition hover:border-brand-200 hover:text-brand-600"
-              href="/"
+              className="rounded-full border border-dashed border-slate-200 p-3 text-slate-400"
+              title={t("footer.social.comingSoon")}
             >
               <Instagram className="h-5 w-5" />
-            </a>
-            <a
+            </span>
+            <span
               aria-label={t("footer.social.facebook")}
-              className="rounded-full border border-slate-200 p-3 text-slate-600 transition hover:border-brand-200 hover:text-brand-600"
-              href="/"
+              className="rounded-full border border-dashed border-slate-200 p-3 text-slate-400"
+              title={t("footer.social.comingSoon")}
             >
               <Facebook className="h-5 w-5" />
-            </a>
+            </span>
           </div>
         </div>
 

@@ -46,7 +46,7 @@ export function HeroSection() {
                 buttonVariants("primary"),
                 "gap-2 px-6 py-4 text-base focus-visible:ring-offset-white",
               )}
-              href="https://wa.me/60123456789"
+              href="https://wa.me/60179535676"
               rel="noreferrer"
               target="_blank"
             >

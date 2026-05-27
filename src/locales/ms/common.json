@@ -1,7 +1,7 @@
 {
   "brand": {
     "name": "Al-Fahmu Learning Centre",
-    "tagline": "Kelas bimbingan yang tersusun dan mudah difahami"
+    "tagline": "Membina kefahaman, keyakinan, dan fokus dalam pembelajaran"
   },
   "nav": {
     "home": "Laman Utama",
@@ -17,7 +17,7 @@
   "hero": {
     "badge": "Program tersusun untuk pelajar sekolah rendah dan menengah",
     "title": "Bantu Anak Lebih Faham, Yakin & Fokus Dalam Pelajaran",
-    "subtitle": "Al-Fahmu Learning Centre menyediakan kelas bimbingan yang tersusun, mudah difahami, dan dekat dengan ibu bapa yang mahukan kemajuan yang jelas.",
+    "subtitle": "Kami membantu pelajar membina asas yang kukuh melalui pembelajaran yang mudah difahami, tersusun, dan sesuai dengan keperluan mereka. Setiap kelas direka untuk meningkatkan kefahaman, keyakinan, dan prestasi akademik.",
     "primaryCta": "WhatsApp Kami",
     "secondaryCta": "Lihat Subjek",
     "highlights": {
@@ -49,8 +49,8 @@
   },
   "about": {
     "eyebrow": "Kenapa ibu bapa memilih Al-Fahmu",
-    "title": "Pendekatan pembelajaran yang kemas, jelas, dan menyenangkan untuk diikuti",
-    "description": "Kami menggabungkan struktur yang mantap dengan perhatian kepada kefahaman sebenar supaya pelajar tidak hanya hadir ke kelas, tetapi benar-benar berkembang.",
+    "title": "Pusat bimbingan yang mesra, profesional, dan fokus pada perkembangan sebenar pelajar",
+    "description": "Di Al-Fahmu Learning Centre, kami percaya setiap pelajar boleh berjaya apabila diberi bimbingan yang betul. Dengan guru yang mesra, pendekatan yang tersusun, serta kelas secara online dan bersemuka, kami menyediakan pengalaman pembelajaran yang lebih fokus, selesa, dan berkesan untuk setiap pelajar.",
     "features": {
       "structured": {
         "title": "Silibus dipecah dengan kemas",
@@ -73,7 +73,7 @@
   "subjects": {
     "eyebrow": "Subjek & program",
     "title": "Pilihan subjek dan bimbingan yang selari dengan keperluan sebenar pelajar",
-    "description": "Daripada akademik teras hingga asas bacaan dan pengajian Islam, setiap kelas disusun supaya pelajar dapat membina pemahaman, keyakinan, dan disiplin belajar yang lebih kukuh.",
+    "description": "Kami menawarkan pelbagai subjek dan program sokongan pembelajaran, termasuk akademik teras, asas membaca, KAFA, Iqra', dan Al-Quran. Setiap program disusun bagi membantu pelajar menguasai asas, memperbaiki kelemahan, dan belajar dengan lebih yakin.",
     "items": {
       "bahasaMelayu": {
         "title": "Bahasa Melayu",
@@ -121,7 +121,7 @@
   "futurePortal": {
     "eyebrow": "Portal masa depan",
     "title": "Portal digital yang bakal menyatukan ibu bapa, guru, dan pelajar",
-    "description": "Laman ini disediakan dengan hala tuju jangka panjang supaya pengurusan kelas, kemajuan, dan komunikasi boleh menjadi lebih lancar apabila portal dilancarkan.",
+    "description": "Al-Fahmu Learning Centre sedang bergerak ke arah sistem pembelajaran yang lebih moden dan teratur. Pada masa hadapan, portal pelajar, guru, dan admin akan membantu pengurusan jadual, tugasan, kehadiran, laporan, dan komunikasi dengan lebih mudah dan efisien.",
     "note": "Akan datang: pengalaman portal moden untuk semua peranan.",
     "cardCta": "Lihat pratonton",
     "cards": {
@@ -140,26 +140,27 @@
     }
   },
   "footer": {
-    "tagline": "Pusat bimbingan yang dibina untuk membantu pelajar belajar dengan lebih faham, lebih yakin, dan lebih konsisten.",
+    "tagline": "Pusat bimbingan yang komited membantu pelajar belajar dengan lebih faham, lebih yakin, dan lebih bersedia untuk masa depan.",
     "quickLinks": "Pautan pantas",
     "portals": "Portal akan datang",
     "rights": "Copyright 2026 Al-Fahmu Learning Centre. Semua hak terpelihara.",
     "social": {
       "whatsapp": "WhatsApp Al-Fahmu Learning Centre",
       "instagram": "Instagram Al-Fahmu Learning Centre",
-      "facebook": "Facebook Al-Fahmu Learning Centre"
+      "facebook": "Facebook Al-Fahmu Learning Centre",
+      "comingSoon": "Akan datang"
     }
   },
   "contact": {
     "eyebrow": "Hubungi kami",
     "title": "Mari berbincang tentang kelas yang paling sesuai untuk anak anda",
-    "description": "Hubungi kami untuk pertanyaan jadual, subjek, atau pendaftaran. Jika anda mahukan respons yang lebih pantas, terus mesej kami di WhatsApp.",
+    "description": "Hubungi kami untuk pertanyaan mengenai subjek, jadual kelas, atau pendaftaran. Kami sedia membantu anda memilih program pembelajaran yang paling sesuai untuk anak anda.",
     "phoneLabel": "Telefon / WhatsApp",
-    "phoneValue": "+60 12-345 6789",
+    "phoneValue": "017-953 5676",
     "emailLabel": "Emel",
-    "emailValue": "hello@alfahmu.example",
+    "emailValue": "aimanasrn@gmail.com",
     "addressLabel": "Alamat",
-    "addressValue": "Alamat penuh akan dikemas kini tidak lama lagi.",
+    "addressValue": "Putrajaya",
     "whatsAppPrompt": "Ingin jawapan paling cepat? Hantar mesej terus ke WhatsApp kami untuk pertanyaan kelas, jadual, dan pendaftaran.",
     "whatsAppCta": "Buka WhatsApp",
     "form": {

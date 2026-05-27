@@ -1,7 +1,7 @@
 {
   "brand": {
     "name": "Al-Fahmu Learning Centre",
-    "tagline": "Structured learning built for confidence and growth"
+    "tagline": "Building understanding, confidence, and focus in learning"
   },
   "nav": {
     "home": "Home",
@@ -16,7 +16,7 @@
   "hero": {
     "badge": "Structured programmes for primary and secondary students",
     "title": "Helping Students Learn Better With Confidence",
-    "subtitle": "Al-Fahmu Learning Centre offers structured, easy-to-follow tuition designed for families who want visible academic progress and calmer learning routines.",
+    "subtitle": "We help students build strong foundations through learning that is clear, structured, and tailored to their needs. Every class is designed to improve understanding, confidence, and academic performance.",
     "primaryCta": "Chat on WhatsApp",
     "secondaryCta": "Explore Subjects",
     "highlights": {
@@ -48,8 +48,8 @@
   },
   "about": {
     "eyebrow": "Why parents choose Al-Fahmu",
-    "title": "A clear, polished learning approach that students can actually stay with",
-    "description": "We combine strong structure with real attention to understanding so students do not simply attend classes, they steadily grow in confidence and clarity.",
+    "title": "A friendly, professional learning centre focused on real student growth",
+    "description": "At Al-Fahmu Learning Centre, we believe every student can succeed when given the right guidance. With friendly teachers, a structured approach, and both online and physical classes, we create a learning experience that is focused, comfortable, and effective for every student.",
     "features": {
       "structured": {
         "title": "Well-paced syllabus breakdown",
@@ -72,7 +72,7 @@
   "subjects": {
     "eyebrow": "Subjects & programmes",
     "title": "Learning options shaped around what students actually need support with",
-    "description": "From core academics to early reading and Islamic learning support, each class is structured to build understanding, confidence, and stronger study discipline over time.",
+    "description": "We offer a range of subjects and learning support programmes, including core academics, reading foundation, KAFA, Iqra', and Al-Quran. Each programme is structured to help students master the basics, strengthen weak areas, and learn with greater confidence.",
     "items": {
       "bahasaMelayu": {
         "title": "Bahasa Melayu",
@@ -120,7 +120,7 @@
   "futurePortal": {
     "eyebrow": "Future portal",
     "title": "A digital portal experience designed for students, teachers, and operations",
-    "description": "This landing page is built with a longer product vision in mind, ready for a future portal that makes learning operations smoother for every role.",
+    "description": "Al-Fahmu Learning Centre is moving toward a more modern and organised learning system. In the future, student, teacher, and admin portals will support schedules, assignments, attendance, reports, and communication in a smoother and more efficient way.",
     "note": "Coming soon: a modern portal experience for every role.",
     "cardCta": "View preview",
     "cards": {
@@ -139,26 +139,27 @@
     }
   },
   "footer": {
-    "tagline": "A learning centre built to help students understand more deeply, grow in confidence, and stay consistent.",
+    "tagline": "A learning centre committed to helping students learn with better understanding, stronger confidence, and greater readiness for the future.",
     "quickLinks": "Quick links",
     "portals": "Upcoming portals",
     "rights": "Copyright 2026 Al-Fahmu Learning Centre. All rights reserved.",
     "social": {
       "whatsapp": "Al-Fahmu Learning Centre WhatsApp",
       "instagram": "Al-Fahmu Learning Centre Instagram",
-      "facebook": "Al-Fahmu Learning Centre Facebook"
+      "facebook": "Al-Fahmu Learning Centre Facebook",
+      "comingSoon": "Coming soon"
     }
   },
   "contact": {
     "eyebrow": "Contact us",
     "title": "Let’s talk about the right class setup for your child",
-    "description": "Reach out for questions about schedules, subjects, or registration. If you want the quickest reply, send us a WhatsApp message directly.",
+    "description": "Contact us for enquiries about subjects, class schedules, or registration. We are ready to help you choose the learning programme that best suits your child.",
     "phoneLabel": "Phone / WhatsApp",
-    "phoneValue": "+60 12-345 6789",
+    "phoneValue": "017-953 5676",
     "emailLabel": "Email",
-    "emailValue": "hello@alfahmu.example",
+    "emailValue": "aimanasrn@gmail.com",
     "addressLabel": "Address",
-    "addressValue": "Full address details will be updated soon.",
+    "addressValue": "Putrajaya",
     "whatsAppPrompt": "Need the fastest response? Message us directly on WhatsApp for class enquiries, schedules, and registration.",
     "whatsAppCta": "Open WhatsApp",
     "form": {
