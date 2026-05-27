@@ -3,6 +3,16 @@
     "name": "Al-Fahmu Learning Centre",
     "tagline": "Structured learning built for confidence and growth"
   },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "subjects": "Subjects",
+    "futurePortal": "Future Portal",
+    "contact": "Contact"
+  },
+  "cta": {
+    "register": "Register Now"
+  },
   "hero": {
     "title": "Helping Students Learn Better With Confidence",
     "subtitle": "Structured learning programs designed to improve understanding and academic performance."

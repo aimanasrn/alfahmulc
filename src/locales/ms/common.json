@@ -3,6 +3,17 @@
     "name": "Al-Fahmu Learning Centre",
     "tagline": "Kelas bimbingan yang tersusun dan mudah difahami"
   },
+  "nav": {
+    "home": "Laman Utama",
+    "about": "Tentang",
+    "subjects": "Subjek",
+    "futurePortal": "Portal Masa Depan",
+    "contact": "Hubungi"
+  },
+  "cta": {
+    "register": "Daftar Sekarang",
+    "registerEn": "Register Now"
+  },
   "hero": {
     "title": "Bantu Anak Lebih Faham, Yakin & Fokus Dalam Pelajaran",
     "subtitle": "Al-Fahmu Learning Centre menyediakan kelas bimbingan yang tersusun dan mudah difahami."
