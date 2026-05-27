@@ -173,6 +173,17 @@
   "portal": {
     "student": "Student Portal",
     "teacher": "Teacher Portal",
-    "admin": "Admin Dashboard"
+    "admin": "Admin Dashboard",
+    "studentDescription": "Students will be able to review schedules, track assignments, and follow their learning progress from one organised space.",
+    "teacherDescription": "Teachers will be able to manage classes, materials, and student follow-up through a clearer, faster workflow.",
+    "adminDescription": "Administrators will have a broader view of centre operations, attendance, and class coordination from one dashboard.",
+    "backToHome": "Back to home",
+    "capabilities": {
+      "schedule": "Class schedules",
+      "assignments": "Assignments",
+      "reports": "Progress reports",
+      "attendance": "Attendance",
+      "classManagement": "Class management"
+    }
   }
 }
