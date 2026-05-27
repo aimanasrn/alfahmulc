@@ -52,7 +52,10 @@ export function ContactSection() {
                     <div>
                       <p className="text-sm font-semibold text-slate-900">{t(item.labelKey)}</p>
                       {item.href ? (
-                        <a className="mt-1 block text-sm leading-6 text-slate-600 hover:text-slate-900" href={item.href}>
+                        <a
+                          className="mt-1 block rounded-md text-sm leading-6 text-slate-600 outline-none transition hover:text-slate-900 focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
+                          href={item.href}
+                        >
                           {value}
                         </a>
                       ) : (
@@ -77,7 +80,7 @@ export function ContactSection() {
                 </div>
               </div>
               <a
-                className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-100"
+                className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                 href="https://wa.me/60123456789"
                 rel="noreferrer"
                 target="_blank"
