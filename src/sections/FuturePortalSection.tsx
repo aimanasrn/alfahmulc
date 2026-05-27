@@ -5,6 +5,7 @@ import {
   Sparkles,
   type LucideIcon,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { portalCards } from "../data/portalCards";
 import { ScrollReveal } from "../components/ui/ScrollReveal";
@@ -14,12 +15,6 @@ const iconMap: Record<string, LucideIcon> = {
   "graduation-cap": GraduationCap,
   "briefcase-business": BriefcaseBusiness,
   "shield-check": ShieldCheck,
-};
-
-const portalLinkByKey: Record<string, string> = {
-  "futurePortal.cards.student.title": "/portal/student",
-  "futurePortal.cards.teacher.title": "/portal/teacher",
-  "futurePortal.cards.admin.title": "/portal/admin",
 };
 
 export function FuturePortalSection() {
@@ -61,12 +56,12 @@ export function FuturePortalSection() {
                   <p className="mt-4 flex-1 text-sm leading-7 text-slate-300">
                     {t(card.descriptionKey)}
                   </p>
-                  <a
+                  <Link
                     className={buttonVariants("ghost", "mt-6 self-start bg-white/10 text-white hover:bg-white/15")}
-                    href={portalLinkByKey[card.titleKey]}
+                    to={card.href}
                   >
                     {t("futurePortal.cardCta")}
-                  </a>
+                  </Link>
                 </article>
               </ScrollReveal>
             );

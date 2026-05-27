@@ -1,5 +1,6 @@
 import { Facebook, Instagram, MessageCircleMore } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const quickLinks = [
   { key: "nav.home", href: "#home" },
@@ -59,13 +60,13 @@ export default function Footer() {
           </h2>
           <div className="mt-5 space-y-3">
             {quickLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 className="block text-sm text-slate-600 transition hover:text-slate-950"
-                href={link.href}
+                to={link.href}
               >
                 {t(link.key)}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

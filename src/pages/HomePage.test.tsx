@@ -23,6 +23,15 @@ test("renders core landing page sections", () => {
 
   expect(screen.getByRole("navigation")).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /Bantu Anak/i })).toBeInTheDocument();
+  expect(
+    screen.getByRole("heading", {
+      name: /Pendekatan pembelajaran yang kemas, jelas, dan menyenangkan untuk diikuti/i,
+    }),
+  ).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /Subjek/i })).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /Portal digital/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /Pautan pantas/i })).toBeInTheDocument();
+  expect(
+    screen.getByRole("link", { name: /Buka WhatsApp Al-Fahmu Learning Centre/i }),
+  ).toBeInTheDocument();
 });
