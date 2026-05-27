@@ -1,4 +1,9 @@
-import { Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  useInRouterContext,
+} from "react-router-dom";
 import { MarketingLayout } from "../layouts/MarketingLayout";
 import { PortalLayout } from "../layouts/PortalLayout";
 import HomePage from "../pages/HomePage";
@@ -6,7 +11,7 @@ import AdminPortalPage from "../pages/portal/AdminPortalPage";
 import StudentPortalPage from "../pages/portal/StudentPortalPage";
 import TeacherPortalPage from "../pages/portal/TeacherPortalPage";
 
-export function AppRouter() {
+function AppRoutes() {
   return (
     <Routes>
       <Route element={<MarketingLayout />}>
@@ -18,5 +23,19 @@ export function AppRouter() {
         <Route path="admin" element={<AdminPortalPage />} />
       </Route>
     </Routes>
+  );
+}
+
+export function AppRouter() {
+  const hasRouterContext = useInRouterContext();
+
+  if (hasRouterContext) {
+    return <AppRoutes />;
+  }
+
+  return (
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   );
 }

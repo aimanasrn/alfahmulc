@@ -1,14 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
-import HomePage from "./HomePage";
+import { AppRouter } from "../routes/AppRouter";
 import "../i18n";
 
-test("renders the hero headline in default Malay", () => {
-  render(
-    <MemoryRouter>
-      <HomePage />
-    </MemoryRouter>,
-  );
+test("renders the home route headline with app router wiring", () => {
+  render(<AppRouter />);
 
   expect(
     screen.getByText("Bantu Anak Lebih Faham, Yakin & Fokus Dalam Pelajaran"),
