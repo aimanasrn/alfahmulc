@@ -1,8 +1,8 @@
 {
-  "files": ["src/main.tsx"],
+  "files": ["src/test/setup.ts"],
   "compilerOptions": {
+    "composite": true,
     "target": "ES2020",
-    "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "allowJs": false,
     "skipLibCheck": true,
@@ -15,9 +15,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "types": ["vite/client"]
+    "types": ["vitest/globals"]
   },
-  "include": ["src"],
-  "exclude": ["src/**/*.test.*", "src/**/*.spec.*", "src/test/**/*"]
+  "include": ["src/**/*.test.*", "src/**/*.spec.*", "src/test/**/*"]
 }
