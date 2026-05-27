@@ -1,0 +1,15 @@
+{
+  "brand": {
+    "name": "Al-Fahmu Learning Centre",
+    "tagline": "Kelas bimbingan yang tersusun dan mudah difahami"
+  },
+  "hero": {
+    "title": "Bantu Anak Lebih Faham, Yakin & Fokus Dalam Pelajaran",
+    "subtitle": "Al-Fahmu Learning Centre menyediakan kelas bimbingan yang tersusun dan mudah difahami."
+  },
+  "portal": {
+    "student": "Portal Pelajar",
+    "teacher": "Portal Guru",
+    "admin": "Dashboard Admin"
+  }
+}

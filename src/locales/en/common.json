@@ -1,0 +1,15 @@
+{
+  "brand": {
+    "name": "Al-Fahmu Learning Centre",
+    "tagline": "Structured learning built for confidence and growth"
+  },
+  "hero": {
+    "title": "Helping Students Learn Better With Confidence",
+    "subtitle": "Structured learning programs designed to improve understanding and academic performance."
+  },
+  "portal": {
+    "student": "Student Portal",
+    "teacher": "Teacher Portal",
+    "admin": "Admin Dashboard"
+  }
+}
