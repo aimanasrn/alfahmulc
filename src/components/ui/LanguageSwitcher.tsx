@@ -21,7 +21,7 @@ export function LanguageSwitcher() {
             key={language.code}
             aria-pressed={isActive}
             className={cn(
-              "px-3 py-2 text-xs shadow-none",
+              "min-w-[2.8rem] px-2.5 py-2 text-[11px] shadow-none sm:px-3 sm:text-xs",
               isActive && "bg-slate-900 text-white hover:bg-slate-900",
             )}
             onClick={() => void i18n.changeLanguage(language.code)}

@@ -11,18 +11,18 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 px-4 pt-4 sm:px-6">
+    <header className="sticky top-0 z-50 px-3 pt-3 sm:px-6 sm:pt-4">
       <nav
         aria-label="Primary"
-        className="mx-auto max-w-6xl rounded-[28px] border border-white/70 bg-white/85 px-4 py-3 shadow-lg shadow-slate-900/5 backdrop-blur-xl sm:px-6"
+        className="mx-auto max-w-6xl rounded-[24px] border border-white/70 bg-white/85 px-3 py-3 shadow-lg shadow-slate-900/5 backdrop-blur-xl sm:rounded-[28px] sm:px-6"
       >
-        <div className="flex items-center justify-between gap-4">
-          <a className="flex items-center gap-3 text-slate-950 no-underline" href="#home">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-50 ring-1 ring-brand-100">
-              <span className="text-sm font-bold text-brand-700">AF</span>
+        <div className="flex items-center justify-between gap-2 sm:gap-4">
+          <a className="flex min-w-0 flex-1 items-center gap-2 text-slate-950 no-underline sm:gap-3" href="#home">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-brand-50 ring-1 ring-brand-100 sm:h-11 sm:w-11">
+              <span className="text-xs font-bold text-brand-700 sm:text-sm">AF</span>
             </div>
             <div className="min-w-0">
-              <p className="truncate text-sm font-semibold uppercase tracking-[0.24em] text-brand-500">
+              <p className="truncate text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-500 sm:text-sm sm:tracking-[0.24em]">
                 {t("brand.name")}
               </p>
               <p className="hidden text-sm text-slate-500 lg:block">{t("brand.tagline")}</p>
@@ -41,7 +41,7 @@ export function Navbar() {
             ))}
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex shrink-0 items-center gap-2">
             <LanguageSwitcher />
             <a className={cn(buttonVariants("primary"), "hidden lg:inline-flex")} href="#contact">
               {t("cta.register")}
@@ -49,7 +49,7 @@ export function Navbar() {
             <button
               aria-expanded={isMenuOpen}
               aria-label="Toggle navigation menu"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-900 transition hover:bg-slate-100 lg:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-900 transition hover:bg-slate-100 lg:hidden"
               onClick={() => setIsMenuOpen((open) => !open)}
               type="button"
             >
