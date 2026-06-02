@@ -52,7 +52,92 @@ export function TestimonialsSection() {
 
         <ScrollReveal>
           <div className="mt-12 overflow-hidden rounded-[2.25rem] border border-slate-200 bg-white p-4 shadow-xl shadow-slate-900/5 transition duration-300 hover:border-brand-300 hover:bg-gradient-to-br hover:from-white hover:via-brand-50 hover:to-accent-100 hover:shadow-2xl hover:shadow-brand-900/15 sm:p-6">
-            <div className="grid gap-6 lg:grid-cols-[minmax(0,0.28fr)_minmax(0,0.72fr)] lg:items-stretch">
+            <div className="lg:hidden">
+              <AnimatePresence mode="wait">
+                <motion.article
+                  animate={{ opacity: 1, y: 0 }}
+                  className={`rounded-[2rem] border border-slate-200 bg-gradient-to-br ${activeAccent.glow} p-5 shadow-lg shadow-slate-900/5`}
+                  exit={{ opacity: 0, y: -20 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  key={`${activeTestimonial.nameKey}-mobile`}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0">
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-500">
+                        {t(activeTestimonial.timeKey)}
+                      </p>
+                      <h3 className="mt-2 text-lg font-bold leading-snug text-slate-950">
+                        {t(activeTestimonial.nameKey)}
+                      </h3>
+                    </div>
+                    <div className={`inline-flex shrink-0 rounded-2xl p-3 ring-1 ${activeAccent.chip}`}>
+                      <Quote className="h-4 w-4" />
+                    </div>
+                  </div>
+
+                  <div className="mt-4 flex items-center gap-1 text-accent-400">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <Star className="h-4 w-4 fill-current" key={index} />
+                    ))}
+                  </div>
+
+                  <p className="mt-5 text-base leading-8 text-slate-700">
+                    "{t(activeTestimonial.quoteKey)}"
+                  </p>
+
+                  <div className="mt-6 rounded-[1.5rem] bg-[linear-gradient(180deg,#1556d8_0%,#0d3ea3_58%,#0b2c69_100%)] px-4 py-4 text-white">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-100">
+                      Student / Parent
+                    </p>
+                    <p className="mt-2 text-sm leading-7 text-white/90">
+                      {t(activeTestimonial.roleKey)}
+                    </p>
+                  </div>
+                </motion.article>
+              </AnimatePresence>
+
+              <div className="mt-5 flex items-center justify-between gap-4">
+                <button
+                  aria-label={t("testimonials.previous")}
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-200 bg-white text-brand-700 shadow-sm transition hover:border-accent-300 hover:bg-gradient-to-br hover:from-brand-100 hover:to-accent-100"
+                  onClick={goToPrevious}
+                  type="button"
+                >
+                  <ChevronLeft className="h-5 w-5" />
+                </button>
+
+                <div className="flex flex-wrap items-center justify-center gap-2">
+                  {testimonials.map((testimonial, index) => {
+                    const isActive = index === activeIndex;
+
+                    return (
+                      <button
+                        aria-label={t("testimonials.goTo", { number: index + 1 })}
+                        aria-pressed={isActive}
+                        className={`h-2.5 rounded-full transition ${
+                          isActive ? "w-10 bg-accent-300" : "w-2.5 bg-slate-300 hover:bg-brand-300"
+                        }`}
+                        key={`${testimonial.nameKey}-mobile-dot`}
+                        onClick={() => setActiveIndex(index)}
+                        type="button"
+                      />
+                    );
+                  })}
+                </div>
+
+                <button
+                  aria-label={t("testimonials.next")}
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-200 bg-white text-brand-700 shadow-sm transition hover:border-accent-300 hover:bg-gradient-to-br hover:from-brand-100 hover:to-accent-100"
+                  onClick={goToNext}
+                  type="button"
+                >
+                  <ChevronRight className="h-5 w-5" />
+                </button>
+              </div>
+            </div>
+
+            <div className="hidden gap-6 lg:grid lg:grid-cols-[minmax(0,0.28fr)_minmax(0,0.72fr)] lg:items-stretch">
               <div className="rounded-[2rem] bg-[linear-gradient(180deg,#1556d8_0%,#0d3ea3_58%,#0b2c69_100%)] p-6 text-white sm:p-7">
                 <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-200">
                   {t("testimonials.eyebrow")}
@@ -91,7 +176,7 @@ export function TestimonialsSection() {
                       <button
                         aria-label={t("testimonials.goTo", { number: index + 1 })}
                         aria-pressed={isActive}
-                    className={`h-2.5 rounded-full transition ${
+                        className={`h-2.5 rounded-full transition ${
                           isActive ? "w-10 bg-accent-300" : "w-2.5 bg-white/25 hover:bg-white/45"
                         }`}
                         key={testimonial.nameKey}
