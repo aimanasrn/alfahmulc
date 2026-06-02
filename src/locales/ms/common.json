@@ -126,20 +126,41 @@
     "next": "Testimoni seterusnya",
     "goTo": "Pergi ke testimoni {{number}}",
     "items": {
-      "parentOne": {
-        "quote": "Anak saya semakin yakin untuk bertanya dan lebih mudah faham topik yang sebelum ini selalu mengelirukan dia.",
-        "name": "Ibu kepada pelajar Tahun 5",
-        "role": "Kelas akademik mingguan"
+      "reviewOne": {
+        "quote": "qisya ada kemajuan dan peningkatan dalam pelajaran...sblm ni markah 66, alhamdulillah exam akhir ni markah 94.",
+        "name": "Nuraliah Aqilah Binti Tarmizi",
+        "role": "Qisya Izz Zahra Izzah binti Zulkarnean",
+        "time": "8 bulan lalu"
       },
-      "parentTwo": {
-        "quote": "Cara cikgu terangkan sangat tersusun. Saya boleh nampak perubahan pada disiplin belajar dan keyakinan anak saya di rumah.",
-        "name": "Bapa kepada pelajar Tingkatan 2",
-        "role": "Program sokongan subjek teras"
+      "reviewTwo": {
+        "quote": "Kasyaf seronok belajar..tak sabar tunggu hari sabtu pegi tuisyen..😊😊😊",
+        "name": "Siti Aishah Binti Ismail",
+        "role": "Pn. Siti Salwa Binti Mohd Shari / Muhammad Kasyaf Rayyan Bin Saiffu Safuan",
+        "time": "1 bulan lalu"
       },
-      "studentOne": {
-        "quote": "Saya rasa lebih tenang bila belajar sebab langkah demi langkah lebih jelas, dan saya tak malu sangat untuk tanya bila tak faham.",
-        "name": "Pelajar Al-Fahmu",
-        "role": "Bimbingan Matematik & Sains"
+      "reviewThree": {
+        "quote": "Cikgu mengajar dengan semangat. Mempunyai naluri pendidik dan bijak berkomunikasi dengan murid.",
+        "name": "Irsalina binti Ahmad Sobri",
+        "role": "En. Mohamad Faizal bin Tauhir / Hasif",
+        "time": "3 bulan lalu"
+      },
+      "reviewFour": {
+        "quote": "Better streaming line tonight. Teacher is very patient and likes kid. She managed to correct kid well.",
+        "name": "Wan Farah Nor Shahirah Binti Wan Mohamad Saifullizan",
+        "role": "Pn. Nurul Izzah / Ahmad Anas Baihaqi",
+        "time": "8 bulan lalu"
+      },
+      "reviewFive": {
+        "quote": "Assalamualaikum. Setakat ini, Alhamdulillah, Cikgu Nasuha seorang guru yang bagus. Nampak effort untuk memberikan anak saya pemahaman yang terbaik, walaupun saya sendiri lihat sedikit sukar memandangkan anak saya belum benar² menguasai asas matematik. Cikgu juga seorang yg berperwatakan ceria, dan anak saya suka belajar dengan cikgu.",
+        "name": "Nasuha Bt Ahmad @ Mustaffa",
+        "role": "Puan Zakiah binti Abd Rashid",
+        "time": "8 bulan lalu"
+      },
+      "reviewSix": {
+        "quote": "My daughter has been learning english from Tcer Afifah, and I've seen a great improvement in her understanding and confidence. She has a very patient and encouraging teaching style, making learning fun with interactive activities by using an attractive video and picture. Raeesa used to struggle with blending sounds, but now she can confidently read simple words.",
+        "name": "Siti Nur 'Afifah Sariat",
+        "role": "Pn. Nurul Izza / Raeesa Sofea",
+        "time": "7 bulan lalu"
       }
     }
   },

@@ -114,8 +114,18 @@ export function TestimonialsSection() {
                     transition={{ duration: 0.35, ease: "easeOut" }}
                   >
                     <div className="flex items-center justify-between gap-4">
-                      <div className={`inline-flex rounded-2xl p-3 ring-1 transition duration-300 hover:bg-gradient-to-br hover:from-brand-500 hover:to-accent-300 hover:text-white ${activeAccent.chip}`}>
-                        <Quote className="h-5 w-5" />
+                      <div className="flex items-center gap-4">
+                        <div className={`inline-flex rounded-2xl p-3 ring-1 transition duration-300 hover:bg-gradient-to-br hover:from-brand-500 hover:to-accent-300 hover:text-white ${activeAccent.chip}`}>
+                          <Quote className="h-5 w-5" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-500">
+                            {t(activeTestimonial.timeKey)}
+                          </p>
+                          <p className="mt-1 text-lg font-bold text-slate-950 sm:text-xl">
+                            {t(activeTestimonial.nameKey)}
+                          </p>
+                        </div>
                       </div>
                       <div className="flex items-center gap-1 text-accent-400">
                         {Array.from({ length: 5 }).map((_, index) => (
@@ -129,10 +139,10 @@ export function TestimonialsSection() {
                     </p>
 
                     <div className="mt-10 border-t border-slate-200/80 pt-5">
-                      <p className="text-base font-bold text-slate-950 sm:text-lg">
-                        {t(activeTestimonial.nameKey)}
+                      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
+                        Student / Parent
                       </p>
-                      <p className="mt-1 text-sm text-slate-500 sm:text-base">
+                      <p className="mt-2 text-base text-slate-600 sm:text-lg">
                         {t(activeTestimonial.roleKey)}
                       </p>
                     </div>
