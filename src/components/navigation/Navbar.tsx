@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
 import { navigationItems } from "../../data/navigation";
@@ -9,6 +10,52 @@ import { cn } from "../../utils/cn";
 export function Navbar() {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [pendingSection, setPendingSection] = useState<string | null>(null);
+
+  const scrollToSection = (href: string) => {
+    const target = document.querySelector<HTMLElement>(href);
+
+    if (!target) {
+      return;
+    }
+
+    const navOffset = 112;
+    const targetTop = target.getBoundingClientRect().top + window.scrollY - navOffset;
+
+    window.history.replaceState(null, "", href);
+    window.scrollTo({
+      top: Math.max(0, targetTop),
+      behavior: "smooth",
+    });
+  };
+
+  const navigateToSection = (href: string) => {
+    if (!href.startsWith("#")) {
+      setIsMenuOpen(false);
+      return;
+    }
+
+    if (isMenuOpen) {
+      setPendingSection(href);
+      setIsMenuOpen(false);
+      return;
+    }
+
+    scrollToSection(href);
+  };
+
+  useEffect(() => {
+    if (!pendingSection || isMenuOpen) {
+      return;
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      scrollToSection(pendingSection);
+      setPendingSection(null);
+    }, 320);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [isMenuOpen, pendingSection]);
 
   return (
     <header className="sticky top-0 z-50 px-3 pt-3 sm:px-6 sm:pt-4">
@@ -35,6 +82,10 @@ export function Navbar() {
                 key={item.href}
                 className="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-950"
                 href={item.href}
+                onClick={(event) => {
+                  event.preventDefault();
+                  navigateToSection(item.href);
+                }}
               >
                 {t(item.labelKey)}
               </a>
@@ -58,20 +109,58 @@ export function Navbar() {
           </div>
         </div>
 
-        <div className={cn("overflow-hidden lg:hidden", isMenuOpen ? "mt-4 block" : "hidden")}>
-          <div className="space-y-2 border-t border-slate-200 pt-4">
-            {navigationItems.map((item) => (
-              <a
-                key={item.href}
-                className="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-slate-950"
-                href={item.href}
-                onClick={() => setIsMenuOpen(false)}
+        <AnimatePresence initial={false}>
+          {isMenuOpen ? (
+            <motion.div
+              animate={{ height: "auto", opacity: 1, marginTop: 16 }}
+              className="overflow-hidden lg:hidden"
+              exit={{ height: 0, opacity: 0, marginTop: 0 }}
+              initial={{ height: 0, opacity: 0, marginTop: 0 }}
+              transition={{ duration: 0.28, ease: "easeOut" }}
+            >
+              <motion.div
+                animate="open"
+                className="space-y-2 border-t border-slate-200 pt-4"
+                initial="closed"
+                variants={{
+                  open: {
+                    transition: {
+                      staggerChildren: 0.06,
+                      delayChildren: 0.04,
+                    },
+                  },
+                  closed: {
+                    transition: {
+                      staggerChildren: 0.04,
+                      staggerDirection: -1,
+                    },
+                  },
+                }}
               >
-                {t(item.labelKey)}
-              </a>
-            ))}
-          </div>
-        </div>
+                {navigationItems.map((item) => (
+                  <motion.a
+                    animate="open"
+                    className="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-slate-950"
+                    href={item.href}
+                    initial="closed"
+                    key={item.href}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      navigateToSection(item.href);
+                    }}
+                    variants={{
+                      open: { opacity: 1, y: 0, filter: "blur(0px)" },
+                      closed: { opacity: 0, y: -10, filter: "blur(2px)" },
+                    }}
+                    transition={{ duration: 0.22, ease: "easeOut" }}
+                  >
+                    {t(item.labelKey)}
+                  </motion.a>
+                ))}
+              </motion.div>
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
       </nav>
     </header>
   );
