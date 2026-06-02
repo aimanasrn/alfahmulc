@@ -11,10 +11,10 @@ body {
   min-width: 320px;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at top, rgba(27, 79, 168, 0.12), transparent 32%),
-    radial-gradient(circle at right top, rgba(220, 174, 18, 0.12), transparent 22%),
-    linear-gradient(180deg, #fffdf3 0%, #ffffff 42%, #fff9e8 100%);
-  color: #10284d;
+    radial-gradient(circle at top, rgba(21, 86, 216, 0.14), transparent 32%),
+    radial-gradient(circle at right top, rgba(255, 196, 0, 0.14), transparent 22%),
+    linear-gradient(180deg, #fffef8 0%, #ffffff 44%, #fff8e7 100%);
+  color: #0f2757;
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
 }
 

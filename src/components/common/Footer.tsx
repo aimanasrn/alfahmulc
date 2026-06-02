@@ -30,7 +30,7 @@ export default function Footer() {
           <div className="mt-6 flex gap-3">
             <a
               aria-label={t("footer.social.whatsapp")}
-              className="rounded-full border border-slate-200 p-3 text-slate-600 transition hover:border-brand-200 hover:text-brand-600"
+              className="rounded-full border border-slate-200 p-3 text-slate-600 transition duration-300 hover:border-brand-300 hover:bg-gradient-to-br hover:from-brand-100 hover:to-accent-200 hover:text-brand-700 hover:shadow-lg hover:shadow-brand-900/10"
               href="https://wa.me/60179535676"
               rel="noreferrer"
               target="_blank"

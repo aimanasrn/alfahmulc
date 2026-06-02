@@ -26,7 +26,10 @@ export function ContactSection() {
   });
 
   return (
-    <section className="px-4 py-20 sm:px-6 sm:py-24" id="contact">
+    <section className="relative overflow-hidden px-4 py-20 sm:px-6 sm:py-24" id="contact">
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-cream-50 via-accent-50/70 to-white" />
+      <div className="absolute left-[-3rem] bottom-10 -z-10 h-56 w-56 rounded-full bg-accent-200/35 blur-3xl" />
+      <div className="absolute right-[-2rem] top-16 -z-10 h-64 w-64 rounded-full bg-brand-100/30 blur-3xl" />
       <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
         <ScrollReveal>
           <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg shadow-slate-900/5">
@@ -43,10 +46,10 @@ export function ContactSection() {
 
                 return (
                   <div
-                    className="flex items-start gap-4 rounded-3xl border border-slate-200 bg-slate-50/80 px-4 py-4"
+                    className="group flex items-start gap-4 rounded-3xl border border-slate-200 bg-slate-50/80 px-4 py-4 transition duration-300 hover:border-brand-300 hover:bg-gradient-to-r hover:from-brand-100 hover:via-white hover:to-accent-100"
                     key={item.labelKey}
                   >
-                    <div className="rounded-2xl bg-brand-50 p-3 text-brand-600">
+                    <div className="rounded-2xl bg-brand-50 p-3 text-brand-600 transition duration-300 group-hover:bg-gradient-to-br group-hover:from-brand-500 group-hover:to-brand-700 group-hover:text-white">
                       <Icon className="h-5 w-5" />
                     </div>
                     <div>

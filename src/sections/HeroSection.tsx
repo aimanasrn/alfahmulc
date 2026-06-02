@@ -20,7 +20,7 @@ export function HeroSection() {
       />
       <motion.div
         animate={{ scale: [1, 1.1, 1], x: [0, -26, 0], y: [0, 22, 0] }}
-        className="absolute right-[-4rem] top-12 -z-10 h-72 w-72 rounded-full bg-accent-300/45 blur-3xl"
+        className="absolute right-[-4rem] top-12 -z-10 h-72 w-72 rounded-full bg-accent-400/38 blur-3xl"
         transition={{ duration: 16, ease: "easeInOut", repeat: Number.POSITIVE_INFINITY }}
       />
 
@@ -81,9 +81,9 @@ export function HeroSection() {
         </div>
 
         <div className="relative">
-          <div className="absolute inset-6 rounded-[2rem] bg-brand-500/10 blur-3xl" />
+          <div className="absolute inset-6 rounded-[2rem] bg-brand-500/12 blur-3xl" />
           <div className="relative overflow-hidden rounded-[2rem] border border-brand-900/20 bg-slate-950 p-6 text-white shadow-2xl shadow-slate-900/20 sm:p-8">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(125,191,255,0.28),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(237,197,54,0.2),transparent_28%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(141,179,255,0.28),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(255,196,0,0.22),transparent_28%)]" />
             <div className="relative space-y-6 sm:space-y-8">
               <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div className="min-w-0">

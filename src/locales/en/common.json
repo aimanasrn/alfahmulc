@@ -117,6 +117,31 @@
       "upkk": "UPKK"
     }
   },
+  "testimonials": {
+    "eyebrow": "What parents and students say",
+    "title": "Feedback that reflects real change in learning confidence",
+    "description": "We want every student to leave class not only having attended, but understanding more clearly, feeling more confident, and staying better prepared for school.",
+    "previous": "Previous testimonial",
+    "next": "Next testimonial",
+    "goTo": "Go to testimonial {{number}}",
+    "items": {
+      "parentOne": {
+        "quote": "My child is much more confident asking questions now and understands topics that used to confuse them.",
+        "name": "Parent of a Year 5 student",
+        "role": "Weekly academic class"
+      },
+      "parentTwo": {
+        "quote": "The teacher's explanations are very structured. I can clearly see changes in my child's study discipline and confidence at home.",
+        "name": "Parent of a Form 2 student",
+        "role": "Core subject support programme"
+      },
+      "studentOne": {
+        "quote": "I feel calmer when studying because each step is clearer, and I am less afraid to ask when I do not understand.",
+        "name": "Al-Fahmu student",
+        "role": "Mathematics and Science guidance"
+      }
+    }
+  },
   "futurePortal": {
     "eyebrow": "Future portal",
     "title": "A digital portal experience designed for students, teachers, and operations",

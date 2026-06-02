@@ -8,9 +8,10 @@ type ButtonProps = PropsWithChildren<ButtonHTMLAttributes<HTMLButtonElement>> & 
 };
 
 const variantClasses: Record<ButtonVariant, string> = {
-  primary: "bg-brand-500 text-white shadow-glow hover:bg-brand-700",
+  primary:
+    "bg-gradient-to-r from-brand-500 via-brand-600 to-brand-700 text-white shadow-glow hover:from-brand-600 hover:via-brand-700 hover:to-brand-800",
   secondary:
-    "border border-slate-200 bg-white text-slate-900 hover:border-brand-200 hover:bg-brand-50",
+    "border border-accent-100 bg-white text-slate-900 hover:border-accent-200 hover:bg-accent-50",
   ghost: "bg-transparent text-slate-700 hover:bg-slate-100",
 };
 

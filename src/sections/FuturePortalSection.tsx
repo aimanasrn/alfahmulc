@@ -48,8 +48,8 @@ export function FuturePortalSection() {
 
             return (
               <ScrollReveal key={card.titleKey}>
-                <article className="flex h-full flex-col rounded-[2rem] border border-white/10 bg-white/5 p-7 backdrop-blur">
-                  <div className="inline-flex rounded-2xl bg-white/10 p-3 text-brand-100">
+                <article className="group flex h-full flex-col rounded-[2rem] border border-white/10 bg-white/5 p-7 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent-300/60 hover:bg-gradient-to-br hover:from-brand-500/20 hover:via-white/10 hover:to-accent-300/20 hover:shadow-2xl hover:shadow-black/20">
+                  <div className="inline-flex rounded-2xl bg-white/10 p-3 text-brand-100 transition duration-300 group-hover:bg-gradient-to-br group-hover:from-accent-300/90 group-hover:to-brand-500/90 group-hover:text-white">
                     <Icon className="h-6 w-6" />
                   </div>
                   <h3 className="mt-6 text-2xl font-bold text-white">{t(card.titleKey)}</h3>

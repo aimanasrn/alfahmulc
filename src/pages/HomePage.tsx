@@ -6,6 +6,7 @@ import { ContactSection } from "../sections/ContactSection";
 import { FuturePortalSection } from "../sections/FuturePortalSection";
 import { HeroSection } from "../sections/HeroSection";
 import { SubjectsSection } from "../sections/SubjectsSection";
+import { TestimonialsSection } from "../sections/TestimonialsSection";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
         <HeroSection />
         <AboutSection />
         <SubjectsSection />
+        <TestimonialsSection />
         <FuturePortalSection />
         <ContactSection />
       </main>

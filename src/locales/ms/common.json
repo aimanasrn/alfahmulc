@@ -118,6 +118,31 @@
       "upkk": "UPKK"
     }
   },
+  "testimonials": {
+    "eyebrow": "Apa kata ibu bapa & pelajar",
+    "title": "Maklum balas yang menunjukkan perubahan sebenar dalam pembelajaran",
+    "description": "Kami mahu setiap pelajar bukan sahaja hadir ke kelas, tetapi benar-benar lebih faham, lebih yakin, dan lebih bersedia menghadapi pelajaran mereka.",
+    "previous": "Testimoni sebelumnya",
+    "next": "Testimoni seterusnya",
+    "goTo": "Pergi ke testimoni {{number}}",
+    "items": {
+      "parentOne": {
+        "quote": "Anak saya semakin yakin untuk bertanya dan lebih mudah faham topik yang sebelum ini selalu mengelirukan dia.",
+        "name": "Ibu kepada pelajar Tahun 5",
+        "role": "Kelas akademik mingguan"
+      },
+      "parentTwo": {
+        "quote": "Cara cikgu terangkan sangat tersusun. Saya boleh nampak perubahan pada disiplin belajar dan keyakinan anak saya di rumah.",
+        "name": "Bapa kepada pelajar Tingkatan 2",
+        "role": "Program sokongan subjek teras"
+      },
+      "studentOne": {
+        "quote": "Saya rasa lebih tenang bila belajar sebab langkah demi langkah lebih jelas, dan saya tak malu sangat untuk tanya bila tak faham.",
+        "name": "Pelajar Al-Fahmu",
+        "role": "Bimbingan Matematik & Sains"
+      }
+    }
+  },
   "futurePortal": {
     "eyebrow": "Portal masa depan",
     "title": "Portal digital yang bakal menyatukan ibu bapa, guru, dan pelajar",
