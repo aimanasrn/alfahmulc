@@ -3,8 +3,8 @@ import { FloatingWhatsAppButton } from "../components/common/FloatingWhatsAppBut
 import { Navbar } from "../components/navigation/Navbar";
 import { AboutSection } from "../sections/AboutSection";
 import { ContactSection } from "../sections/ContactSection";
-import { FuturePortalSection } from "../sections/FuturePortalSection";
 import { HeroSection } from "../sections/HeroSection";
+import { InfoBoardSection } from "../sections/InfoBoardSection";
 import { SubjectsSection } from "../sections/SubjectsSection";
 import { TestimonialsSection } from "../sections/TestimonialsSection";
 
@@ -17,7 +17,7 @@ export default function HomePage() {
         <AboutSection />
         <SubjectsSection />
         <TestimonialsSection />
-        <FuturePortalSection />
+        <InfoBoardSection />
         <ContactSection />
       </main>
       <Footer />

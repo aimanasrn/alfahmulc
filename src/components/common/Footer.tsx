@@ -1,18 +1,17 @@
 import { Facebook, Instagram, MessageCircleMore } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 
 const quickLinks = [
   { key: "nav.home", href: "#home" },
   { key: "nav.about", href: "#about" },
   { key: "nav.subjects", href: "#subjects" },
-  { key: "nav.futurePortal", href: "#future-portal" },
+  { key: "nav.infoBoard", href: "#info-board" },
 ];
 
-const portalLinks = [
-  { key: "portal.student", href: "/portal/student" },
-  { key: "portal.teacher", href: "/portal/teacher" },
-  { key: "portal.admin", href: "/portal/admin" },
+const actionLinks = [
+  { key: "footer.actions.items.testimonials", href: "#testimonials" },
+  { key: "footer.actions.items.infoBoard", href: "#info-board" },
+  { key: "footer.actions.items.contact", href: "#contact" },
 ];
 
 export default function Footer() {
@@ -73,17 +72,17 @@ export default function Footer() {
 
         <div>
           <h2 className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-400">
-            {t("footer.portals")}
+            {t("footer.actions.title")}
           </h2>
           <div className="mt-5 space-y-3">
-            {portalLinks.map((link) => (
-              <Link
+            {actionLinks.map((link) => (
+              <a
                 key={link.href}
                 className="block text-sm text-slate-600 transition hover:text-slate-950"
-                to={link.href}
+                href={link.href}
               >
                 {t(link.key)}
-              </Link>
+              </a>
             ))}
           </div>
         </div>

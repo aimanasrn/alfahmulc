@@ -7,7 +7,7 @@
     "home": "Laman Utama",
     "about": "Tentang",
     "subjects": "Subjek",
-    "futurePortal": "Portal Masa Depan",
+    "infoBoard": "Info Board",
     "contact": "Hubungi"
   },
   "cta": {
@@ -133,7 +133,7 @@
         "time": "8 bulan lalu"
       },
       "reviewTwo": {
-        "quote": "Kasyaf seronok belajar..tak sabar tunggu hari sabtu pegi tuisyen..😊😊😊",
+        "quote": "Kasyaf seronok belajar..tak sabar tunggu hari sabtu pegi tuisyen.. :) :) :)",
         "name": "Siti Aishah Binti Ismail",
         "role": "Pn. Siti Salwa Binti Mohd Shari / Muhammad Kasyaf Rayyan Bin Saiffu Safuan",
         "time": "1 bulan lalu"
@@ -151,7 +151,7 @@
         "time": "8 bulan lalu"
       },
       "reviewFive": {
-        "quote": "Assalamualaikum. Setakat ini, Alhamdulillah, Cikgu Nasuha seorang guru yang bagus. Nampak effort untuk memberikan anak saya pemahaman yang terbaik, walaupun saya sendiri lihat sedikit sukar memandangkan anak saya belum benar² menguasai asas matematik. Cikgu juga seorang yg berperwatakan ceria, dan anak saya suka belajar dengan cikgu.",
+        "quote": "Assalamualaikum. Setakat ini, Alhamdulillah, Cikgu Nasuha seorang guru yang bagus. Nampak effort untuk memberikan anak saya pemahaman yang terbaik, walaupun saya sendiri lihat sedikit sukar memandangkan anak saya belum benar-benar menguasai asas matematik. Cikgu juga seorang yg berperwatakan ceria, dan anak saya suka belajar dengan cikgu.",
         "name": "Nasuha Bt Ahmad @ Mustaffa",
         "role": "Puan Zakiah binti Abd Rashid",
         "time": "8 bulan lalu"
@@ -185,10 +185,58 @@
       }
     }
   },
+  "infoBoard": {
+    "eyebrow": "Info board",
+    "title": "Maklumat penting yang membantu ibu bapa membuat keputusan dengan lebih cepat",
+    "description": "Kami ringkaskan perkara utama yang biasanya ingin diketahui oleh ibu bapa sebelum mendaftar, supaya anda boleh lihat dengan jelas format kelas, tahap pelajar, dan cara paling mudah untuk bertanya.",
+    "note": "Sesuai untuk ibu bapa yang mahu gambaran cepat sebelum daftar.",
+    "cards": {
+      "format": {
+        "title": "Format kelas yang fleksibel",
+        "description": "Sesi pembelajaran disusun supaya pelajar boleh ikut kelas dengan lebih selesa mengikut keadaan dan keperluan mereka.",
+        "points": {
+          "onlinePhysical": "Kelas ditawarkan secara online dan bersemuka mengikut kesesuaian pelajar.",
+          "structuredGuidance": "Susunan pembelajaran jelas untuk ulang kaji, latihan, dan kemajuan yang lebih konsisten."
+        }
+      },
+      "learners": {
+        "title": "Siapa yang kami bantu",
+        "description": "Program kami sesuai untuk pelajar yang perlukan asas yang lebih kukuh, bimbingan tambahan, atau sokongan lebih dekat.",
+        "points": {
+          "levels": "Terbuka untuk prasekolah, sekolah rendah, menengah, KAFA, dan UPKK.",
+          "subjects": "Fokus pada subjek akademik, membaca, Iqra', dan Al-Quran."
+        }
+      },
+      "enquiry": {
+        "title": "Pertanyaan dan pendaftaran",
+        "description": "Ibu bapa boleh hubungi kami dengan cepat untuk semak subjek, jadual, atau slot yang masih tersedia.",
+        "points": {
+          "whatsapp": "WhatsApp sesuai untuk pertanyaan pantas berkaitan jadual, subjek, dan pendaftaran.",
+          "location": "Berpusat di Putrajaya dengan pilihan pembelajaran yang lebih dekat dan mudah dicapai."
+        }
+      }
+    },
+    "footerStrip": {
+      "responseLabel": "Respons",
+      "responseValue": "Pertanyaan lebih cepat melalui WhatsApp",
+      "modeLabel": "Pilihan kelas",
+      "modeValue": "Online & bersemuka",
+      "locationLabel": "Lokasi",
+      "locationValue": "Putrajaya"
+    }
+  },
   "footer": {
     "tagline": "Pusat bimbingan yang komited membantu pelajar belajar dengan lebih faham, lebih yakin, dan lebih bersedia untuk masa depan.",
     "quickLinks": "Pautan pantas",
     "portals": "Portal akan datang",
+    "actions": {
+      "title": "Langkah seterusnya",
+      "items": {
+        "testimonials": "Lihat testimoni",
+        "infoBoard": "Lihat info board",
+        "contact": "Hubungi kami"
+      }
+    },
     "rights": "Copyright 2026 Al-Fahmu Learning Centre. Semua hak terpelihara.",
     "social": {
       "whatsapp": "WhatsApp Al-Fahmu Learning Centre",

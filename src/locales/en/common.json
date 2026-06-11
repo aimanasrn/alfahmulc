@@ -7,7 +7,7 @@
     "home": "Home",
     "about": "About",
     "subjects": "Subjects",
-    "futurePortal": "Future Portal",
+    "infoBoard": "Info Board",
     "contact": "Contact"
   },
   "cta": {
@@ -132,7 +132,7 @@
         "time": "8 months ago"
       },
       "reviewTwo": {
-        "quote": "Kasyaf seronok belajar..tak sabar tunggu hari sabtu pegi tuisyen..😊😊😊",
+        "quote": "Kasyaf seronok belajar..tak sabar tunggu hari sabtu pegi tuisyen.. :) :) :)",
         "name": "Siti Aishah Binti Ismail",
         "role": "Pn. Siti Salwa Binti Mohd Shari / Muhammad Kasyaf Rayyan Bin Saiffu Safuan",
         "time": "1 month ago"
@@ -150,7 +150,7 @@
         "time": "8 months ago"
       },
       "reviewFive": {
-        "quote": "Assalamualaikum. Setakat ini, Alhamdulillah, Cikgu Nasuha seorang guru yang bagus. Nampak effort untuk memberikan anak saya pemahaman yang terbaik, walaupun saya sendiri lihat sedikit sukar memandangkan anak saya belum benar² menguasai asas matematik. Cikgu juga seorang yg berperwatakan ceria, dan anak saya suka belajar dengan cikgu.",
+        "quote": "Assalamualaikum. Setakat ini, Alhamdulillah, Cikgu Nasuha seorang guru yang bagus. Nampak effort untuk memberikan anak saya pemahaman yang terbaik, walaupun saya sendiri lihat sedikit sukar memandangkan anak saya belum benar-benar menguasai asas matematik. Cikgu juga seorang yg berperwatakan ceria, dan anak saya suka belajar dengan cikgu.",
         "name": "Nasuha Bt Ahmad @ Mustaffa",
         "role": "Puan Zakiah binti Abd Rashid",
         "time": "8 months ago"
@@ -184,10 +184,58 @@
       }
     }
   },
+  "infoBoard": {
+    "eyebrow": "Info board",
+    "title": "Key details that help parents decide more confidently",
+    "description": "We summarise the practical information parents usually want to know before registering, so it is easier to understand the class format, student levels, and the fastest way to reach us.",
+    "note": "A quick overview for parents who want the essentials first.",
+    "cards": {
+      "format": {
+        "title": "Flexible class format",
+        "description": "Lessons are arranged so students can join in a way that feels more comfortable and suitable for their learning needs.",
+        "points": {
+          "onlinePhysical": "Classes are available both online and in person based on what suits the student best.",
+          "structuredGuidance": "Clear learning flow supports revision, practice, and more consistent progress."
+        }
+      },
+      "learners": {
+        "title": "Who we support",
+        "description": "Our programmes are suitable for students who need stronger foundations, extra guidance, or more personalised learning support.",
+        "points": {
+          "levels": "Open to preschool, primary, secondary, KAFA, and UPKK learners.",
+          "subjects": "Focused on academic subjects, reading foundation, Iqra', and Al-Quran."
+        }
+      },
+      "enquiry": {
+        "title": "Enquiries and registration",
+        "description": "Parents can reach us quickly to ask about subjects, schedules, or available class slots.",
+        "points": {
+          "whatsapp": "WhatsApp is ideal for fast questions about schedules, subjects, and registration.",
+          "location": "Based in Putrajaya with learning options that feel more accessible and convenient."
+        }
+      }
+    },
+    "footerStrip": {
+      "responseLabel": "Response",
+      "responseValue": "Faster enquiries through WhatsApp",
+      "modeLabel": "Class options",
+      "modeValue": "Online & in-person",
+      "locationLabel": "Location",
+      "locationValue": "Putrajaya"
+    }
+  },
   "footer": {
     "tagline": "A learning centre committed to helping students learn with better understanding, stronger confidence, and greater readiness for the future.",
     "quickLinks": "Quick links",
     "portals": "Upcoming portals",
+    "actions": {
+      "title": "Next steps",
+      "items": {
+        "testimonials": "Read testimonials",
+        "infoBoard": "View info board",
+        "contact": "Contact us"
+      }
+    },
     "rights": "Copyright 2026 Al-Fahmu Learning Centre. All rights reserved.",
     "social": {
       "whatsapp": "Al-Fahmu Learning Centre WhatsApp",
@@ -198,7 +246,7 @@
   },
   "contact": {
     "eyebrow": "Contact us",
-    "title": "Let’s talk about the right class setup for your child",
+    "title": "Let's talk about the right class setup for your child",
     "description": "Contact us for enquiries about subjects, class schedules, or registration. We are ready to help you choose the learning programme that best suits your child.",
     "phoneLabel": "Phone / WhatsApp",
     "phoneValue": "017-953 5676",

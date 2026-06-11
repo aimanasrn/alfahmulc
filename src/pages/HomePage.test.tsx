@@ -36,7 +36,11 @@ test("renders core landing page sections", () => {
     }).length,
   ).toBeGreaterThan(0);
   expect(screen.getAllByRole("button", { name: /Testimoni seterusnya/i }).length).toBeGreaterThan(0);
-  expect(screen.getByRole("heading", { name: /Portal digital/i })).toBeInTheDocument();
+  expect(
+    screen.getByRole("heading", {
+      name: /Maklumat penting yang membantu ibu bapa membuat keputusan dengan lebih cepat/i,
+    }),
+  ).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /Mari berbincang/i })).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /Pautan pantas/i })).toBeInTheDocument();
   expect(

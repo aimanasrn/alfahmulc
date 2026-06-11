@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -24,6 +24,7 @@ const accentClassMap = {
 export function TestimonialsSection() {
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isAutoPlayPaused, setIsAutoPlayPaused] = useState(false);
   const activeTestimonial = testimonials[activeIndex];
   const activeAccent = accentClassMap[activeTestimonial.accent];
 
@@ -34,6 +35,18 @@ export function TestimonialsSection() {
   const goToNext = () => {
     setActiveIndex((current) => (current === testimonials.length - 1 ? 0 : current + 1));
   };
+
+  useEffect(() => {
+    if (isAutoPlayPaused) {
+      return;
+    }
+
+    const intervalId = window.setInterval(() => {
+      setActiveIndex((current) => (current === testimonials.length - 1 ? 0 : current + 1));
+    }, 5000);
+
+    return () => window.clearInterval(intervalId);
+  }, [isAutoPlayPaused]);
 
   return (
     <section className="relative overflow-hidden px-4 py-20 sm:px-6 sm:py-24" id="testimonials">
@@ -51,7 +64,13 @@ export function TestimonialsSection() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="mt-12 overflow-hidden rounded-[2.25rem] border border-slate-200 bg-white p-4 shadow-xl shadow-slate-900/5 transition duration-300 hover:border-brand-300 hover:bg-gradient-to-br hover:from-white hover:via-brand-50 hover:to-accent-100 hover:shadow-2xl hover:shadow-brand-900/15 sm:p-6">
+          <div
+            className="mt-12 overflow-hidden rounded-[2.25rem] border border-slate-200 bg-white p-4 shadow-xl shadow-slate-900/5 transition duration-300 hover:border-brand-300 hover:bg-gradient-to-br hover:from-white hover:via-brand-50 hover:to-accent-100 hover:shadow-2xl hover:shadow-brand-900/15 sm:p-6"
+            onFocusCapture={() => setIsAutoPlayPaused(true)}
+            onBlurCapture={() => setIsAutoPlayPaused(false)}
+            onMouseEnter={() => setIsAutoPlayPaused(true)}
+            onMouseLeave={() => setIsAutoPlayPaused(false)}
+          >
             <div className="lg:hidden">
               <AnimatePresence mode="wait">
                 <motion.article
