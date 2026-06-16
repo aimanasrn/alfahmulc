@@ -3,11 +3,29 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { testimonialKeys } from "../data/landingPage";
 import { ScrollReveal } from "../components/ui/ScrollReveal";
+import { ScrollVelocity } from "../components/ui/ScrollVelocity";
 import { SectionTitle } from "../components/ui/SectionTitle";
 
 export function TestimonialsSection() {
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
+  const marqueeCards = testimonialKeys.map((key) => {
+    const name = t(`testimonials.items.${key}.name`);
+    const quote = t(`testimonials.items.${key}.quote`);
+    const preview = quote.length > 132 ? `${quote.slice(0, 129).trimEnd()}...` : quote;
+
+    return (
+      <article key={key} className="testimonial-marquee-card">
+        <div className="testimonial-marquee-card__stars" aria-hidden="true">
+          {Array.from({ length: 5 }).map((_, starIndex) => (
+            <Star key={starIndex} />
+          ))}
+        </div>
+        <p>{preview}</p>
+        <strong>{name}</strong>
+      </article>
+    );
+  });
 
   useEffect(() => {
     const intervalId = window.setInterval(() => {
@@ -39,6 +57,11 @@ export function TestimonialsSection() {
         />
 
         <ScrollReveal className="testimonial-carousel">
+          <div className="testimonial-marquee" aria-hidden="true">
+            <ScrollVelocity items={marqueeCards} baseVelocity={-34} />
+            <ScrollVelocity items={[...marqueeCards].reverse()} baseVelocity={34} />
+          </div>
+
           <div className="testimonial-carousel__viewport">
             <div
               className="testimonial-carousel__track"
