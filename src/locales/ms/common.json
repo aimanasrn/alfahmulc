@@ -56,11 +56,27 @@
     "description": "AL-FAHMU Learning Centre membantu kanak-kanak berkembang melalui kecemerlangan akademik, nilai Islam, pembinaan sahsiah, dan bimbingan yang membina keyakinan. Kami percaya setiap pelajar memerlukan panduan yang sabar, struktur yang jelas, dan suasana yang selamat untuk berkembang mengikut kemampuan sendiri.",
     "mission": {
       "title": "Misi Kami",
-      "description": "Menyediakan pembelajaran berkualiti yang terarah untuk mengukuhkan ilmu, disiplin, dan keyakinan diri."
+      "items": [
+        "Menyediakan bimbingan pembelajaran yang berfokus kepada kefahaman, bukan hafalan semata.",
+        "Membantu pelajar menguasai asas membaca, mengaji dan akademik secara berperingkat dan konsisten.",
+        "Mewujudkan suasana pembelajaran yang selesa, terarah dan berdisiplin.",
+        "Membimbing pelajar mengikut tahap kebolehan individu, bukan sekadar ikut umur atau tingkatan.",
+        "Bekerjasama dengan ibu bapa dalam memantau perkembangan anak."
+      ]
     },
     "vision": {
       "title": "Visi Kami",
-      "description": "Menjadi pusat pembelajaran yang dipercayai dalam membentuk pelajar yang berkebolehan, yakin, dan berpegang pada nilai murni."
+      "description": "Melahirkan pelajar yang menguasai dan faham asas ilmu, berakhlak baik dan yakin dalam pembelajaran."
+    },
+    "objectives": {
+      "title": "Objektif Kami",
+      "items": [
+        "Membantu pelajar membaca dengan lancar dan memahami isi bacaan.",
+        "Memastikan pelajar menguasai asas mengaji, sebutan dan adab pembelajaran Al-Quran.",
+        "Mengukuhkan asas akademik murid sekolah rendah dalam subjek teras.",
+        "Meningkatkan kefahaman dan keyakinan pelajar sekolah menengah dalam pembelajaran.",
+        "Membentuk pelajar yang berdisiplin, berkeyakinan dan bermotivasi untuk belajar."
+      ]
     }
   },
   "programs": {
@@ -149,21 +165,51 @@
     "title": "Apa Kata Ibu Bapa",
     "description": "Ibu bapa menghargai keyakinan, konsistensi, dan perubahan positif yang mereka lihat pada anak-anak.",
     "childProgramLabel": "Program Anak",
+    "previous": "Testimoni sebelumnya",
+    "next": "Testimoni seterusnya",
+    "goTo": "Pergi ke testimoni {{number}}",
     "items": {
       "reviewOne": {
-        "quote": "Anak saya semakin seronok belajar dan nampak lebih yakin dengan pelajaran sekolah.",
-        "name": "Ibu Bapa A",
-        "program": "Sokongan Akademik"
+        "quote": "Assalamualaikum. Setakat ini, Alhamdulillah, Cikgu Nasuha seorang guru yang bagus. Nampak effort untuk memberikan anak saya pemahaman yang terbaik, walaupun saya sendiri lihat sedikit sukar memandangkan anak saya belum benar-benar menguasai asas matematik. Cikgu juga seorang yang berperwatakan ceria, dan anak saya suka belajar dengan cikgu.",
+        "name": "Nasuha Bt Ahmad @ Mustaffa",
+        "program": "Puan Zakiah binti Abd Rashid",
+        "time": "8 bulan lalu"
       },
       "reviewTwo": {
-        "quote": "Guru-gurunya sabar dan mudah difahami. Kami dapat lihat perubahan dalam masa yang singkat.",
-        "name": "Ibu Bapa B",
-        "program": "Kelas Al-Quran"
+        "quote": "Qisya ada kemajuan dan peningkatan dalam pelajaran. Sebelum ini markah 66, alhamdulillah exam akhir ini markah 94.",
+        "name": "Nuraliah Aqilah Binti Tarmizi",
+        "program": "Qisya Izz Zahra Izzah binti Zulkarnean",
+        "time": "8 bulan lalu"
       },
       "reviewThree": {
-        "quote": "AL-FAHMU terasa mesra, tersusun, dan meyakinkan. Ia memberi ketenangan kepada kami sebagai ibu bapa.",
-        "name": "Ibu Bapa C",
-        "program": "Program Membaca"
+        "quote": "Kasyaf seronok belajar, tak sabar tunggu hari Sabtu pergi tuisyen.",
+        "name": "Siti Aishah Binti Ismail",
+        "program": "Pn. Siti Salwa Binti Mohd Shari / Muhammad Kasyaf Rayyan Bin Saiffu Safuan",
+        "time": "1 bulan lalu"
+      },
+      "reviewFour": {
+        "quote": "Assalamualaikum wbt, Alhamdulillah, cikgu Auni mengajar dengan sangat bersemangat dan anak sangat mudah faham. Prestasi akademik anak juga semakin meningkat. Terima kasih cikgu Auni.",
+        "name": "Nur Auni Insyirah",
+        "program": "Dr. Aqilah Mukhtar Ahmad",
+        "time": "8 bulan lalu"
+      },
+      "reviewFive": {
+        "quote": "Cikgu mengajar dengan semangat. Mempunyai naluri pendidik dan bijak berkomunikasi dengan murid.",
+        "name": "Irsalina binti Ahmad Sobri",
+        "program": "En. Mohamad Faizal bin Tauhir / Hasif",
+        "time": "3 bulan lalu"
+      },
+      "reviewSix": {
+        "quote": "Better streaming line tonight. Teacher is very patient and likes kid. She managed to correct kid well.",
+        "name": "Wan Farah Nor Shahirah Binti Wan Mohamad Saifullizan",
+        "program": "Pn. Nurul Izzah / Ahmad Anas Baihaqi",
+        "time": "8 bulan lalu"
+      },
+      "reviewSeven": {
+        "quote": "My daughter has been learning English from Tcer Afifah, and I have seen a great improvement in her understanding and confidence. She has a very patient and encouraging teaching style, making learning fun with interactive activities by using attractive videos and pictures. Raeesa used to struggle with blending sounds, but now she can confidently read simple words.",
+        "name": "Siti Nur 'Afifah Sariat",
+        "program": "Pn. Nurul Izza / Raeesa Sofea",
+        "time": "7 bulan lalu"
       }
     }
   },

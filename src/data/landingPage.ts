@@ -31,4 +31,12 @@ export const galleryKeys = [
   "holidayProgram",
 ] as const;
 
-export const testimonialKeys = ["reviewOne", "reviewTwo", "reviewThree"] as const;
+export const testimonialKeys = [
+  "reviewOne",
+  "reviewTwo",
+  "reviewThree",
+  "reviewFour",
+  "reviewFive",
+  "reviewSix",
+  "reviewSeven",
+] as const;

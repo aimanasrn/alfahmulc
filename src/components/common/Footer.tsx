@@ -9,6 +9,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container site-footer__grid">
         <div>
+          <img alt="AL-FAHMU Learning Centre logo" className="site-footer__logo" src="/logo.png" />
           <p className="site-footer__brand">{t("brand.name")}</p>
           <p className="site-footer__description">{t("footer.description")}</p>
         </div>

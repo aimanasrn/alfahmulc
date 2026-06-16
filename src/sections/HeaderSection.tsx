@@ -24,7 +24,7 @@ export function HeaderSection() {
     <header className={cn("site-header", isScrolled && "is-scrolled")}>
       <div className="container site-header__inner">
         <a className="site-brand" href="#home">
-          <span className="site-brand__mark">AF</span>
+          <img alt="AL-FAHMU Learning Centre logo" className="site-brand__logo" src="/logo.png" />
           <span className="site-brand__text">
             <strong>{t("brand.name")}</strong>
             <small>{t("brand.tagline")}</small>

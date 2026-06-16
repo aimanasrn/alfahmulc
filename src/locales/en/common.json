@@ -56,11 +56,27 @@
     "description": "AL-FAHMU Learning Centre helps children grow through academic excellence, Islamic values, character building, and confidence-focused support. We believe every learner deserves patient guidance, meaningful structure, and a safe environment to progress at their own pace.",
     "mission": {
       "title": "Our Mission",
-      "description": "To provide guided, high-quality learning that strengthens knowledge, discipline, and self-belief."
+      "items": [
+        "To provide learning guidance that focuses on understanding, not memorisation alone.",
+        "To help students master the foundations of reading, Quran recitation, and academics in a gradual and consistent way.",
+        "To create a learning environment that is comfortable, guided, and disciplined.",
+        "To guide students according to their individual ability level, not only by age or school form.",
+        "To work together with parents in monitoring each child's development."
+      ]
     },
     "vision": {
       "title": "Our Vision",
-      "description": "To become a trusted learning centre that shapes capable, confident, and values-driven students."
+      "description": "To nurture students who master and understand the foundations of knowledge, have good character, and feel confident in learning."
+    },
+    "objectives": {
+      "title": "Our Objectives",
+      "items": [
+        "To help students read fluently and understand what they read.",
+        "To ensure students master the basics of Quran recitation, pronunciation, and proper learning etiquette.",
+        "To strengthen the academic foundations of primary school students in core subjects.",
+        "To improve the understanding and confidence of secondary school students in learning.",
+        "To shape students who are disciplined, confident, and motivated to learn."
+      ]
     }
   },
   "programs": {
@@ -149,21 +165,51 @@
     "title": "What Parents Say",
     "description": "Parents appreciate the confidence, consistency, and calm improvement they see in their children.",
     "childProgramLabel": "Child Program",
+    "previous": "Previous testimonial",
+    "next": "Next testimonial",
+    "goTo": "Go to testimonial {{number}}",
     "items": {
       "reviewOne": {
-        "quote": "My child looks forward to class and comes home more confident with both schoolwork and routine.",
-        "name": "Parent A",
-        "program": "Academic Support"
+        "quote": "Assalamualaikum. So far, Alhamdulillah, Teacher Nasuha has been a very good teacher. I can clearly see the effort she puts into giving my child the best understanding, even though I know it is a little challenging because my child still has not fully mastered the basics of mathematics. She also has a cheerful personality, and my child enjoys learning with her.",
+        "name": "Nasuha Bt Ahmad @ Mustaffa",
+        "program": "Puan Zakiah binti Abd Rashid",
+        "time": "8 months ago"
       },
       "reviewTwo": {
-        "quote": "The teachers are patient and clear, and we can feel the difference in understanding after a few weeks.",
-        "name": "Parent B",
-        "program": "Quran Classes"
+        "quote": "Qisya has shown progress and improvement in her studies. Before this she scored 66, and alhamdulillah in the final exam she scored 94.",
+        "name": "Nuraliah Aqilah Binti Tarmizi",
+        "program": "Qisya Izz Zahra Izzah binti Zulkarnean",
+        "time": "8 months ago"
       },
       "reviewThree": {
-        "quote": "AL-FAHMU feels warm, organised, and trustworthy. It gives us peace of mind as parents.",
-        "name": "Parent C",
-        "program": "Reading Program"
+        "quote": "Kasyaf enjoys learning and cannot wait for Saturday tuition classes.",
+        "name": "Siti Aishah Binti Ismail",
+        "program": "Pn. Siti Salwa Binti Mohd Shari / Muhammad Kasyaf Rayyan Bin Saiffu Safuan",
+        "time": "1 month ago"
+      },
+      "reviewFour": {
+        "quote": "Assalamualaikum. Alhamdulillah, Teacher Auni teaches with great enthusiasm and my child understands very easily. My child's academic performance is also improving. Thank you, Teacher Auni.",
+        "name": "Nur Auni Insyirah",
+        "program": "Dr. Aqilah Mukhtar Ahmad",
+        "time": "8 months ago"
+      },
+      "reviewFive": {
+        "quote": "The teacher teaches with enthusiasm. She has the instincts of an educator and communicates wisely with students.",
+        "name": "Irsalina binti Ahmad Sobri",
+        "program": "En. Mohamad Faizal bin Tauhir / Hasif",
+        "time": "3 months ago"
+      },
+      "reviewSix": {
+        "quote": "Better streaming line tonight. Teacher is very patient and likes kid. She managed to correct kid well.",
+        "name": "Wan Farah Nor Shahirah Binti Wan Mohamad Saifullizan",
+        "program": "Pn. Nurul Izzah / Ahmad Anas Baihaqi",
+        "time": "8 months ago"
+      },
+      "reviewSeven": {
+        "quote": "My daughter has been learning English from Tcer Afifah, and I have seen a great improvement in her understanding and confidence. She has a very patient and encouraging teaching style, making learning fun with interactive activities by using attractive videos and pictures. Raeesa used to struggle with blending sounds, but now she can confidently read simple words.",
+        "name": "Siti Nur 'Afifah Sariat",
+        "program": "Pn. Nurul Izza / Raeesa Sofea",
+        "time": "7 months ago"
       }
     }
   },
