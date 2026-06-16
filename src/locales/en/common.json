@@ -1,285 +1,255 @@
 {
   "brand": {
-    "name": "Al-Fahmu Learning Centre",
-    "tagline": "Building understanding, confidence, and focus in learning"
+    "name": "AL-FAHMU Learning Centre",
+    "tagline": "Academic excellence with Islamic values and caring guidance"
+  },
+  "topBar": {
+    "phone": "Call: +60 12-000 0000",
+    "location": "Putrajaya",
+    "hours": "Open daily: 8:30 AM - 6:00 PM"
   },
   "nav": {
     "home": "Home",
     "about": "About",
-    "subjects": "Subjects",
-    "infoBoard": "Info Board",
+    "programs": "Programs",
+    "activities": "Activities",
+    "testimonials": "Testimonials",
     "contact": "Contact"
   },
   "cta": {
-    "register": "Register Now"
+    "register": "Register Now",
+    "enrollNow": "Enroll Now",
+    "whatsApp": "WhatsApp Us"
   },
   "hero": {
-    "badge": "Structured programmes for primary and secondary students",
-    "title": "Helping Students Learn Better With Confidence",
-    "subtitle": "We help students build strong foundations through learning that is clear, structured, and tailored to their needs. Every class is designed to improve understanding, confidence, and academic performance.",
-    "primaryCta": "Chat on WhatsApp",
-    "secondaryCta": "Explore Subjects",
-    "highlights": {
-      "structured": {
-        "title": "Structured learning rhythm",
-        "description": "Weekly lessons are mapped clearly so students always know what they are building next."
+    "badge": "Trusted Learning Centre",
+    "title": "Nurturing Knowledge, Building Character.",
+    "description": "Providing quality academic and Islamic education for children through engaging, guided, and modern learning experiences.",
+    "primaryCta": "Register Now",
+    "secondaryCta": "Learn More",
+    "cardTitle": "Warm guidance for growing learners",
+    "cardDescription": "A balanced learning environment where children are supported academically, spiritually, and personally."
+  },
+  "stats": {
+    "items": {
+      "students": {
+        "value": "300+",
+        "label": "Students"
       },
-      "personal": {
-        "title": "Guidance that adapts",
-        "description": "Students receive patient support when they need revision, practice, or confidence rebuilding."
+      "experience": {
+        "value": "10+",
+        "label": "Years Experience"
       },
-      "progress": {
-        "title": "Progress you can feel",
-        "description": "We focus on understanding, confidence, and discipline instead of rushing through content."
+      "teachers": {
+        "value": "Certified",
+        "label": "Teachers"
+      },
+      "method": {
+        "value": "Modern",
+        "label": "Learning Method"
       }
-    },
-    "panel": {
-      "eyebrow": "Premium experience",
-      "title": "A learning environment that feels calm, polished, and reassuring",
-      "tag": "BM + EN",
-      "points": [
-        "Consistent class routines help students arrive better prepared for tests and exams.",
-        "Simple lesson delivery supports students who need stronger foundations before moving faster.",
-        "Quick WhatsApp communication keeps enquiries, schedules, and registration more responsive."
-      ],
-      "quoteLabel": "Our focus",
-      "quote": "Every session is designed to make learning easier to understand, not just more intense."
     }
   },
   "about": {
-    "eyebrow": "Why parents choose Al-Fahmu",
-    "title": "A friendly, professional learning centre focused on real student growth",
-    "description": "At Al-Fahmu Learning Centre, we believe every student can succeed when given the right guidance. With friendly teachers, a structured approach, and both online and physical classes, we create a learning experience that is focused, comfortable, and effective for every student.",
-    "features": {
-      "structured": {
-        "title": "Well-paced syllabus breakdown",
-        "description": "Topics are unpacked in manageable steps so students can strengthen understanding without feeling overloaded."
+    "eyebrow": "About us",
+    "title": "About AL-FAHMU Learning Centre",
+    "description": "AL-FAHMU Learning Centre helps children grow through academic excellence, Islamic values, character building, and confidence-focused support. We believe every learner deserves patient guidance, meaningful structure, and a safe environment to progress at their own pace.",
+    "mission": {
+      "title": "Our Mission",
+      "items": [
+        "To provide learning guidance that focuses on understanding, not memorisation alone.",
+        "To help students master the foundations of reading, Quran recitation, and academics in a gradual and consistent way.",
+        "To create a learning environment that is comfortable, guided, and disciplined.",
+        "To guide students according to their individual ability level, not only by age or school form.",
+        "To work together with parents in monitoring each child's development."
+      ]
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To nurture students who master and understand the foundations of knowledge, have good character, and feel confident in learning."
+    },
+    "objectives": {
+      "title": "Our Objectives",
+      "items": [
+        "To help students read fluently and understand what they read.",
+        "To ensure students master the basics of Quran recitation, pronunciation, and proper learning etiquette.",
+        "To strengthen the academic foundations of primary school students in core subjects.",
+        "To improve the understanding and confidence of secondary school students in learning.",
+        "To shape students who are disciplined, confident, and motivated to learn."
+      ]
+    }
+  },
+  "programs": {
+    "eyebrow": "Programs",
+    "title": "Our Learning Programs",
+    "description": "Thoughtfully designed programmes that support different stages of academic and Islamic learning.",
+    "learnMore": "Learn More",
+    "items": {
+      "academicSupport": {
+        "title": "Academic Support",
+        "description": "Extra guidance for core school subjects with clearer explanations and stronger practice habits."
       },
-      "confidence": {
-        "title": "Confidence built steadily",
-        "description": "Consistent support helps students ask questions, try again, and improve weak areas without embarrassment."
+      "quranClasses": {
+        "title": "Quran Classes",
+        "description": "Build reading fluency, tajwid awareness, and comfort with Quran learning in a supportive setting."
       },
-      "guidance": {
-        "title": "Close, student-friendly guidance",
-        "description": "Patient explanations create a classroom atmosphere that feels approachable, focused, and encouraging."
+      "homeworkGuidance": {
+        "title": "Homework Guidance",
+        "description": "Daily learning support that helps children stay consistent, organised, and less overwhelmed."
       },
-      "progress": {
-        "title": "Progress that is easier to notice",
-        "description": "With clear routines and goals, parents can see improvement in both discipline and understanding."
+      "readingProgram": {
+        "title": "Reading Program",
+        "description": "Foundational reading practice that grows literacy confidence step by step."
+      },
+      "examPreparation": {
+        "title": "Exam Preparation",
+        "description": "Focused revision, answer techniques, and guided review for important school assessments."
+      },
+      "holidayProgram": {
+        "title": "Holiday Program",
+        "description": "Meaningful school-break sessions that keep learning active in a fun and structured way."
       }
     }
   },
-  "subjects": {
-    "eyebrow": "Subjects & programmes",
-    "title": "Learning options shaped around what students actually need support with",
-    "description": "We offer a range of subjects and learning support programmes, including core academics, reading foundation, KAFA, Iqra', and Al-Quran. Each programme is structured to help students master the basics, strengthen weak areas, and learn with greater confidence.",
+  "whyChooseUs": {
+    "eyebrow": "Why choose us",
+    "title": "Why Parents Choose AL-FAHMU",
+    "description": "Families trust AL-FAHMU for a warmer, more attentive learning experience that still feels structured and professional.",
     "items": {
-      "bahasaMelayu": {
-        "title": "Bahasa Melayu",
-        "description": "Builds reading, writing, and language use with clearer explanations and stronger exam readiness."
+      "smallClassSize": "Small Class Size",
+      "experiencedTeachers": "Experienced Teachers",
+      "interactiveLearning": "Interactive Learning",
+      "characterBuilding": "Character Building",
+      "safeEnvironment": "Safe Environment",
+      "parentCommunication": "Parent Communication"
+    }
+  },
+  "learningMethod": {
+    "eyebrow": "Learning approach",
+    "title": "Our Learning Method",
+    "description": "A simple four-step process that keeps progress clear for both parents and students.",
+    "items": {
+      "assessment": {
+        "title": "Assessment",
+        "description": "We begin by understanding the child’s current level, habits, and learning needs."
       },
-      "english": {
-        "title": "English",
-        "description": "Supports reading, writing, and spoken confidence through structured daily-use language practice."
+      "learningPlan": {
+        "title": "Learning Plan",
+        "description": "A suitable learning direction is arranged based on strengths, gaps, and goals."
       },
-      "mathematics": {
-        "title": "Mathematics",
-        "description": "Step-by-step practice strengthens numeracy, problem solving, and answer techniques."
+      "guidedLearning": {
+        "title": "Guided Learning",
+        "description": "Teachers support students through lessons that are calm, engaging, and structured."
       },
-      "science": {
-        "title": "Science",
-        "description": "Clarifies key concepts with simpler explanations so abstract topics feel more approachable."
-      },
-      "belajarMembaca": {
-        "title": "Reading Foundation",
-        "description": "Patient early-reading guidance helps students build literacy basics more comfortably and confidently."
-      },
-      "kafa": {
-        "title": "KAFA",
-        "description": "Structured KAFA support helps students follow lessons more clearly and retain key topics more effectively."
-      },
-      "iqra": {
-        "title": "Iqra'",
-        "description": "Student-friendly Iqra' guidance builds reading familiarity gradually and more consistently."
-      },
-      "alQuran": {
-        "title": "Al-Quran",
-        "description": "Guided Quran reading support focuses on fluency, pronunciation, and student confidence."
+      "progressMonitoring": {
+        "title": "Progress Monitoring",
+        "description": "Improvement is reviewed regularly so parents can see how the child is growing."
       }
-    },
-    "levelsTitle": "Open to learners from",
-    "levels": {
-      "prasekolah": "Preschool",
-      "rendah": "Primary School (Years 1-6)",
-      "menengahRendah": "Lower Secondary (Forms 1-3)",
-      "spm": "SPM (Forms 4 & 5)",
-      "kafa": "KAFA",
-      "upkk": "UPKK"
+    }
+  },
+  "gallery": {
+    "eyebrow": "Activities",
+    "title": "Learning Activities",
+    "description": "A glimpse into the kinds of guided, interactive experiences children can enjoy at AL-FAHMU.",
+    "items": {
+      "classroomLearning": "Classroom Learning",
+      "quranSession": "Quran Session",
+      "groupActivity": "Group Activity",
+      "readingSession": "Reading Session",
+      "examWorkshop": "Exam Workshop",
+      "holidayProgram": "Holiday Program"
     }
   },
   "testimonials": {
-    "eyebrow": "What parents and students say",
-    "title": "Feedback that reflects real change in learning confidence",
-    "description": "We want every student to leave class not only having attended, but understanding more clearly, feeling more confident, and staying better prepared for school.",
+    "eyebrow": "Testimonials",
+    "title": "What Parents Say",
+    "description": "Parents appreciate the confidence, consistency, and calm improvement they see in their children.",
+    "childProgramLabel": "Child Program",
     "previous": "Previous testimonial",
     "next": "Next testimonial",
     "goTo": "Go to testimonial {{number}}",
     "items": {
       "reviewOne": {
-        "quote": "qisya ada kemajuan dan peningkatan dalam pelajaran...sblm ni markah 66, alhamdulillah exam akhir ni markah 94.",
-        "name": "Nuraliah Aqilah Binti Tarmizi",
-        "role": "Qisya Izz Zahra Izzah binti Zulkarnean",
+        "quote": "Assalamualaikum. So far, Alhamdulillah, Teacher Nasuha has been a very good teacher. I can clearly see the effort she puts into giving my child the best understanding, even though I know it is a little challenging because my child still has not fully mastered the basics of mathematics. She also has a cheerful personality, and my child enjoys learning with her.",
+        "name": "Nasuha Bt Ahmad @ Mustaffa",
+        "program": "Puan Zakiah binti Abd Rashid",
         "time": "8 months ago"
       },
       "reviewTwo": {
-        "quote": "Kasyaf seronok belajar..tak sabar tunggu hari sabtu pegi tuisyen.. :) :) :)",
-        "name": "Siti Aishah Binti Ismail",
-        "role": "Pn. Siti Salwa Binti Mohd Shari / Muhammad Kasyaf Rayyan Bin Saiffu Safuan",
-        "time": "1 month ago"
+        "quote": "Qisya has shown progress and improvement in her studies. Before this she scored 66, and alhamdulillah in the final exam she scored 94.",
+        "name": "Nuraliah Aqilah Binti Tarmizi",
+        "program": "Qisya Izz Zahra Izzah binti Zulkarnean",
+        "time": "8 months ago"
       },
       "reviewThree": {
-        "quote": "Cikgu mengajar dengan semangat. Mempunyai naluri pendidik dan bijak berkomunikasi dengan murid.",
-        "name": "Irsalina binti Ahmad Sobri",
-        "role": "En. Mohamad Faizal bin Tauhir / Hasif",
-        "time": "3 months ago"
+        "quote": "Kasyaf enjoys learning and cannot wait for Saturday tuition classes.",
+        "name": "Siti Aishah Binti Ismail",
+        "program": "Pn. Siti Salwa Binti Mohd Shari / Muhammad Kasyaf Rayyan Bin Saiffu Safuan",
+        "time": "1 month ago"
       },
       "reviewFour": {
-        "quote": "Better streaming line tonight. Teacher is very patient and likes kid. She managed to correct kid well.",
-        "name": "Wan Farah Nor Shahirah Binti Wan Mohamad Saifullizan",
-        "role": "Pn. Nurul Izzah / Ahmad Anas Baihaqi",
+        "quote": "Assalamualaikum. Alhamdulillah, Teacher Auni teaches with great enthusiasm and my child understands very easily. My child's academic performance is also improving. Thank you, Teacher Auni.",
+        "name": "Nur Auni Insyirah",
+        "program": "Dr. Aqilah Mukhtar Ahmad",
         "time": "8 months ago"
       },
       "reviewFive": {
-        "quote": "Assalamualaikum. Setakat ini, Alhamdulillah, Cikgu Nasuha seorang guru yang bagus. Nampak effort untuk memberikan anak saya pemahaman yang terbaik, walaupun saya sendiri lihat sedikit sukar memandangkan anak saya belum benar-benar menguasai asas matematik. Cikgu juga seorang yg berperwatakan ceria, dan anak saya suka belajar dengan cikgu.",
-        "name": "Nasuha Bt Ahmad @ Mustaffa",
-        "role": "Puan Zakiah binti Abd Rashid",
-        "time": "8 months ago"
+        "quote": "The teacher teaches with enthusiasm. She has the instincts of an educator and communicates wisely with students.",
+        "name": "Irsalina binti Ahmad Sobri",
+        "program": "En. Mohamad Faizal bin Tauhir / Hasif",
+        "time": "3 months ago"
       },
       "reviewSix": {
-        "quote": "My daughter has been learning english from Tcer Afifah, and I've seen a great improvement in her understanding and confidence. She has a very patient and encouraging teaching style, making learning fun with interactive activities by using an attractive video and picture. Raeesa used to struggle with blending sounds, but now she can confidently read simple words.",
+        "quote": "Better streaming line tonight. Teacher is very patient and likes kid. She managed to correct kid well.",
+        "name": "Wan Farah Nor Shahirah Binti Wan Mohamad Saifullizan",
+        "program": "Pn. Nurul Izzah / Ahmad Anas Baihaqi",
+        "time": "8 months ago"
+      },
+      "reviewSeven": {
+        "quote": "My daughter has been learning English from Tcer Afifah, and I have seen a great improvement in her understanding and confidence. She has a very patient and encouraging teaching style, making learning fun with interactive activities by using attractive videos and pictures. Raeesa used to struggle with blending sounds, but now she can confidently read simple words.",
         "name": "Siti Nur 'Afifah Sariat",
-        "role": "Pn. Nurul Izza / Raeesa Sofea",
+        "program": "Pn. Nurul Izza / Raeesa Sofea",
         "time": "7 months ago"
       }
     }
   },
-  "futurePortal": {
-    "eyebrow": "Future portal",
-    "title": "A digital portal experience designed for students, teachers, and operations",
-    "description": "Al-Fahmu Learning Centre is moving toward a more modern and organised learning system. In the future, student, teacher, and admin portals will support schedules, assignments, attendance, reports, and communication in a smoother and more efficient way.",
-    "note": "Coming soon: a modern portal experience for every role.",
-    "cardCta": "View preview",
-    "cards": {
-      "student": {
-        "title": "Student Portal",
-        "description": "Access learning materials, review schedules, and stay on top of assignments from one organised place."
-      },
-      "teacher": {
-        "title": "Teacher Portal",
-        "description": "Manage classes, share resources, and monitor student progress through a cleaner workflow."
-      },
-      "admin": {
-        "title": "Admin Dashboard",
-        "description": "Track tuition-centre operations, registrations, and important information with better visibility."
-      }
-    }
+  "finalCta": {
+    "title": "Give Your Child The Best Learning Experience",
+    "description": "Start your child’s learning journey with AL-FAHMU Learning Centre today.",
+    "primaryCta": "WhatsApp Us",
+    "secondaryCta": "Register Today"
   },
-  "infoBoard": {
-    "eyebrow": "Info board",
-    "title": "Key details that help parents decide more confidently",
-    "description": "We summarise the practical information parents usually want to know before registering, so it is easier to understand the class format, student levels, and the fastest way to reach us.",
-    "note": "A quick overview for parents who want the essentials first.",
-    "cards": {
-      "format": {
-        "title": "Flexible class format",
-        "description": "Lessons are arranged so students can join in a way that feels more comfortable and suitable for their learning needs.",
-        "points": {
-          "onlinePhysical": "Classes are available both online and in person based on what suits the student best.",
-          "structuredGuidance": "Clear learning flow supports revision, practice, and more consistent progress."
-        }
-      },
-      "learners": {
-        "title": "Who we support",
-        "description": "Our programmes are suitable for students who need stronger foundations, extra guidance, or more personalised learning support.",
-        "points": {
-          "levels": "Open to preschool, primary, secondary, KAFA, and UPKK learners.",
-          "subjects": "Focused on academic subjects, reading foundation, Iqra', and Al-Quran."
-        }
-      },
-      "enquiry": {
-        "title": "Enquiries and registration",
-        "description": "Parents can reach us quickly to ask about subjects, schedules, or available class slots.",
-        "points": {
-          "whatsapp": "WhatsApp is ideal for fast questions about schedules, subjects, and registration.",
-          "location": "Based in Putrajaya with learning options that feel more accessible and convenient."
-        }
-      }
-    },
-    "footerStrip": {
-      "responseLabel": "Response",
-      "responseValue": "Faster enquiries through WhatsApp",
-      "modeLabel": "Class options",
-      "modeValue": "Online & in-person",
-      "locationLabel": "Location",
-      "locationValue": "Putrajaya"
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let’s Talk About the Right Learning Path",
+    "description": "Reach out for programme enquiries, schedules, and registration guidance.",
+    "phoneLabel": "Phone",
+    "phoneValue": "+60 12-000 0000",
+    "addressLabel": "Address",
+    "addressValue": "Putrajaya",
+    "emailLabel": "Email",
+    "emailValue": "hello@alfahmu.edu.my",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Parent or guardian name",
+      "phone": "Phone",
+      "phonePlaceholder": "Example: 012-345 6789",
+      "childAge": "Child Age",
+      "childAgePlaceholder": "Example: 8",
+      "message": "Message",
+      "messagePlaceholder": "Tell us which programme you are interested in.",
+      "submit": "Submit"
     }
   },
   "footer": {
-    "tagline": "A learning centre committed to helping students learn with better understanding, stronger confidence, and greater readiness for the future.",
-    "quickLinks": "Quick links",
-    "portals": "Upcoming portals",
-    "actions": {
-      "title": "Next steps",
-      "items": {
-        "testimonials": "Read testimonials",
-        "infoBoard": "View info board",
-        "contact": "Contact us"
-      }
-    },
-    "rights": "Copyright 2026 Al-Fahmu Learning Centre. All rights reserved.",
-    "social": {
-      "whatsapp": "Al-Fahmu Learning Centre WhatsApp",
-      "instagram": "Al-Fahmu Learning Centre Instagram",
-      "facebook": "Al-Fahmu Learning Centre Facebook",
-      "comingSoon": "Coming soon"
-    }
-  },
-  "contact": {
-    "eyebrow": "Contact us",
-    "title": "Let's talk about the right class setup for your child",
-    "description": "Contact us for enquiries about subjects, class schedules, or registration. We are ready to help you choose the learning programme that best suits your child.",
-    "phoneLabel": "Phone / WhatsApp",
-    "phoneValue": "017-953 5676",
-    "emailLabel": "Email",
-    "emailValue": "aimanasrn@gmail.com",
-    "addressLabel": "Address",
-    "addressValue": "Putrajaya",
-    "whatsAppPrompt": "Need the fastest response? Message us directly on WhatsApp for class enquiries, schedules, and registration.",
-    "whatsAppCta": "Open WhatsApp",
-    "form": {
-      "name": "Name",
-      "namePlaceholder": "Your full name",
-      "phone": "Phone number",
-      "phonePlaceholder": "Example: 012-345 6789",
-      "email": "Email",
-      "emailPlaceholder": "you@email.com",
-      "message": "Message",
-      "messagePlaceholder": "Tell us which subjects or learning support you are looking for.",
-      "submit": "Send enquiry",
-      "submitting": "Sending...",
-      "success": "Thank you. Your enquiry has been recorded and is ready to connect to a backend later.",
-      "failure": "Sorry, something went wrong while sending. Please try again or contact us on WhatsApp.",
-      "errors": {
-        "requiredName": "Name is required",
-        "requiredPhone": "Phone number is required",
-        "requiredEmail": "Email is required",
-        "requiredMessage": "Message is required",
-        "invalidEmail": "Please enter a valid email address"
-      }
-    }
+    "description": "A warm and trusted learning centre in Putrajaya for academic growth, Islamic values, and character building.",
+    "quickLinks": "Quick Links",
+    "contactTitle": "Contact Info",
+    "socialTitle": "Social",
+    "rights": "© 2026 AL-FAHMU Learning Centre. All rights reserved."
   },
   "floatingWhatsApp": {
-    "label": "Open Al-Fahmu Learning Centre WhatsApp",
+    "label": "Open AL-FAHMU Learning Centre WhatsApp",
     "text": "Ask on WhatsApp"
   },
   "portal": {

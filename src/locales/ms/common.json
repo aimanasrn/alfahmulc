@@ -1,286 +1,255 @@
 {
   "brand": {
-    "name": "Al-Fahmu Learning Centre",
-    "tagline": "Membina kefahaman, keyakinan, dan fokus dalam pembelajaran"
+    "name": "AL-FAHMU Learning Centre",
+    "tagline": "Kecemerlangan akademik dengan nilai Islam dan bimbingan yang prihatin"
+  },
+  "topBar": {
+    "phone": "Hubungi: +60 12-000 0000",
+    "location": "Putrajaya",
+    "hours": "Dibuka setiap hari: 8:30 pagi - 6:00 petang"
   },
   "nav": {
     "home": "Laman Utama",
     "about": "Tentang",
-    "subjects": "Subjek",
-    "infoBoard": "Info Board",
+    "programs": "Program",
+    "activities": "Aktiviti",
+    "testimonials": "Testimoni",
     "contact": "Hubungi"
   },
   "cta": {
     "register": "Daftar Sekarang",
-    "registerEn": "Register Now"
+    "enrollNow": "Daftar Sekarang",
+    "whatsApp": "WhatsApp Kami"
   },
   "hero": {
-    "badge": "Program tersusun untuk pelajar sekolah rendah dan menengah",
-    "title": "Bantu Anak Lebih Faham, Yakin & Fokus Dalam Pelajaran",
-    "subtitle": "Kami membantu pelajar membina asas yang kukuh melalui pembelajaran yang mudah difahami, tersusun, dan sesuai dengan keperluan mereka. Setiap kelas direka untuk meningkatkan kefahaman, keyakinan, dan prestasi akademik.",
-    "primaryCta": "WhatsApp Kami",
-    "secondaryCta": "Lihat Subjek",
-    "highlights": {
-      "structured": {
-        "title": "Jadual belajar tersusun",
-        "description": "Kelas dibina dengan langkah yang jelas supaya pelajar tahu apa yang perlu dikuasai setiap minggu."
+    "badge": "Pusat Pembelajaran Dipercayai",
+    "title": "Menyuburkan Ilmu, Membina Sahsiah.",
+    "description": "Menyediakan pendidikan akademik dan Islam yang berkualiti untuk kanak-kanak melalui pengalaman pembelajaran yang moden, terarah, dan menarik.",
+    "primaryCta": "Daftar Sekarang",
+    "secondaryCta": "Ketahui Lagi",
+    "cardTitle": "Bimbingan mesra untuk pembelajaran yang berkembang",
+    "cardDescription": "Persekitaran pembelajaran yang seimbang untuk membantu anak berkembang dari segi akademik, rohani, dan keyakinan diri."
+  },
+  "stats": {
+    "items": {
+      "students": {
+        "value": "300+",
+        "label": "Pelajar"
       },
-      "personal": {
-        "title": "Bimbingan ikut keperluan",
-        "description": "Guru membantu pelajar yang perlukan ulang kaji tambahan tanpa membuat mereka rasa tertinggal."
+      "experience": {
+        "value": "10+",
+        "label": "Tahun Pengalaman"
       },
-      "progress": {
-        "title": "Fokus pada perubahan sebenar",
-        "description": "Kami utamakan kefahaman, keyakinan, dan disiplin belajar yang boleh dilihat dari semasa ke semasa."
+      "teachers": {
+        "value": "Guru Bertauliah",
+        "label": "Pengajar"
+      },
+      "method": {
+        "value": "Kaedah Moden",
+        "label": "Pembelajaran"
       }
-    },
-    "panel": {
-      "eyebrow": "Pengalaman premium",
-      "title": "Ruang pembelajaran yang terasa tenang dan meyakinkan",
-      "tag": "BM + EN",
-      "points": [
-        "Rutin kelas yang konsisten supaya pelajar lebih bersedia sebelum ujian dan peperiksaan.",
-        "Aktiviti penerangan yang mudah diikuti untuk membantu pelajar yang perlukan asas yang lebih kukuh.",
-        "Komunikasi yang lebih pantas melalui WhatsApp untuk pertanyaan kelas, jadual, dan pendaftaran."
-      ],
-      "quoteLabel": "Fokus kami",
-      "quote": "Setiap sesi direka untuk menjadikan pelajaran lebih mudah difahami, bukan sekadar lebih padat."
     }
   },
   "about": {
-    "eyebrow": "Kenapa ibu bapa memilih Al-Fahmu",
-    "title": "Pusat bimbingan yang mesra, profesional, dan fokus pada perkembangan sebenar pelajar",
-    "description": "Di Al-Fahmu Learning Centre, kami percaya setiap pelajar boleh berjaya apabila diberi bimbingan yang betul. Dengan guru yang mesra, pendekatan yang tersusun, serta kelas secara online dan bersemuka, kami menyediakan pengalaman pembelajaran yang lebih fokus, selesa, dan berkesan untuk setiap pelajar.",
-    "features": {
-      "structured": {
-        "title": "Silibus dipecah dengan kemas",
-        "description": "Topik diajar secara berperingkat supaya pelajar boleh membina kefahaman tanpa rasa terbeban."
+    "eyebrow": "Tentang kami",
+    "title": "Tentang AL-FAHMU",
+    "description": "AL-FAHMU Learning Centre membantu kanak-kanak berkembang melalui kecemerlangan akademik, nilai Islam, pembinaan sahsiah, dan bimbingan yang membina keyakinan. Kami percaya setiap pelajar memerlukan panduan yang sabar, struktur yang jelas, dan suasana yang selamat untuk berkembang mengikut kemampuan sendiri.",
+    "mission": {
+      "title": "Misi Kami",
+      "items": [
+        "Menyediakan bimbingan pembelajaran yang berfokus kepada kefahaman, bukan hafalan semata.",
+        "Membantu pelajar menguasai asas membaca, mengaji dan akademik secara berperingkat dan konsisten.",
+        "Mewujudkan suasana pembelajaran yang selesa, terarah dan berdisiplin.",
+        "Membimbing pelajar mengikut tahap kebolehan individu, bukan sekadar ikut umur atau tingkatan.",
+        "Bekerjasama dengan ibu bapa dalam memantau perkembangan anak."
+      ]
+    },
+    "vision": {
+      "title": "Visi Kami",
+      "description": "Melahirkan pelajar yang menguasai dan faham asas ilmu, berakhlak baik dan yakin dalam pembelajaran."
+    },
+    "objectives": {
+      "title": "Objektif Kami",
+      "items": [
+        "Membantu pelajar membaca dengan lancar dan memahami isi bacaan.",
+        "Memastikan pelajar menguasai asas mengaji, sebutan dan adab pembelajaran Al-Quran.",
+        "Mengukuhkan asas akademik murid sekolah rendah dalam subjek teras.",
+        "Meningkatkan kefahaman dan keyakinan pelajar sekolah menengah dalam pembelajaran.",
+        "Membentuk pelajar yang berdisiplin, berkeyakinan dan bermotivasi untuk belajar."
+      ]
+    }
+  },
+  "programs": {
+    "eyebrow": "Program",
+    "title": "Program Pembelajaran Kami",
+    "description": "Program yang disusun dengan teliti untuk menyokong pembelajaran akademik dan Islam pada pelbagai peringkat.",
+    "learnMore": "Ketahui Lagi",
+    "items": {
+      "academicSupport": {
+        "title": "Sokongan Akademik",
+        "description": "Bimbingan tambahan untuk subjek teras sekolah dengan penerangan yang lebih jelas dan latihan yang lebih teratur."
       },
-      "confidence": {
-        "title": "Keyakinan dibina sedikit demi sedikit",
-        "description": "Sokongan yang konsisten membantu pelajar berani bertanya, mencuba, dan memperbaiki kelemahan."
+      "quranClasses": {
+        "title": "Kelas Al-Quran",
+        "description": "Membina kelancaran bacaan, kesedaran tajwid, dan keselesaan belajar Al-Quran dalam suasana yang menyokong."
       },
-      "guidance": {
-        "title": "Bimbingan yang dekat dengan pelajar",
-        "description": "Penerangan yang sabar dan mudah difahami menjadikan suasana kelas lebih mesra dan fokus."
+      "homeworkGuidance": {
+        "title": "Bimbingan Kerja Rumah",
+        "description": "Sokongan harian yang membantu anak lebih konsisten, teratur, dan kurang tertekan dengan tugasan."
       },
-      "progress": {
-        "title": "Kemajuan lebih mudah diperhatikan",
-        "description": "Dengan rutin dan sasaran yang jelas, ibu bapa dapat melihat perubahan pada disiplin dan pemahaman anak."
+      "readingProgram": {
+        "title": "Program Membaca",
+        "description": "Latihan asas membaca yang membantu keyakinan literasi berkembang langkah demi langkah."
+      },
+      "examPreparation": {
+        "title": "Persediaan Peperiksaan",
+        "description": "Ulang kaji berfokus, teknik menjawab, dan semakan terarah untuk penilaian sekolah yang penting."
+      },
+      "holidayProgram": {
+        "title": "Program Cuti Sekolah",
+        "description": "Sesi bermakna ketika cuti sekolah yang mengekalkan pembelajaran secara menyeronokkan dan tersusun."
       }
     }
   },
-  "subjects": {
-    "eyebrow": "Subjek & program",
-    "title": "Pilihan subjek dan bimbingan yang selari dengan keperluan sebenar pelajar",
-    "description": "Kami menawarkan pelbagai subjek dan program sokongan pembelajaran, termasuk akademik teras, asas membaca, KAFA, Iqra', dan Al-Quran. Setiap program disusun bagi membantu pelajar menguasai asas, memperbaiki kelemahan, dan belajar dengan lebih yakin.",
+  "whyChooseUs": {
+    "eyebrow": "Kenapa pilih kami",
+    "title": "Kenapa Ibu Bapa Memilih AL-FAHMU",
+    "description": "Keluarga memilih AL-FAHMU kerana pengalaman pembelajaran yang lebih mesra, dekat, dan tetap tersusun secara profesional.",
     "items": {
-      "bahasaMelayu": {
-        "title": "Bahasa Melayu",
-        "description": "Fokus pada kefahaman, penulisan, dan penggunaan bahasa yang lebih kemas untuk tugasan dan peperiksaan."
+      "smallClassSize": "Saiz Kelas Kecil",
+      "experiencedTeachers": "Guru Berpengalaman",
+      "interactiveLearning": "Pembelajaran Interaktif",
+      "characterBuilding": "Pembinaan Sahsiah",
+      "safeEnvironment": "Persekitaran Selamat",
+      "parentCommunication": "Komunikasi Dengan Ibu Bapa"
+    }
+  },
+  "learningMethod": {
+    "eyebrow": "Pendekatan pembelajaran",
+    "title": "Kaedah Pembelajaran Kami",
+    "description": "Empat langkah mudah yang menjadikan perkembangan pelajar lebih jelas untuk ibu bapa dan anak.",
+    "items": {
+      "assessment": {
+        "title": "Penilaian",
+        "description": "Kami bermula dengan memahami tahap semasa, tabiat belajar, dan keperluan anak."
       },
-      "english": {
-        "title": "English",
-        "description": "Membantu pelajar meningkatkan reading, writing, dan confidence ketika menggunakan English setiap hari."
+      "learningPlan": {
+        "title": "Pelan Pembelajaran",
+        "description": "Hala tuju pembelajaran yang sesuai disusun berdasarkan kekuatan, jurang, dan sasaran anak."
       },
-      "mathematics": {
-        "title": "Matematik",
-        "description": "Latihan demi latihan untuk mengukuhkan asas kiraan, penyelesaian masalah, dan teknik menjawab."
+      "guidedLearning": {
+        "title": "Pembelajaran Terarah",
+        "description": "Guru membimbing pelajar melalui sesi yang tenang, menarik, dan tersusun."
       },
-      "science": {
-        "title": "Sains",
-        "description": "Penjelasan konsep yang ringkas tetapi jelas supaya pelajar lebih mudah memahami topik yang abstrak."
-      },
-      "belajarMembaca": {
-        "title": "Belajar Membaca",
-        "description": "Bimbingan awal membaca yang sabar dan berperingkat untuk membantu pelajar membina asas literasi dengan lebih yakin."
-      },
-      "kafa": {
-        "title": "KAFA",
-        "description": "Sokongan pembelajaran KAFA dengan penerangan yang lebih tersusun untuk bantu pelajar faham dan mengingat dengan lebih baik."
-      },
-      "iqra": {
-        "title": "Iqra'",
-        "description": "Pendekatan mesra pelajar untuk mengukuhkan bacaan Iqra' secara beransur-ansur dan lebih konsisten."
-      },
-      "alQuran": {
-        "title": "Al-Quran",
-        "description": "Bimbingan bacaan Al-Quran yang kemas dan fokus pada kelancaran, sebutan, dan keyakinan pelajar."
+      "progressMonitoring": {
+        "title": "Pemantauan Kemajuan",
+        "description": "Perkembangan disemak secara berkala supaya ibu bapa dapat melihat perubahan anak dengan jelas."
       }
-    },
-    "levelsTitle": "Terbuka kepada pelajar",
-    "levels": {
-      "prasekolah": "Prasekolah",
-      "rendah": "Sekolah Rendah (Tahun 1-6)",
-      "menengahRendah": "Menengah Rendah (Tingkatan 1-3)",
-      "spm": "SPM (Tingkatan 4 & 5)",
-      "kafa": "KAFA",
-      "upkk": "UPKK"
+    }
+  },
+  "gallery": {
+    "eyebrow": "Aktiviti",
+    "title": "Aktiviti Pembelajaran",
+    "description": "Lihat gambaran pengalaman pembelajaran yang terarah, interaktif, dan mesra di AL-FAHMU.",
+    "items": {
+      "classroomLearning": "Pembelajaran Dalam Kelas",
+      "quranSession": "Sesi Al-Quran",
+      "groupActivity": "Aktiviti Berkumpulan",
+      "readingSession": "Sesi Membaca",
+      "examWorkshop": "Bengkel Peperiksaan",
+      "holidayProgram": "Program Cuti Sekolah"
     }
   },
   "testimonials": {
-    "eyebrow": "Apa kata ibu bapa & pelajar",
-    "title": "Maklum balas yang menunjukkan perubahan sebenar dalam pembelajaran",
-    "description": "Kami mahu setiap pelajar bukan sahaja hadir ke kelas, tetapi benar-benar lebih faham, lebih yakin, dan lebih bersedia menghadapi pelajaran mereka.",
+    "eyebrow": "Testimoni",
+    "title": "Apa Kata Ibu Bapa",
+    "description": "Ibu bapa menghargai keyakinan, konsistensi, dan perubahan positif yang mereka lihat pada anak-anak.",
+    "childProgramLabel": "Program Anak",
     "previous": "Testimoni sebelumnya",
     "next": "Testimoni seterusnya",
     "goTo": "Pergi ke testimoni {{number}}",
     "items": {
       "reviewOne": {
-        "quote": "qisya ada kemajuan dan peningkatan dalam pelajaran...sblm ni markah 66, alhamdulillah exam akhir ni markah 94.",
-        "name": "Nuraliah Aqilah Binti Tarmizi",
-        "role": "Qisya Izz Zahra Izzah binti Zulkarnean",
+        "quote": "Assalamualaikum. Setakat ini, Alhamdulillah, Cikgu Nasuha seorang guru yang bagus. Nampak effort untuk memberikan anak saya pemahaman yang terbaik, walaupun saya sendiri lihat sedikit sukar memandangkan anak saya belum benar-benar menguasai asas matematik. Cikgu juga seorang yang berperwatakan ceria, dan anak saya suka belajar dengan cikgu.",
+        "name": "Nasuha Bt Ahmad @ Mustaffa",
+        "program": "Puan Zakiah binti Abd Rashid",
         "time": "8 bulan lalu"
       },
       "reviewTwo": {
-        "quote": "Kasyaf seronok belajar..tak sabar tunggu hari sabtu pegi tuisyen.. :) :) :)",
-        "name": "Siti Aishah Binti Ismail",
-        "role": "Pn. Siti Salwa Binti Mohd Shari / Muhammad Kasyaf Rayyan Bin Saiffu Safuan",
-        "time": "1 bulan lalu"
+        "quote": "Qisya ada kemajuan dan peningkatan dalam pelajaran. Sebelum ini markah 66, alhamdulillah exam akhir ini markah 94.",
+        "name": "Nuraliah Aqilah Binti Tarmizi",
+        "program": "Qisya Izz Zahra Izzah binti Zulkarnean",
+        "time": "8 bulan lalu"
       },
       "reviewThree": {
-        "quote": "Cikgu mengajar dengan semangat. Mempunyai naluri pendidik dan bijak berkomunikasi dengan murid.",
-        "name": "Irsalina binti Ahmad Sobri",
-        "role": "En. Mohamad Faizal bin Tauhir / Hasif",
-        "time": "3 bulan lalu"
+        "quote": "Kasyaf seronok belajar, tak sabar tunggu hari Sabtu pergi tuisyen.",
+        "name": "Siti Aishah Binti Ismail",
+        "program": "Pn. Siti Salwa Binti Mohd Shari / Muhammad Kasyaf Rayyan Bin Saiffu Safuan",
+        "time": "1 bulan lalu"
       },
       "reviewFour": {
-        "quote": "Better streaming line tonight. Teacher is very patient and likes kid. She managed to correct kid well.",
-        "name": "Wan Farah Nor Shahirah Binti Wan Mohamad Saifullizan",
-        "role": "Pn. Nurul Izzah / Ahmad Anas Baihaqi",
+        "quote": "Assalamualaikum wbt, Alhamdulillah, cikgu Auni mengajar dengan sangat bersemangat dan anak sangat mudah faham. Prestasi akademik anak juga semakin meningkat. Terima kasih cikgu Auni.",
+        "name": "Nur Auni Insyirah",
+        "program": "Dr. Aqilah Mukhtar Ahmad",
         "time": "8 bulan lalu"
       },
       "reviewFive": {
-        "quote": "Assalamualaikum. Setakat ini, Alhamdulillah, Cikgu Nasuha seorang guru yang bagus. Nampak effort untuk memberikan anak saya pemahaman yang terbaik, walaupun saya sendiri lihat sedikit sukar memandangkan anak saya belum benar-benar menguasai asas matematik. Cikgu juga seorang yg berperwatakan ceria, dan anak saya suka belajar dengan cikgu.",
-        "name": "Nasuha Bt Ahmad @ Mustaffa",
-        "role": "Puan Zakiah binti Abd Rashid",
-        "time": "8 bulan lalu"
+        "quote": "Cikgu mengajar dengan semangat. Mempunyai naluri pendidik dan bijak berkomunikasi dengan murid.",
+        "name": "Irsalina binti Ahmad Sobri",
+        "program": "En. Mohamad Faizal bin Tauhir / Hasif",
+        "time": "3 bulan lalu"
       },
       "reviewSix": {
-        "quote": "My daughter has been learning english from Tcer Afifah, and I've seen a great improvement in her understanding and confidence. She has a very patient and encouraging teaching style, making learning fun with interactive activities by using an attractive video and picture. Raeesa used to struggle with blending sounds, but now she can confidently read simple words.",
+        "quote": "Better streaming line tonight. Teacher is very patient and likes kid. She managed to correct kid well.",
+        "name": "Wan Farah Nor Shahirah Binti Wan Mohamad Saifullizan",
+        "program": "Pn. Nurul Izzah / Ahmad Anas Baihaqi",
+        "time": "8 bulan lalu"
+      },
+      "reviewSeven": {
+        "quote": "My daughter has been learning English from Tcer Afifah, and I have seen a great improvement in her understanding and confidence. She has a very patient and encouraging teaching style, making learning fun with interactive activities by using attractive videos and pictures. Raeesa used to struggle with blending sounds, but now she can confidently read simple words.",
         "name": "Siti Nur 'Afifah Sariat",
-        "role": "Pn. Nurul Izza / Raeesa Sofea",
+        "program": "Pn. Nurul Izza / Raeesa Sofea",
         "time": "7 bulan lalu"
       }
     }
   },
-  "futurePortal": {
-    "eyebrow": "Portal masa depan",
-    "title": "Portal digital yang bakal menyatukan ibu bapa, guru, dan pelajar",
-    "description": "Al-Fahmu Learning Centre sedang bergerak ke arah sistem pembelajaran yang lebih moden dan teratur. Pada masa hadapan, portal pelajar, guru, dan admin akan membantu pengurusan jadual, tugasan, kehadiran, laporan, dan komunikasi dengan lebih mudah dan efisien.",
-    "note": "Akan datang: pengalaman portal moden untuk semua peranan.",
-    "cardCta": "Lihat pratonton",
-    "cards": {
-      "student": {
-        "title": "Portal Pelajar",
-        "description": "Akses bahan pembelajaran, semak jadual, dan ikuti tugasan dengan lebih teratur di satu tempat."
-      },
-      "teacher": {
-        "title": "Portal Guru",
-        "description": "Urus kelas, kongsi bahan, dan pantau perkembangan pelajar melalui aliran kerja yang lebih kemas."
-      },
-      "admin": {
-        "title": "Dashboard Admin",
-        "description": "Pantau operasi pusat tuisyen, daftar pelajar, dan susun maklumat penting secara lebih menyeluruh."
-      }
-    }
+  "finalCta": {
+    "title": "Berikan Anak Anda Pengalaman Pembelajaran Terbaik",
+    "description": "Mulakan perjalanan pembelajaran anak anda bersama AL-FAHMU Learning Centre hari ini.",
+    "primaryCta": "WhatsApp Kami",
+    "secondaryCta": "Daftar Hari Ini"
   },
-  "infoBoard": {
-    "eyebrow": "Info board",
-    "title": "Maklumat penting yang membantu ibu bapa membuat keputusan dengan lebih cepat",
-    "description": "Kami ringkaskan perkara utama yang biasanya ingin diketahui oleh ibu bapa sebelum mendaftar, supaya anda boleh lihat dengan jelas format kelas, tahap pelajar, dan cara paling mudah untuk bertanya.",
-    "note": "Sesuai untuk ibu bapa yang mahu gambaran cepat sebelum daftar.",
-    "cards": {
-      "format": {
-        "title": "Format kelas yang fleksibel",
-        "description": "Sesi pembelajaran disusun supaya pelajar boleh ikut kelas dengan lebih selesa mengikut keadaan dan keperluan mereka.",
-        "points": {
-          "onlinePhysical": "Kelas ditawarkan secara online dan bersemuka mengikut kesesuaian pelajar.",
-          "structuredGuidance": "Susunan pembelajaran jelas untuk ulang kaji, latihan, dan kemajuan yang lebih konsisten."
-        }
-      },
-      "learners": {
-        "title": "Siapa yang kami bantu",
-        "description": "Program kami sesuai untuk pelajar yang perlukan asas yang lebih kukuh, bimbingan tambahan, atau sokongan lebih dekat.",
-        "points": {
-          "levels": "Terbuka untuk prasekolah, sekolah rendah, menengah, KAFA, dan UPKK.",
-          "subjects": "Fokus pada subjek akademik, membaca, Iqra', dan Al-Quran."
-        }
-      },
-      "enquiry": {
-        "title": "Pertanyaan dan pendaftaran",
-        "description": "Ibu bapa boleh hubungi kami dengan cepat untuk semak subjek, jadual, atau slot yang masih tersedia.",
-        "points": {
-          "whatsapp": "WhatsApp sesuai untuk pertanyaan pantas berkaitan jadual, subjek, dan pendaftaran.",
-          "location": "Berpusat di Putrajaya dengan pilihan pembelajaran yang lebih dekat dan mudah dicapai."
-        }
-      }
-    },
-    "footerStrip": {
-      "responseLabel": "Respons",
-      "responseValue": "Pertanyaan lebih cepat melalui WhatsApp",
-      "modeLabel": "Pilihan kelas",
-      "modeValue": "Online & bersemuka",
-      "locationLabel": "Lokasi",
-      "locationValue": "Putrajaya"
+  "contact": {
+    "eyebrow": "Hubungi",
+    "title": "Mari Bincang Laluan Pembelajaran Yang Sesuai",
+    "description": "Hubungi kami untuk pertanyaan program, jadual, dan panduan pendaftaran.",
+    "phoneLabel": "Telefon",
+    "phoneValue": "+60 12-000 0000",
+    "addressLabel": "Alamat",
+    "addressValue": "Putrajaya",
+    "emailLabel": "Emel",
+    "emailValue": "hello@alfahmu.edu.my",
+    "form": {
+      "name": "Nama",
+      "namePlaceholder": "Nama ibu bapa atau penjaga",
+      "phone": "Telefon",
+      "phonePlaceholder": "Contoh: 012-345 6789",
+      "childAge": "Umur Anak",
+      "childAgePlaceholder": "Contoh: 8",
+      "message": "Mesej",
+      "messagePlaceholder": "Beritahu kami program yang anda minati.",
+      "submit": "Hantar"
     }
   },
   "footer": {
-    "tagline": "Pusat bimbingan yang komited membantu pelajar belajar dengan lebih faham, lebih yakin, dan lebih bersedia untuk masa depan.",
-    "quickLinks": "Pautan pantas",
-    "portals": "Portal akan datang",
-    "actions": {
-      "title": "Langkah seterusnya",
-      "items": {
-        "testimonials": "Lihat testimoni",
-        "infoBoard": "Lihat info board",
-        "contact": "Hubungi kami"
-      }
-    },
-    "rights": "Copyright 2026 Al-Fahmu Learning Centre. Semua hak terpelihara.",
-    "social": {
-      "whatsapp": "WhatsApp Al-Fahmu Learning Centre",
-      "instagram": "Instagram Al-Fahmu Learning Centre",
-      "facebook": "Facebook Al-Fahmu Learning Centre",
-      "comingSoon": "Akan datang"
-    }
-  },
-  "contact": {
-    "eyebrow": "Hubungi kami",
-    "title": "Mari berbincang tentang kelas yang paling sesuai untuk anak anda",
-    "description": "Hubungi kami untuk pertanyaan mengenai subjek, jadual kelas, atau pendaftaran. Kami sedia membantu anda memilih program pembelajaran yang paling sesuai untuk anak anda.",
-    "phoneLabel": "Telefon / WhatsApp",
-    "phoneValue": "017-953 5676",
-    "emailLabel": "Emel",
-    "emailValue": "aimanasrn@gmail.com",
-    "addressLabel": "Alamat",
-    "addressValue": "Putrajaya",
-    "whatsAppPrompt": "Ingin jawapan paling cepat? Hantar mesej terus ke WhatsApp kami untuk pertanyaan kelas, jadual, dan pendaftaran.",
-    "whatsAppCta": "Buka WhatsApp",
-    "form": {
-      "name": "Nama",
-      "namePlaceholder": "Nama penuh anda",
-      "phone": "Nombor telefon",
-      "phonePlaceholder": "Contoh: 012-345 6789",
-      "email": "Emel",
-      "emailPlaceholder": "anda@email.com",
-      "message": "Mesej",
-      "messagePlaceholder": "Beritahu kami subjek atau keperluan pembelajaran yang anda cari.",
-      "submit": "Hantar pertanyaan",
-      "submitting": "Menghantar...",
-      "success": "Terima kasih. Pertanyaan anda telah direkodkan dan sedia untuk dihubungkan ke backend kemudian.",
-      "failure": "Maaf, berlaku masalah semasa menghantar. Sila cuba lagi atau hubungi kami di WhatsApp.",
-      "errors": {
-        "requiredName": "Nama diperlukan",
-        "requiredPhone": "Nombor telefon diperlukan",
-        "requiredEmail": "Emel diperlukan",
-        "requiredMessage": "Mesej diperlukan",
-        "invalidEmail": "Masukkan emel yang sah"
-      }
-    }
+    "description": "Pusat pembelajaran yang mesra dan dipercayai di Putrajaya untuk pertumbuhan akademik, nilai Islam, dan pembinaan sahsiah.",
+    "quickLinks": "Pautan Pantas",
+    "contactTitle": "Maklumat Hubungan",
+    "socialTitle": "Sosial",
+    "rights": "© 2026 AL-FAHMU Learning Centre. Hak cipta terpelihara."
   },
   "floatingWhatsApp": {
-    "label": "Buka WhatsApp Al-Fahmu Learning Centre",
+    "label": "Buka WhatsApp AL-FAHMU Learning Centre",
     "text": "Tanya di WhatsApp"
   },
   "portal": {
