@@ -1,6 +1,7 @@
 import { BookOpen, GraduationCap, Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { ScrollReveal } from "../components/ui/ScrollReveal";
+import { HeroGrainient } from "../components/ui/HeroGrainient";
 import { buttonVariants } from "../components/ui/Button";
 
 export function HeroSection() {
@@ -8,6 +9,7 @@ export function HeroSection() {
 
   return (
     <section className="hero-section" id="home">
+      <HeroGrainient />
       <div className="container hero-section__grid">
         <ScrollReveal className="hero-copy">
           <span className="hero-copy__badge">{t("hero.badge")}</span>
