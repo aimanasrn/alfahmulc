@@ -14,7 +14,7 @@ Object.defineProperty(window, "IntersectionObserver", {
   value: MockIntersectionObserver,
 });
 
-test("renders core landing page sections", () => {
+test("renders the bilingual landing page sections", () => {
   render(
     <MemoryRouter>
       <HomePage />
@@ -22,28 +22,16 @@ test("renders core landing page sections", () => {
   );
 
   expect(screen.getByRole("navigation")).toBeInTheDocument();
-  expect(screen.getByRole("heading", { name: /Bantu Anak/i })).toBeInTheDocument();
+  expect(screen.getAllByText(/Putrajaya/i).length).toBeGreaterThan(0);
+  expect(screen.getByRole("heading", { name: /Menyuburkan Ilmu, Membina Sahsiah/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /Tentang AL-FAHMU/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /Program Pembelajaran Kami/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /Kenapa Ibu Bapa Memilih AL-FAHMU/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /Kaedah Pembelajaran Kami/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /Aktiviti Pembelajaran/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /Apa Kata Ibu Bapa/i })).toBeInTheDocument();
   expect(
-    screen.getByRole("heading", {
-      name: /Pusat bimbingan yang mesra, profesional, dan fokus pada perkembangan sebenar pelajar/i,
-    }),
+    screen.getByRole("heading", { name: /Berikan Anak Anda Pengalaman Pembelajaran Terbaik/i }),
   ).toBeInTheDocument();
-  expect(screen.getByRole("heading", { name: /Subjek/i })).toBeInTheDocument();
-  expect(screen.getByRole("heading", { name: /KAFA/i })).toBeInTheDocument();
-  expect(
-    screen.getAllByRole("heading", {
-      name: /Maklum balas yang menunjukkan perubahan sebenar dalam pembelajaran/i,
-    }).length,
-  ).toBeGreaterThan(0);
-  expect(screen.getAllByRole("button", { name: /Testimoni seterusnya/i }).length).toBeGreaterThan(0);
-  expect(
-    screen.getByRole("heading", {
-      name: /Maklumat penting yang membantu ibu bapa membuat keputusan dengan lebih cepat/i,
-    }),
-  ).toBeInTheDocument();
-  expect(screen.getByRole("heading", { name: /Mari berbincang/i })).toBeInTheDocument();
-  expect(screen.getByRole("heading", { name: /Pautan pantas/i })).toBeInTheDocument();
-  expect(
-    screen.getByRole("link", { name: /Buka WhatsApp Al-Fahmu Learning Centre/i }),
-  ).toBeInTheDocument();
+  expect(screen.getAllByRole("link", { name: /Daftar Sekarang/i }).length).toBeGreaterThan(0);
 });

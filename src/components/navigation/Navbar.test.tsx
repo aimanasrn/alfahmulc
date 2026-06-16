@@ -19,5 +19,5 @@ test("switches language from Malay to English", async () => {
 
   await user.click(screen.getByRole("button", { name: "EN" }));
 
-  expect(screen.getByRole("link", { name: "Register Now" })).toBeInTheDocument();
+  expect(screen.getAllByRole("link", { name: "Enroll Now" }).length).toBeGreaterThan(0);
 });

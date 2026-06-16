@@ -1,23 +1,33 @@
 import Footer from "../components/common/Footer";
 import { FloatingWhatsAppButton } from "../components/common/FloatingWhatsAppButton";
-import { Navbar } from "../components/navigation/Navbar";
-import { AboutSection } from "../sections/AboutSection";
-import { ContactSection } from "../sections/ContactSection";
+import { TopBarSection } from "../sections/TopBarSection";
+import { HeaderSection } from "../sections/HeaderSection";
 import { HeroSection } from "../sections/HeroSection";
-import { InfoBoardSection } from "../sections/InfoBoardSection";
-import { SubjectsSection } from "../sections/SubjectsSection";
+import { StatsSection } from "../sections/StatsSection";
+import { AboutSection } from "../sections/AboutSection";
+import { ProgramsSection } from "../sections/ProgramsSection";
+import { WhyChooseUsSection } from "../sections/WhyChooseUsSection";
+import { LearningMethodSection } from "../sections/LearningMethodSection";
+import { GallerySection } from "../sections/GallerySection";
 import { TestimonialsSection } from "../sections/TestimonialsSection";
+import { FinalCtaSection } from "../sections/FinalCtaSection";
+import { ContactSection } from "../sections/ContactSection";
 
 export default function HomePage() {
   return (
     <>
-      <Navbar />
+      <TopBarSection />
+      <HeaderSection />
       <main>
         <HeroSection />
+        <StatsSection />
         <AboutSection />
-        <SubjectsSection />
+        <ProgramsSection />
+        <WhyChooseUsSection />
+        <LearningMethodSection />
+        <GallerySection />
         <TestimonialsSection />
-        <InfoBoardSection />
+        <FinalCtaSection />
         <ContactSection />
       </main>
       <Footer />

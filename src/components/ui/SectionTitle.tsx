@@ -1,25 +1,23 @@
-import { cn } from "../../utils/cn";
-
 type SectionTitleProps = {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
-  description: string;
+  description?: string;
   align?: "left" | "center";
+  titleId?: string;
 };
 
 export function SectionTitle({
   eyebrow,
   title,
   description,
-  align = "left",
+  align = "center",
+  titleId,
 }: SectionTitleProps) {
   return (
-    <div className={cn("max-w-2xl", align === "center" ? "mx-auto text-center" : "text-left")}>
-      <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-brand-500">
-        {eyebrow}
-      </p>
-      <h2 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">{title}</h2>
-      <p className="mt-4 text-base leading-7 text-slate-600">{description}</p>
+    <div className={align === "left" ? "section-title section-title--left" : "section-title"}>
+      {eyebrow ? <p className="section-title__eyebrow">{eyebrow}</p> : null}
+      <h2 id={titleId}>{title}</h2>
+      {description ? <p className="section-title__description">{description}</p> : null}
     </div>
   );
 }

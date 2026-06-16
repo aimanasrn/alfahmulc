@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { Button } from "./Button";
 import { cn } from "../../utils/cn";
 
 const languages = [
@@ -12,23 +11,20 @@ export function LanguageSwitcher() {
   const activeLanguage = i18n.resolvedLanguage ?? i18n.language;
 
   return (
-    <div className="inline-flex items-center gap-1 rounded-full border border-slate-200/80 bg-white/80 p-1 backdrop-blur">
+    <div aria-label="Language switcher" className="language-switcher" role="group">
       {languages.map((language) => {
         const isActive = activeLanguage === language.code;
 
         return (
-          <Button
+          <button
             key={language.code}
             aria-pressed={isActive}
-            className={cn(
-              "min-w-[2.8rem] px-2.5 py-2 text-[11px] shadow-none sm:px-3 sm:text-xs",
-              isActive && "bg-slate-900 text-white hover:bg-slate-900",
-            )}
+            className={cn("language-switcher__button", isActive && "is-active")}
             onClick={() => void i18n.changeLanguage(language.code)}
-            variant="ghost"
+            type="button"
           >
             {language.label}
-          </Button>
+          </button>
         );
       })}
     </div>
