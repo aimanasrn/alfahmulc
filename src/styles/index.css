@@ -654,6 +654,11 @@ textarea:focus-visible {
   margin-bottom: 1rem;
   background: rgba(11, 77, 162, 0.1);
   color: var(--color-primary);
+  transition:
+    transform 220ms ease,
+    background-color 220ms ease,
+    color 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .stat-card strong {
@@ -734,6 +739,11 @@ textarea:focus-visible {
 
 .about-card svg {
   color: var(--color-accent);
+  transition:
+    transform 220ms ease,
+    background-color 220ms ease,
+    color 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .about-card__list,
@@ -794,6 +804,7 @@ textarea:focus-visible {
   margin-top: 1rem;
   color: var(--color-primary);
   font-weight: 700;
+  transition: transform 220ms ease, color 220ms ease;
 }
 
 .why-choose-us {
@@ -860,6 +871,11 @@ textarea:focus-visible {
   background: linear-gradient(135deg, rgba(11, 77, 162, 0.14), rgba(244, 194, 13, 0.28));
   color: var(--color-primary-dark);
   font-weight: 800;
+  transition:
+    transform 220ms ease,
+    background-color 220ms ease,
+    color 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .gallery-grid {
@@ -895,6 +911,7 @@ textarea:focus-visible {
 .gallery-card h3 {
   margin: 0;
   padding: 1rem 1.15rem 1.2rem;
+  transition: transform 220ms ease, color 220ms ease;
 }
 
 .testimonial-grid {
@@ -983,6 +1000,7 @@ textarea:focus-visible {
   display: flex;
   gap: 0.25rem;
   color: var(--color-accent);
+  transition: transform 220ms ease, color 220ms ease;
 }
 
 .testimonial-marquee-card p {
@@ -1032,6 +1050,7 @@ textarea:focus-visible {
   font-family: "Poppins", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
+  transition: transform 220ms ease, color 220ms ease;
 }
 
 .testimonial-card__meta {
@@ -1043,6 +1062,70 @@ textarea:focus-visible {
   display: flex;
   gap: 0.25rem;
   margin-bottom: 1rem;
+  transition: transform 220ms ease, color 220ms ease;
+}
+
+.stat-card:hover .stat-card__icon,
+.stat-card:focus-within .stat-card__icon,
+.program-card:hover .program-card__icon,
+.program-card:focus-within .program-card__icon,
+.method-card:hover .method-card__number,
+.method-card:focus-within .method-card__number,
+.about-card:hover svg,
+.about-card:focus-within svg {
+  transform: translateY(-2px) scale(1.06);
+  color: var(--color-primary-dark);
+  box-shadow: 0 12px 24px rgba(244, 194, 13, 0.18);
+}
+
+.stat-card:hover .stat-card__icon,
+.stat-card:focus-within .stat-card__icon,
+.program-card:hover .program-card__icon,
+.program-card:focus-within .program-card__icon,
+.method-card:hover .method-card__number,
+.method-card:focus-within .method-card__number {
+  background: linear-gradient(135deg, rgba(244, 194, 13, 0.24), rgba(11, 77, 162, 0.16));
+}
+
+.program-card:hover a,
+.program-card:focus-within a {
+  transform: translateX(4px);
+  color: var(--color-primary-dark);
+}
+
+.gallery-card:hover h3,
+.gallery-card:focus-within h3 {
+  color: var(--color-primary);
+}
+
+.testimonial-card:hover,
+.testimonial-card:focus-within {
+  transform: translateY(-4px) scale(1.005);
+}
+
+.testimonial-marquee-card:hover,
+.testimonial-marquee-card:focus-within {
+  transform: translateY(-4px) scale(1.008);
+  box-shadow: 0 20px 40px rgba(10, 40, 90, 0.12);
+}
+
+.testimonial-card:hover .testimonial-card__avatar,
+.testimonial-card:focus-within .testimonial-card__avatar {
+  transform: scale(1.05);
+}
+
+.testimonial-marquee-card:hover .testimonial-marquee-card__stars,
+.testimonial-marquee-card:focus-within .testimonial-marquee-card__stars,
+.testimonial-card:hover .testimonial-card__stars,
+.testimonial-card:focus-within .testimonial-card__stars {
+  color: #e7b700;
+}
+
+.contact-form-card:hover,
+.contact-form-card:focus-within,
+.about-objectives:hover,
+.about-objectives:focus-within {
+  background: rgba(255, 255, 255, 0.96);
 }
 
 .testimonial-card__quote {
