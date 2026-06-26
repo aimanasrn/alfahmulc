@@ -27,13 +27,13 @@ export function HeaderSection() {
           <img alt="AL-FAHMU Learning Centre logo" className="site-brand__logo" src="/logo.png" />
           <span className="site-brand__text">
             <strong>{t("brand.name")}</strong>
-            <small>{t("brand.tagline")}</small>
+            <small className="site-brand__tagline">{t("brand.tagline")}</small>
           </span>
         </a>
 
         <nav aria-label="Primary navigation" className="site-nav">
           {links.map((link) => (
-            <a key={link.id} className="site-nav__link" href={`#${link.id}`}>
+            <a key={link.id} className="site-nav__link site-nav__link--compact" href={`#${link.id}`}>
               {link.label}
             </a>
           ))}
@@ -41,7 +41,7 @@ export function HeaderSection() {
 
         <div className="site-header__actions">
           <LanguageSwitcher />
-          <a className={cn(buttonVariants("primary"), "site-header__cta")} href="#contact">
+          <a className={cn(buttonVariants("primary"), "site-header__cta", "site-header__cta--compact")} href="#contact">
             {t("cta.enrollNow")}
           </a>
           <button
@@ -68,7 +68,7 @@ export function HeaderSection() {
               {link.label}
             </a>
           ))}
-          <a className={buttonVariants("primary")} href="#contact" onClick={() => setIsMenuOpen(false)}>
+          <a className={cn(buttonVariants("primary"), "mobile-drawer__cta")} href="#contact" onClick={() => setIsMenuOpen(false)}>
             {t("cta.enrollNow")}
           </a>
         </div>

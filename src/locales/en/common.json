@@ -151,6 +151,25 @@
     "eyebrow": "Activities",
     "title": "Learning Activities",
     "description": "A glimpse into the kinds of guided, interactive experiences children can enjoy at AL-FAHMU.",
+    "carousel": {
+      "eyebrow": "Mini gallery",
+      "title": "Activity Highlights",
+      "description": "A small gallery of learning moments that show how lessons stay calm, active, and engaging.",
+      "regionLabel": "Activity highlights gallery",
+      "previous": "Previous activity highlight",
+      "next": "Next activity highlight",
+      "goTo": "Show activity highlight {{number}}",
+      "dotsLabel": "Activity highlight slides",
+      "slideLabel": "Highlight {{current}} of {{total}}"
+    },
+    "highlights": {
+      "classroomLearning": "Focused classroom sessions help children stay confident with clear step-by-step guidance.",
+      "quranSession": "Quran lessons are guided with patience, proper pronunciation, and steady progress.",
+      "groupActivity": "Small group activities help students build teamwork, discussion habits, and confidence.",
+      "readingSession": "Reading time strengthens fluency, understanding, and love for learning in a calm setting.",
+      "examWorkshop": "Exam workshops give students practical revision structure and more confidence before assessments.",
+      "holidayProgram": "Holiday programmes keep children active with meaningful learning during school breaks."
+    },
     "items": {
       "classroomLearning": "Classroom Learning",
       "quranSession": "Quran Session",

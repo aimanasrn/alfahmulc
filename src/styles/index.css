@@ -168,6 +168,10 @@ img {
   font-size: 0.75rem;
 }
 
+.site-brand__tagline {
+  display: block;
+}
+
 .site-nav {
   display: flex;
   align-items: center;
@@ -186,6 +190,10 @@ img {
   border-radius: 999px;
 }
 
+.site-nav__link--compact {
+  font-size: 0.88rem;
+}
+
 .site-nav__link:hover,
 .mobile-drawer__link:hover,
 .site-footer__links a:hover {
@@ -200,6 +208,12 @@ img {
 
 .site-header__cta {
   display: inline-flex;
+}
+
+.site-header__cta--compact {
+  min-height: 2.7rem;
+  padding: 0.72rem 1.05rem;
+  font-size: 0.88rem;
 }
 
 .menu-toggle {
@@ -223,7 +237,7 @@ img {
 }
 
 .mobile-drawer.is-open {
-  max-height: 24rem;
+  max-height: 32rem;
   border-color: rgba(11, 77, 162, 0.08);
 }
 
@@ -236,6 +250,15 @@ img {
 .mobile-drawer__link {
   padding: 0.75rem 0;
   font-weight: 600;
+}
+
+.mobile-drawer__cta {
+  width: 100%;
+  min-height: 3.1rem;
+  margin-top: 0.25rem;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  box-shadow: 0 12px 28px rgba(10, 40, 90, 0.16);
 }
 
 .language-switcher {
@@ -882,6 +905,92 @@ textarea:focus-visible {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.mini-gallery {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(11, 77, 162, 0.12);
+  background:
+    radial-gradient(circle at top right, rgba(244, 194, 13, 0.18), transparent 16rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.94));
+  box-shadow: var(--shadow-card);
+}
+
+.mini-gallery__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.45rem;
+  color: var(--color-primary);
+  font-size: 0.76rem;
+}
+
+.mini-gallery__header h3,
+.mini-gallery__content h4 {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--color-primary-dark);
+}
+
+.mini-gallery__header h3 {
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+}
+
+.mini-gallery__description {
+  color: var(--color-muted);
+  margin: 0.65rem 0 1.35rem;
+  max-width: 42rem;
+}
+
+.mini-gallery__masonry {
+  column-count: 3;
+  column-gap: 1rem;
+}
+
+.mini-gallery__item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(11, 77, 162, 0.1);
+  box-shadow: var(--shadow-card);
+}
+
+.mini-gallery__item--1 .mini-gallery__image {
+  min-height: 11rem;
+}
+
+.mini-gallery__item--2 .mini-gallery__image {
+  min-height: 15rem;
+}
+
+.mini-gallery__item--3 .mini-gallery__image {
+  min-height: 13rem;
+}
+
+.mini-gallery__image {
+  overflow: hidden;
+}
+
+.mini-gallery__photo {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  display: block;
+}
+
+.mini-gallery__content {
+  padding: 0.9rem 1rem 1rem;
+}
+
+.mini-gallery__content h4 {
+  font-size: 0.95rem;
+}
+
 .gallery-card {
   overflow: hidden;
   border-radius: var(--radius-lg);
@@ -901,6 +1010,15 @@ textarea:focus-visible {
     linear-gradient(180deg, rgba(11, 77, 162, 0.05), rgba(11, 77, 162, 0.28)),
     linear-gradient(135deg, rgba(244, 194, 13, 0.28), rgba(11, 77, 162, 0.18));
   transition: transform 220ms ease;
+  overflow: hidden;
+}
+
+.gallery-card__photo,
+.mini-gallery__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .gallery-card:hover .gallery-card__image,
@@ -1499,6 +1617,45 @@ textarea:focus-visible {
   .site-brand__logo {
     width: 3rem;
     height: 3rem;
+  }
+
+  .mini-gallery {
+    padding: 1.15rem;
+  }
+
+  .mini-gallery__masonry {
+    column-count: 2;
+  }
+
+  .mini-gallery__description {
+    margin-bottom: 1rem;
+  }
+
+  .mini-gallery__item--1 .mini-gallery__image,
+  .mini-gallery__item--2 .mini-gallery__image,
+  .mini-gallery__item--3 .mini-gallery__image {
+    min-height: 10.5rem;
+  }
+
+  .site-brand__tagline {
+    display: none;
+  }
+
+  .site-header__inner {
+    align-items: center;
+  }
+
+  .site-header__actions {
+    gap: 0.55rem;
+  }
+
+  .mobile-drawer__content {
+    gap: 0.4rem;
+    padding: 0.75rem 0 1.35rem;
+  }
+
+  .mobile-drawer__link {
+    padding: 0.65rem 0;
   }
 
   .site-footer__logo {

@@ -151,6 +151,25 @@
     "eyebrow": "Aktiviti",
     "title": "Aktiviti Pembelajaran",
     "description": "Lihat gambaran pengalaman pembelajaran yang terarah, interaktif, dan mesra di AL-FAHMU.",
+    "carousel": {
+      "eyebrow": "Galeri mini",
+      "title": "Sorotan Aktiviti",
+      "description": "Galeri kecil ini menunjukkan suasana pembelajaran yang tenang, aktif, dan menarik untuk anak-anak.",
+      "regionLabel": "Galeri sorotan aktiviti",
+      "previous": "Sorotan aktiviti sebelumnya",
+      "next": "Sorotan aktiviti seterusnya",
+      "goTo": "Paparkan sorotan aktiviti {{number}}",
+      "dotsLabel": "Slaid sorotan aktiviti",
+      "slideLabel": "Sorotan {{current}} daripada {{total}}"
+    },
+    "highlights": {
+      "classroomLearning": "Sesi dalam kelas membantu anak belajar dengan fokus melalui bimbingan langkah demi langkah.",
+      "quranSession": "Sesi Al-Quran dibimbing dengan sabar, sebutan yang betul, dan kemajuan yang konsisten.",
+      "groupActivity": "Aktiviti berkumpulan membina keyakinan, kerjasama, dan kemahiran berinteraksi dengan baik.",
+      "readingSession": "Sesi membaca menguatkan kelancaran, kefahaman, dan minat belajar dalam suasana yang selesa.",
+      "examWorkshop": "Bengkel peperiksaan membantu pelajar ulang kaji dengan lebih teratur dan yakin.",
+      "holidayProgram": "Program cuti sekolah memastikan anak terus aktif dengan pembelajaran yang bermakna."
+    },
     "items": {
       "classroomLearning": "Pembelajaran Dalam Kelas",
       "quranSession": "Sesi Al-Quran",
