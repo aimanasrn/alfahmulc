@@ -16,11 +16,11 @@ const miniGalleryImages = [
   "/minigaleri/03.jpg",
   "/minigaleri/04.jpg",
   "/minigaleri/05.jpg",
-  "/minigaleri/06.heic",
-  "/minigaleri/07.heic",
-  "/minigaleri/08.heic",
+  "/minigaleri/06.png",
+  "/minigaleri/07.png",
+  "/minigaleri/08.png",
   "/minigaleri/09.jpg",
-  "/minigaleri/kelasmembaca.heic",
+  "/minigaleri/kelasmembaca.jpg",
 ] as const;
 
 export function GallerySection() {
