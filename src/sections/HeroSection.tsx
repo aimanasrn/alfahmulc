@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { ScrollReveal } from "../components/ui/ScrollReveal";
 import { HeroGrainient } from "../components/ui/HeroGrainient";
 import { buttonVariants } from "../components/ui/Button";
+import { SplitText } from "../components/ui/SplitText";
 
 export function HeroSection() {
   const { t } = useTranslation();
@@ -13,7 +14,14 @@ export function HeroSection() {
       <div className="container hero-section__grid">
         <ScrollReveal className="hero-copy">
           <span className="hero-copy__badge">{t("hero.badge")}</span>
-          <h1>{t("hero.title")}</h1>
+          <SplitText
+            text={t("hero.title")}
+            tag="h1"
+            delay={50}
+            duration={0.7}
+            from={{ opacity: 0, y: 35 }}
+            to={{ opacity: 1, y: 0 }}
+          />
           <p>{t("hero.description")}</p>
           <div className="hero-copy__actions">
             <a className={buttonVariants("primary")} href="#contact">
