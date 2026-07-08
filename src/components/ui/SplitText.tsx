@@ -33,7 +33,7 @@ export function SplitText({
   onLetterAnimationComplete,
 }: SplitTextProps) {
   const ref = useRef<HTMLElement>(null);
-  const isInView = useInView(ref, { once: true, amount: threshold, margin: rootMargin });
+  const isInView = useInView(ref, { once: true, amount: threshold, margin: rootMargin as any });
   
   const words = text.split(" ");
 
