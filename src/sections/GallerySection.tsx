@@ -17,7 +17,7 @@ const miniGalleryImages = [
   "/minigaleri/04.jpg",
   "/minigaleri/05.jpg",
   "/minigaleri/06.png",
-  "/minigaleri/07.PNG",
+  "/minigaleri/07.png",
   "/minigaleri/08.png",
   "/minigaleri/09.jpg",
   "/minigaleri/kelasmembaca.jpg",

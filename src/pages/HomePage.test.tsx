@@ -22,7 +22,7 @@ test("renders the bilingual landing page sections", () => {
   );
 
   expect(screen.getByRole("navigation")).toBeInTheDocument();
-  expect(screen.getAllByText(/Putrajaya/i).length).toBeGreaterThan(0);
+  expect(screen.getAllByText(/Seri Kembangan/i).length).toBeGreaterThan(0);
   expect(screen.getByRole("heading", { name: /Menyuburkan Ilmu, Membina Sahsiah/i })).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /Tentang AL-FAHMU/i })).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /Program Pembelajaran Kami/i })).toBeInTheDocument();

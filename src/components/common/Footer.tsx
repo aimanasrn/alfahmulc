@@ -37,13 +37,23 @@ export default function Footer() {
         <div>
           <h2>{t("footer.socialTitle")}</h2>
           <div className="site-footer__social">
-            <a aria-label={t("floatingWhatsApp.label")} href="https://wa.me/60120000000">
+            <a aria-label={t("floatingWhatsApp.label")} href="https://wa.me/601119815754" rel="noreferrer" target="_blank">
               <MessageCircleMore aria-hidden="true" />
             </a>
-            <a aria-label="Instagram" href="#contact">
+            <a
+              aria-label="Instagram"
+              href="https://www.instagram.com/pusattuisyenalfahmu?igsh=MThvcXZ5MDhsOHNkYw=="
+              rel="noreferrer"
+              target="_blank"
+            >
               <Instagram aria-hidden="true" />
             </a>
-            <a aria-label="Facebook" href="#contact">
+            <a
+              aria-label="Facebook"
+              href="https://www.facebook.com/share/15P8gFzadk/"
+              rel="noreferrer"
+              target="_blank"
+            >
               <Facebook aria-hidden="true" />
             </a>
           </div>

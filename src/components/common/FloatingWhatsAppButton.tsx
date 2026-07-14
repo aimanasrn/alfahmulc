@@ -8,7 +8,7 @@ export function FloatingWhatsAppButton() {
     <a
       aria-label={t("floatingWhatsApp.label")}
       className="floating-whatsapp"
-      href="https://wa.me/60120000000"
+      href="https://wa.me/601119815754"
       rel="noreferrer"
       target="_blank"
     >

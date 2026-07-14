@@ -19,6 +19,8 @@ const initialValues: ContactValues = {
   message: "",
 };
 
+const whatsappNumber = "601119815754";
+
 export function ContactSection() {
   const { t } = useTranslation();
   const [values, setValues] = useState<ContactValues>(initialValues);
@@ -29,6 +31,24 @@ export function ContactSection() {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    const message = [
+      "Assalamualaikum AL-FAHMU Learning Centre.",
+      "Saya ingin bertanya tentang pendaftaran/program.",
+      "",
+      `${t("contact.form.name")}: ${values.name.trim()}`,
+      `${t("contact.form.phone")}: ${values.phone.trim()}`,
+      `${t("contact.form.childAge")}: ${values.childAge.trim()}`,
+      `${t("contact.form.message")}: ${values.message.trim()}`,
+    ].join("\n");
+
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
+
+    setValues(initialValues);
   };
 
   return (
@@ -74,6 +94,7 @@ export function ContactSection() {
               <input
                 onChange={(event) => handleChange("name", event.target.value)}
                 placeholder={t("contact.form.namePlaceholder")}
+                required
                 value={values.name}
               />
             </label>
@@ -82,6 +103,7 @@ export function ContactSection() {
               <input
                 onChange={(event) => handleChange("phone", event.target.value)}
                 placeholder={t("contact.form.phonePlaceholder")}
+                required
                 value={values.phone}
               />
             </label>
@@ -90,6 +112,7 @@ export function ContactSection() {
               <input
                 onChange={(event) => handleChange("childAge", event.target.value)}
                 placeholder={t("contact.form.childAgePlaceholder")}
+                required
                 value={values.childAge}
               />
             </label>
@@ -98,6 +121,7 @@ export function ContactSection() {
               <textarea
                 onChange={(event) => handleChange("message", event.target.value)}
                 placeholder={t("contact.form.messagePlaceholder")}
+                required
                 rows={5}
                 value={values.message}
               />

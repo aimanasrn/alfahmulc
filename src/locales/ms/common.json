@@ -4,9 +4,8 @@
     "tagline": "Kecemerlangan akademik dengan nilai Islam dan bimbingan yang prihatin"
   },
   "topBar": {
-    "phone": "Hubungi: +60 12-000 0000",
-    "location": "Putrajaya",
-    "hours": "Dibuka setiap hari: 8:30 pagi - 6:00 petang"
+    "phone": "Hubungi: 011-1981 5754",
+    "location": "Seri Kembangan, Selangor"
   },
   "nav": {
     "home": "Laman Utama",
@@ -243,11 +242,11 @@
     "title": "Mari Bincang Laluan Pembelajaran Yang Sesuai",
     "description": "Hubungi kami untuk pertanyaan program, jadual, dan panduan pendaftaran.",
     "phoneLabel": "Telefon",
-    "phoneValue": "+60 12-000 0000",
+    "phoneValue": "011-1981 5754",
     "addressLabel": "Alamat",
-    "addressValue": "Putrajaya",
+    "addressValue": "227-1, Jalan 18/23, Taman Sri Serdang, 43300 Seri Kembangan, Selangor",
     "emailLabel": "Emel",
-    "emailValue": "hello@alfahmu.edu.my",
+    "emailValue": "alfahmulearningcentre@gmail.com",
     "form": {
       "name": "Nama",
       "namePlaceholder": "Nama ibu bapa atau penjaga",
@@ -261,7 +260,7 @@
     }
   },
   "footer": {
-    "description": "Pusat pembelajaran yang mesra dan dipercayai di Putrajaya untuk pertumbuhan akademik, nilai Islam, dan pembinaan sahsiah.",
+    "description": "Pusat pembelajaran yang mesra dan dipercayai di Seri Kembangan, Selangor untuk pertumbuhan akademik, nilai Islam, dan pembinaan sahsiah.",
     "quickLinks": "Pautan Pantas",
     "contactTitle": "Maklumat Hubungan",
     "socialTitle": "Sosial",

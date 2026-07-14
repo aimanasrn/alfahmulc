@@ -1,4 +1,4 @@
-import { MapPin, Clock3, Phone } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export function TopBarSection() {
@@ -14,10 +14,6 @@ export function TopBarSection() {
         <p>
           <MapPin aria-hidden="true" />
           <span>{t("topBar.location")}</span>
-        </p>
-        <p>
-          <Clock3 aria-hidden="true" />
-          <span>{t("topBar.hours")}</span>
         </p>
       </div>
     </div>

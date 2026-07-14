@@ -4,9 +4,9 @@ import { useLocation } from "react-router-dom";
 
 const SITE_URL = "https://alfahmulc.com";
 const SITE_NAME = "AL-FAHMU Learning Centre";
-const HOME_TITLE = `${SITE_NAME} | Pusat Pembelajaran di Putrajaya`;
+const HOME_TITLE = `${SITE_NAME} | Pusat Pembelajaran di Seri Kembangan`;
 const HOME_DESCRIPTION =
-  "AL-FAHMU Learning Centre di Putrajaya menawarkan kelas tuisyen akademik, Al-Quran, membaca, persediaan peperiksaan dan bimbingan kerja rumah untuk anak-anak.";
+  "AL-FAHMU Learning Centre di Seri Kembangan, Selangor menawarkan kelas tuisyen akademik, Al-Quran, membaca, persediaan peperiksaan dan bimbingan kerja rumah untuk anak-anak.";
 const PORTAL_DESCRIPTION =
   "Portal AL-FAHMU Learning Centre untuk pelajar, guru dan pentadbir.";
 

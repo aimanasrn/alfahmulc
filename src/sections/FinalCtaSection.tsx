@@ -12,7 +12,7 @@ export function FinalCtaSection() {
           <h2>{t("finalCta.title")}</h2>
           <p>{t("finalCta.description")}</p>
           <div className="final-cta__actions">
-            <a className={cn(buttonVariants("secondary"), "final-cta__button")} href="https://wa.me/60120000000">
+            <a className={cn(buttonVariants("secondary"), "final-cta__button")} href="https://wa.me/601119815754">
               {t("finalCta.primaryCta")}
             </a>
             <a className={cn(buttonVariants("primary"), "final-cta__button")} href="#contact">
