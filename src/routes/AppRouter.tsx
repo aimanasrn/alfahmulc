@@ -4,6 +4,7 @@ import {
   Routes,
   useInRouterContext,
 } from "react-router-dom";
+import { SeoHead } from "../components/common/SeoHead";
 import { MarketingLayout } from "../layouts/MarketingLayout";
 import { PortalLayout } from "../layouts/PortalLayout";
 import HomePage from "../pages/HomePage";
@@ -13,16 +14,19 @@ import TeacherPortalPage from "../pages/portal/TeacherPortalPage";
 
 function AppRoutes() {
   return (
-    <Routes>
-      <Route element={<MarketingLayout />}>
-        <Route path="/" element={<HomePage />} />
-      </Route>
-      <Route path="/portal" element={<PortalLayout />}>
-        <Route path="student" element={<StudentPortalPage />} />
-        <Route path="teacher" element={<TeacherPortalPage />} />
-        <Route path="admin" element={<AdminPortalPage />} />
-      </Route>
-    </Routes>
+    <>
+      <SeoHead />
+      <Routes>
+        <Route element={<MarketingLayout />}>
+          <Route path="/" element={<HomePage />} />
+        </Route>
+        <Route path="/portal" element={<PortalLayout />}>
+          <Route path="student" element={<StudentPortalPage />} />
+          <Route path="teacher" element={<TeacherPortalPage />} />
+          <Route path="admin" element={<AdminPortalPage />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
