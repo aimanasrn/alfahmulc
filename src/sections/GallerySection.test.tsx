@@ -35,5 +35,16 @@ test("renders uploaded activity images in the gallery and mini gallery", async (
   );
 
   const miniGallery = screen.getByRole("region", { name: /activity highlights gallery/i });
-  expect(within(miniGallery).getByAltText(/^Activity Highlights 1$/i)).toHaveAttribute("src", "/minigaleri/03.jpg");
+  const miniGalleryImages = within(miniGallery).getAllByRole("img");
+
+  expect(miniGalleryImages.map((image) => image.getAttribute("src"))).toEqual([
+    "/minigaleri/03.jpg",
+    "/minigaleri/04.jpg",
+    "/minigaleri/05.png",
+    "/minigaleri/06.png",
+    "/minigaleri/07.png",
+    "/minigaleri/08.png",
+    "/minigaleri/09.jpg",
+    "/minigaleri/kelasmembaca.jpg",
+  ]);
 });

@@ -15,7 +15,7 @@ const activityImageByKey = {
 const miniGalleryImages = [
   "/minigaleri/03.jpg",
   "/minigaleri/04.jpg",
-  "/minigaleri/05.jpg",
+  "/minigaleri/05.png",
   "/minigaleri/06.png",
   "/minigaleri/07.png",
   "/minigaleri/08.png",
