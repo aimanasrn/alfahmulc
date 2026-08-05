@@ -2166,6 +2166,61 @@ body {
   gap: 1rem;
 }
 
+.gallery-video {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(17rem, 0.8fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: center;
+  margin: 0 0 2.5rem;
+  padding: 1rem;
+  border: 1px solid rgba(20, 54, 105, 0.1);
+  border-radius: 1.15rem;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(7, 29, 73, 0.07);
+}
+
+.gallery-video__media {
+  overflow: hidden;
+  border-radius: 0.85rem;
+  background: var(--color-primary-dark);
+  aspect-ratio: 16 / 9;
+}
+
+.gallery-video__media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-video__copy {
+  padding: 1rem 1.5rem 1rem 0;
+}
+
+.gallery-video__eyebrow {
+  margin: 0 0 0.7rem;
+  color: var(--color-primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.gallery-video__copy h3 {
+  margin: 0;
+  color: var(--color-primary-dark);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.45rem, 2.5vw, 2.1rem);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.gallery-video__copy > p:last-child {
+  margin: 1rem 0 0;
+  color: #66758c;
+  line-height: 1.75;
+}
+
 .gallery-card {
   overflow: hidden;
 }
@@ -2384,6 +2439,16 @@ body {
   .hero-visual__panel,
   .hero-visual__photo {
     min-height: 27rem;
+  }
+
+  .gallery-video {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .gallery-video__copy {
+    padding: 1rem 0.75rem 1.25rem;
   }
 
   .stats-grid,

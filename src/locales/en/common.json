@@ -150,6 +150,13 @@
     "eyebrow": "Activities",
     "title": "Learning Activities",
     "description": "A glimpse into the kinds of guided, interactive experiences children can enjoy at AL-FAHMU.",
+    "video": {
+      "eyebrow": "Watch our video",
+      "title": "See the AL-FAHMU learning experience",
+      "description": "Get a quick look at the classroom atmosphere, activities, and caring guidance children experience at AL-FAHMU.",
+      "label": "AL-FAHMU learning experience video",
+      "fallback": "Your browser does not support this video."
+    },
     "carousel": {
       "eyebrow": "Mini gallery",
       "title": "Activity Highlights",

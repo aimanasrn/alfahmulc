@@ -35,6 +35,25 @@ export function GallerySection() {
           description={t("gallery.description")}
         />
 
+        <ScrollReveal className="gallery-video" delay={0.04}>
+          <div className="gallery-video__media">
+            <video
+              aria-label={t("gallery.video.label")}
+              controls
+              preload="metadata"
+              poster="/aktivitipembelajaran/pembelajarandalamkelas.png"
+            >
+              <source src="/alfahmu%20web%20mp4.mp4" type="video/mp4" />
+              {t("gallery.video.fallback")}
+            </video>
+          </div>
+          <div className="gallery-video__copy">
+            <p className="gallery-video__eyebrow">{t("gallery.video.eyebrow")}</p>
+            <h3>{t("gallery.video.title")}</h3>
+            <p>{t("gallery.video.description")}</p>
+          </div>
+        </ScrollReveal>
+
         <div className="gallery-grid">
           {galleryKeys.map((key, index) => (
             <ScrollReveal key={key} className="gallery-card" delay={index * 0.05}>

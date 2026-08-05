@@ -40,9 +40,9 @@ export function HeroSection() {
         <ScrollReveal className="hero-visual" delay={0.08}>
           <div className="hero-visual__panel">
             <img
-              alt="AL-FAHMU students learning in a classroom"
+              alt="AL-FAHMU students learning together"
               className="hero-visual__photo"
-              src="/aktivitipembelajaran/pembelajarandalamkelas.png"
+              src="/aktivitipembelajaran/programcutisekolah.png"
             />
             <div className="hero-visual__card">
               <span className="hero-visual__card-label">{t("hero.badge")}</span>

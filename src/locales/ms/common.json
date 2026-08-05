@@ -150,6 +150,13 @@
     "eyebrow": "Aktiviti",
     "title": "Aktiviti Pembelajaran",
     "description": "Lihat gambaran pengalaman pembelajaran yang terarah, interaktif, dan mesra di AL-FAHMU.",
+    "video": {
+      "eyebrow": "Tonton video kami",
+      "title": "Lihat suasana pembelajaran AL-FAHMU",
+      "description": "Dapatkan gambaran ringkas tentang suasana kelas, aktiviti, dan bimbingan yang anak-anak alami di AL-FAHMU.",
+      "label": "Video suasana pembelajaran AL-FAHMU",
+      "fallback": "Pelayar anda tidak menyokong video ini."
+    },
     "carousel": {
       "eyebrow": "Galeri mini",
       "title": "Sorotan Aktiviti",
