@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import {
   BrowserRouter,
   Route,
@@ -12,6 +13,8 @@ import AdminPortalPage from "../pages/portal/AdminPortalPage";
 import StudentPortalPage from "../pages/portal/StudentPortalPage";
 import TeacherPortalPage from "../pages/portal/TeacherPortalPage";
 
+const StaffFormsPage = lazy(() => import("../pages/portal/StaffFormsPage"));
+
 function AppRoutes() {
   return (
     <>
@@ -20,6 +23,11 @@ function AppRoutes() {
         <Route element={<MarketingLayout />}>
           <Route path="/" element={<HomePage />} />
         </Route>
+        <Route path="/portal/borang" element={
+          <Suspense fallback={<p role="status">Memuatkan borang…</p>}>
+            <StaffFormsPage />
+          </Suspense>
+        } />
         <Route path="/portal" element={<PortalLayout />}>
           <Route path="student" element={<StudentPortalPage />} />
           <Route path="teacher" element={<TeacherPortalPage />} />
