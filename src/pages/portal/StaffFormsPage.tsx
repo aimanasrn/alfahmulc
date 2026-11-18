@@ -104,6 +104,20 @@ export default function StaffFormsPage() {
               </div>
             </article>
           ))}
+          <article className="staff-form-card">
+            <div className="staff-form-card__top">
+              <span className="staff-form-card__icon"><FileText size={22} aria-hidden="true" /></span>
+              <span className="staff-form-card__number">0{staffForms.length + 1}</span>
+            </div>
+            <span className="staff-form-card__category">Laporan prestasi</span>
+            <h2>Rekod Prestasi Pelajar</h2>
+            <p>Rekodkan markah, kehadiran dan ulasan pelajar bagi setiap subjek.</p>
+            <div className="staff-form-card__actions">
+              <Link className="staff-forms__primary" to="/portal/borang/rekod-guru" aria-label="Isi borang: Rekod Prestasi Pelajar">
+                Isi borang <ArrowUpRight size={17} aria-hidden="true" />
+              </Link>
+            </div>
+          </article>
         </section>
 
         {selectedForm ? (

@@ -14,6 +14,7 @@ import StudentPortalPage from "../pages/portal/StudentPortalPage";
 import TeacherPortalPage from "../pages/portal/TeacherPortalPage";
 
 const StaffFormsPage = lazy(() => import("../pages/portal/StaffFormsPage"));
+const TeacherRecordFormPage = lazy(() => import("../pages/portal/TeacherRecordFormPage"));
 
 function AppRoutes() {
   return (
@@ -26,6 +27,11 @@ function AppRoutes() {
         <Route path="/portal/borang" element={
           <Suspense fallback={<p role="status">Memuatkan borang…</p>}>
             <StaffFormsPage />
+          </Suspense>
+        } />
+        <Route path="/portal/borang/rekod-guru" element={
+          <Suspense fallback={<p role="status">Memuatkan borang…</p>}>
+            <TeacherRecordFormPage />
           </Suspense>
         } />
         <Route path="/portal" element={<PortalLayout />}>

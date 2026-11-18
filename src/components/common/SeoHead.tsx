@@ -43,12 +43,15 @@ export function SeoHead() {
   useEffect(() => {
     const isPortalRoute = location.pathname.startsWith("/portal");
     const isStaffFormsRoute = location.pathname === "/portal/borang";
+    const isTeacherRecordRoute = location.pathname === "/portal/borang/rekod-guru";
     const language = i18n.resolvedLanguage === "en" ? "en-MY" : "ms-MY";
     const canonicalUrl = isPortalRoute
       ? `${SITE_URL}${location.pathname}`
       : `${SITE_URL}/`;
     const title = isStaffFormsRoute
       ? `Pusat Borang | ${SITE_NAME}`
+      : isTeacherRecordRoute
+      ? `Rekod Prestasi Pelajar | ${SITE_NAME}`
       : isPortalRoute
       ? `${SITE_NAME} Portal`
       : HOME_TITLE;
