@@ -39,14 +39,15 @@ masuk ke Google Sheet melalui `docs/apps-script/laporan-prestasi.gs`.
 
 1. Dalam Google Sheet, buka **Extensions > Apps Script** dan tampal kandungan fail itu.
 2. Pilih fungsi `setupLaporanPrestasi`, tekan **Run** dan benarkan akses.
-3. Salin `KOD GURU` daripada **Execution log**. Kongsi kod ini dengan guru sahaja.
+3. Masukkan nama dan No. IC setiap guru dalam tab `Guru`. Hadkan akses Sheet kepada admin.
 4. Pilih **Deploy > New deployment > Web app**. Tetapkan **Execute as: Me** dan
    **Who has access: Anyone**, kemudian salin URL `/exec`.
 5. Tetapkan `VITE_REKOD_GURU_URL=<URL /exec>` dalam `.env.local` untuk pembangunan
    dan dalam tetapan hosting untuk production, kemudian build semula.
 
 Selepas mengubah skrip, terbitkan versi baharu melalui **Deploy > Manage deployments**.
-Jika kod guru terdedah, jalankan `tukarKodGuru`.
+Padam baris guru dalam tab `Guru` untuk menarik balik akses. No. IC tidak disimpan
+dalam `Rekod Guru`, dan nama guru pada rekod diambil daripada tab `Guru`.
 
 Senarai subjek dan darjah berada dalam `src/data/teacherRecord.ts`. Rekod yang sama
 (pelajar, tempoh dan subjek) ditolak, jadi pembetulan dibuat oleh admin dalam Sheet.

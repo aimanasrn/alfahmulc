@@ -28,8 +28,7 @@ export default function TeacherRecordFormPage() {
   const periods = useMemo(() => getRecentPeriods(), []);
   const [values, setValues] = useState({
     ...studentFields,
-    kodGuru: "",
-    namaGuru: "",
+    noIc: "",
     darjah: "",
     subjek: "",
     tempoh: periods[0],
@@ -99,12 +98,18 @@ export default function TeacherRecordFormPage() {
           <fieldset>
             <legend>Maklumat guru</legend>
             <label>
-              Kod guru
-              <input type="password" autoComplete="off" required value={values.kodGuru} onChange={(event) => update("kodGuru", event.target.value)} />
-            </label>
-            <label>
-              Nama guru
-              <input autoComplete="name" required maxLength={120} value={values.namaGuru} onChange={(event) => update("namaGuru", event.target.value)} />
+              No. IC guru
+              <input
+                type="password"
+                inputMode="numeric"
+                autoComplete="off"
+                required
+                maxLength={14}
+                pattern="\d{6}-?\d{2}-?\d{4}"
+                title="12 digit No. IC, dengan atau tanpa tanda sempang"
+                value={values.noIc}
+                onChange={(event) => update("noIc", event.target.value)}
+              />
             </label>
           </fieldset>
 

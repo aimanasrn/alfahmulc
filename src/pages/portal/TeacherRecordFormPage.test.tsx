@@ -28,8 +28,7 @@ function fill(label: string, value: string) {
 }
 
 function fillForm() {
-  fill("Kod guru", "KOD123");
-  fill("Nama guru", "Siti Aishah");
+  fill("No. IC guru", "900101-14-5678");
   fill("Nama pelajar", "Ahmad Al Amin");
   fill("Darjah / Tingkatan", "Darjah 2");
   fill("Subjek", "Iqra");
@@ -55,26 +54,27 @@ test("sends the record and keeps teacher details for the next student", async ()
   const [url, options] = fetchMock.mock.calls[0];
   const body = options.body as URLSearchParams;
   expect(url).toBe(endpoint);
-  expect(body.get("kodGuru")).toBe("KOD123");
+  expect(body.get("noIc")).toBe("900101-14-5678");
+  expect(body.has("namaGuru")).toBe(false);
   expect(body.get("namaPelajar")).toBe("Ahmad Al Amin");
   expect(body.get("tempoh")).toBe(getRecentPeriods()[0]);
   expect(body.get("markah")).toBe("70");
 
   expect(screen.getByLabelText("Nama pelajar")).toHaveValue("");
   expect(screen.getByLabelText("Markah (%)")).toHaveValue(null);
-  expect(screen.getByLabelText("Nama guru")).toHaveValue("Siti Aishah");
+  expect(screen.getByLabelText("No. IC guru")).toHaveValue("900101-14-5678");
   expect(screen.getByLabelText("Subjek")).toHaveValue("Iqra");
 });
 
 test("shows the server error and keeps the answers", async () => {
   vi.stubEnv("VITE_REKOD_GURU_URL", endpoint);
-  respondWith({ ok: false, error: "Kod guru tidak sah." });
+  respondWith({ ok: false, error: "No. IC tidak berdaftar. Sila hubungi admin." });
   await openForm();
 
   fillForm();
   fireEvent.click(screen.getByRole("button", { name: "Hantar rekod" }));
 
-  expect(await screen.findByRole("alert")).toHaveTextContent("Kod guru tidak sah.");
+  expect(await screen.findByRole("alert")).toHaveTextContent("No. IC tidak berdaftar.");
   expect(screen.getByLabelText("Nama pelajar")).toHaveValue("Ahmad Al Amin");
 });
 

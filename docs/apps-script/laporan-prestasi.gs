@@ -9,7 +9,11 @@ const TAB_PANDUAN = "Panduan";
 const TAB_REKOD = "Rekod Guru";
 const TAB_LAPORAN = "Laporan Individu";
 const TAB_DASHBOARD = "Dashboard";
+const TAB_GURU = "Guru";
 const TAB_SENARAI = "Senarai";
+
+const MAX_CUBAAN_IC = 20;
+const TEMPOH_SEKATAN_SAAT = 900;
 
 const R = "'" + TAB_REKOD + "'!";
 const S = TAB_SENARAI + "!";
@@ -41,14 +45,27 @@ function doPost(e) {
     // Medan perangkap bot: pura-pura berjaya, tiada apa disimpan.
     if (data.website) return reply({ ok: true });
 
-    const kod = PropertiesService.getScriptProperties().getProperty("KOD_GURU");
-    if (!kod) return fail("Sistem belum disediakan. Sila hubungi admin.");
-    if (clean(data.kodGuru, 50) !== kod) return fail("Kod guru tidak sah.");
+    const ss = SpreadsheetApp.getActive();
+    const guruSheet = ss.getSheetByName(TAB_GURU);
+    if (!guruSheet) return fail("Sistem belum disediakan. Sila hubungi admin.");
+
+    const noIc = digitsOnly(data.noIc);
+    if (noIc.length !== 12) return fail("No. IC mesti mengandungi 12 digit.");
+
+    // Had cubaan salah supaya No. IC tidak boleh diteka berulang kali.
+    const cache = CacheService.getScriptCache();
+    const cubaan = Number(cache.get("cubaan_ic") || 0);
+    if (cubaan >= MAX_CUBAAN_IC) return fail("Terlalu banyak cubaan. Sila cuba lagi selepas 15 minit.");
+
+    const namaGuru = findGuru(guruSheet, noIc);
+    if (!namaGuru) {
+      cache.put("cubaan_ic", String(cubaan + 1), TEMPOH_SEKATAN_SAAT);
+      return fail("No. IC tidak berdaftar. Sila hubungi admin.");
+    }
 
     const namaPelajar = clean(data.namaPelajar, 120).toUpperCase();
     const darjah = clean(data.darjah, 40);
     const tempoh = clean(data.tempoh, 30).toUpperCase();
-    const namaGuru = clean(data.namaGuru, 120);
     const subjek = clean(data.subjek, 80);
     const kekuatan = clean(data.kekuatan, 1000);
     const perlu = clean(data.perluDipertingkatkan, 1000);
@@ -66,7 +83,7 @@ function doPost(e) {
     locked = lock.tryLock(10000);
     if (!locked) return fail("Sistem sedang sibuk. Sila cuba lagi.");
 
-    const sheet = SpreadsheetApp.getActive().getSheetByName(TAB_REKOD);
+    const sheet = ss.getSheetByName(TAB_REKOD);
     if (!sheet) return fail("Sistem belum disediakan. Sila hubungi admin.");
 
     if (isDuplicate(sheet, namaPelajar, tempoh, subjek)) {
@@ -102,6 +119,21 @@ function isDuplicate(sheet, namaPelajar, tempoh, subjek) {
     .some((row) => key(row[0], row[2], row[4]) === target);
 }
 
+function findGuru(sheet, noIc) {
+  const lastRow = sheet.getLastRow();
+  if (lastRow < 2) return "";
+
+  const match = sheet.getRange(2, 1, lastRow - 1, 2).getDisplayValues().find((row) => {
+    const ic = digitsOnly(row[1]);
+    return ic && ic.padStart(12, "0") === noIc;
+  });
+  return match ? clean(match[0], 120) : "";
+}
+
+function digitsOnly(value) {
+  return String(value === undefined || value === null ? "" : value).replace(/\D/g, "");
+}
+
 function clean(value, maxLength) {
   return String(value === undefined || value === null ? "" : value)
     .replace(/\s+/g, " ").trim().slice(0, maxLength);
@@ -127,36 +159,24 @@ function reply(body) {
     .setMimeType(ContentService.MimeType.JSON);
 }
 
-/* ---------- Kod guru ---------- */
-
-function newKodGuru() {
-  return Utilities.getUuid().replace(/-/g, "").slice(0, 10).toUpperCase();
-}
-
-/** Jalankan fungsi ini jika kod guru terdedah. Kod lama terus tidak sah. */
-function tukarKodGuru() {
-  const kod = newKodGuru();
-  PropertiesService.getScriptProperties().setProperty("KOD_GURU", kod);
-  console.log("KOD GURU BAHARU: " + kod);
-}
-
 /* ---------- Bina Google Sheet ---------- */
 
 /**
- * Selamat dijalankan semula: data dalam Rekod Guru dikekalkan,
+ * Selamat dijalankan semula: data dalam Rekod Guru dan Guru dikekalkan,
  * manakala tab lain dibina semula.
  */
 function setupLaporanPrestasi() {
   const ss = SpreadsheetApp.getActive();
   ss.setSpreadsheetTimeZone("Asia/Kuala_Lumpur");
 
-  const names = [TAB_PANDUAN, TAB_REKOD, TAB_LAPORAN, TAB_DASHBOARD, TAB_SENARAI];
+  const names = [TAB_PANDUAN, TAB_REKOD, TAB_LAPORAN, TAB_DASHBOARD, TAB_GURU, TAB_SENARAI];
   const sheets = names.map((name) => ss.getSheetByName(name) || ss.insertSheet(name));
-  const [panduan, rekod, laporan, dashboard, senarai] = sheets;
+  const [panduan, rekod, laporan, dashboard, guru, senarai] = sheets;
 
   [panduan, laporan, dashboard, senarai].forEach(resetSheet);
 
   buildRekod(rekod);
+  buildGuru(guru);
   buildSenarai(senarai);
   buildPanduan(panduan);
   buildLaporan(laporan, senarai);
@@ -176,9 +196,25 @@ function setupLaporanPrestasi() {
     .filter((sheet) => sheet.getLastRow() === 0 && sheet.getCharts().length === 0)
     .forEach((sheet) => ss.deleteSheet(sheet));
 
-  const props = PropertiesService.getScriptProperties();
-  if (!props.getProperty("KOD_GURU")) props.setProperty("KOD_GURU", newKodGuru());
-  console.log("KOD GURU: " + props.getProperty("KOD_GURU"));
+  // Kod guru lama tidak digunakan lagi.
+  PropertiesService.getScriptProperties().deleteProperty("KOD_GURU");
+  console.log("Setup selesai. Masukkan nama dan No. IC guru dalam tab Guru.");
+}
+
+function buildGuru(sheet) {
+  sheet.getRange("A1:B1").setValues([["Nama Guru", "No. IC"]])
+    .setBackground(NAVY).setFontColor("#FFFFFF").setFontWeight("bold")
+    .setHorizontalAlignment("center").setVerticalAlignment("middle");
+  sheet.setFrozenRows(1);
+  sheet.setRowHeight(1, 30);
+  sheet.setColumnWidth(1, 260);
+  sheet.setColumnWidth(2, 160);
+  sheet.setColumnWidth(4, 420);
+
+  // Format teks mengekalkan sifar di depan No. IC.
+  sheet.getRange(2, 2, sheet.getMaxRows() - 1, 1).setNumberFormat("@");
+  sheet.getRange("D1").setValue("Padam baris guru untuk menarik balik akses. Jangan kongsi tab ini.")
+    .setFontStyle("italic").setFontColor(MUTED);
 }
 
 function resetSheet(sheet) {
@@ -244,7 +280,8 @@ function buildPanduan(sheet) {
   title(sheet.getRange("A1:B1"), "AL FAHMU LEARNING CENTRE | SISTEM LAPORAN PRESTASI");
   const rows = [
     ["TUJUAN", "Satu fail berpusat untuk rekod prestasi pelajar. Laporan ibu bapa menggabungkan semua subjek bagi seorang pelajar."],
-    ["LANGKAH 1", "Guru isi borang Rekod Prestasi Pelajar di website, satu borang bagi setiap subjek."],
+    ["GURU", "Admin daftarkan nama dan No. IC guru dalam helaian 'Guru'. Padam baris guru untuk menarik balik akses."],
+    ["LANGKAH 1", "Guru isi borang Rekod Prestasi Pelajar di website menggunakan No. IC, satu borang bagi setiap subjek."],
     ["LANGKAH 2", "Rekod masuk secara automatik ke helaian 'Rekod Guru'."],
     ["LANGKAH 3", "Admin buka 'Laporan Individu', kemudian pilih nama pelajar di B4 dan tempoh di E4."],
     ["LANGKAH 4", "Semak laporan, kemudian pilih File > Download > PDF untuk simpan atau hantar kepada ibu bapa."],
