@@ -194,6 +194,12 @@ function resetSheet(sheet) {
 
 function buildRekod(sheet) {
   const rows = sheet.getMaxRows();
+
+  // Warna selang-seli hanya untuk baris data, supaya tidak menimpa warna tajuk.
+  sheet.getBandings().forEach((banding) => banding.remove());
+  sheet.getRange(2, 1, rows - 1, HEADERS.length)
+    .applyRowBanding(SpreadsheetApp.BandingTheme.LIGHT_GREY, false, false);
+
   sheet.getRange(1, 1, 1, HEADERS.length).setValues([HEADERS])
     .setBackground(NAVY).setFontColor("#FFFFFF").setFontWeight("bold")
     .setHorizontalAlignment("center").setVerticalAlignment("middle");
@@ -208,11 +214,7 @@ function buildRekod(sheet) {
   sheet.getRange(2, 8, rows - 1, 4).setWrap(true);
   sheet.getRange(2, 1, rows - 1, HEADERS.length).setVerticalAlignment("top");
 
-  const table = sheet.getRange(1, 1, rows, HEADERS.length);
-  if (sheet.getBandings().length === 0) {
-    table.applyRowBanding(SpreadsheetApp.BandingTheme.LIGHT_GREY, false, false);
-  }
-  if (!sheet.getFilter()) table.createFilter();
+  if (!sheet.getFilter()) sheet.getRange(1, 1, rows, HEADERS.length).createFilter();
 }
 
 function buildSenarai(sheet) {
@@ -266,7 +268,7 @@ function buildLaporan(sheet, senarai) {
   const joined = (column) =>
     "=IFERROR(TEXTJOIN(CHAR(10),TRUE,FILTER(" + R + "E2:E&\": \"&" + R + column + "2:" + column + "," + match + ")),\"\")";
 
-  [180, 160, 90, 110, 130, 250].forEach((width, index) => sheet.setColumnWidth(index + 1, width));
+  [180, 160, 90, 130, 130, 250].forEach((width, index) => sheet.setColumnWidth(index + 1, width));
 
   title(sheet.getRange("A1:F1"), "AL FAHMU LEARNING CENTRE");
   sheet.getRange("A2:F2").merge().setValue("LAPORAN PRESTASI PELAJAR | STUDENT PROGRESS REPORT")
@@ -473,6 +475,8 @@ function box(range) {
 }
 
 function dropdown(cell, source) {
+  // Format teks menghalang "NOVEMBER 2026" ditukar menjadi tarikh oleh Sheets.
+  cell.setNumberFormat("@");
   cell.setDataValidation(SpreadsheetApp.newDataValidation()
     .requireValueInRange(source, true)
     .setAllowInvalid(false)
