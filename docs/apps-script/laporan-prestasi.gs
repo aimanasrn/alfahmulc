@@ -10,6 +10,7 @@ const TAB_REKOD = "Rekod Guru";
 const TAB_LAPORAN = "Laporan Individu";
 const TAB_DASHBOARD = "Dashboard";
 const TAB_GURU = "Guru";
+const TAB_PELAJAR = "Pelajar";
 const TAB_SENARAI = "Senarai";
 
 const MAX_CUBAAN_IC = 20;
@@ -28,6 +29,11 @@ const HEADERS = [
   "Nama Pelajar", "Darjah / Tingkatan", "Tempoh Laporan", "Nama Guru", "Subjek",
   "Markah (%)", "Kehadiran (%)", "Kekuatan Pelajar", "Perlu Dipertingkatkan",
   "Ulasan Guru", "Tindakan Susulan", "Dihantar Pada",
+];
+
+const KELAS = [
+  "Prasekolah", "Darjah 1", "Darjah 2", "Darjah 3", "Darjah 4", "Darjah 5", "Darjah 6",
+  "Tingkatan 1", "Tingkatan 2", "Tingkatan 3", "Tingkatan 4", "Tingkatan 5",
 ];
 
 const BULAN = "JANUARI|FEBRUARI|MAC|APRIL|MEI|JUN|JULAI|OGOS|SEPTEMBER|OKTOBER|NOVEMBER|DISEMBER";
@@ -63,8 +69,18 @@ function doPost(e) {
       return fail("No. IC tidak berdaftar. Sila hubungi admin.");
     }
 
+    const pelajarSheet = ss.getSheetByName(TAB_PELAJAR);
+    if (!pelajarSheet) return fail("Sistem belum disediakan. Sila hubungi admin.");
+    const senarai = senaraiPelajar(pelajarSheet);
+
+    // Senarai untuk autocomplete. No. IC pelajar tidak dihantar.
+    if (data.action === "senaraiPelajar") return reply({ ok: true, pelajar: senarai });
+
     const namaPelajar = clean(data.namaPelajar, 120).toUpperCase();
-    const darjah = clean(data.darjah, 40);
+    const padanan = senarai.filter((pelajar) => pelajar.nama === namaPelajar);
+    if (padanan.length === 0) return fail("Nama pelajar tiada dalam senarai. Sila pilih daripada senarai atau hubungi admin.");
+    if (padanan.length > 1) return fail("Nama pelajar ini berganda dalam senarai. Minta admin bezakan ejaan.");
+    const darjah = padanan[0].darjah;
     const tempoh = clean(data.tempoh, 30).toUpperCase();
     const subjek = clean(data.subjek, 80);
     const kekuatan = clean(data.kekuatan, 1000);
@@ -127,7 +143,17 @@ function findGuru(sheet, noIc) {
     const ic = digitsOnly(row[1]);
     return ic && ic.padStart(12, "0") === noIc;
   });
-  return match ? clean(match[0], 120) : "";
+  return match ? clean(match[0], 120).toUpperCase() : "";
+}
+
+function senaraiPelajar(sheet) {
+  const lastRow = sheet.getLastRow();
+  if (lastRow < 2) return [];
+
+  return sheet.getRange(2, 2, lastRow - 1, 2).getDisplayValues()
+    .map((row) => ({ nama: clean(row[0], 120).toUpperCase(), darjah: clean(row[1], 40) }))
+    .filter((pelajar) => pelajar.nama && pelajar.darjah)
+    .sort((a, b) => a.nama.localeCompare(b.nama));
 }
 
 function digitsOnly(value) {
@@ -159,24 +185,60 @@ function reply(body) {
     .setMimeType(ContentService.MimeType.JSON);
 }
 
+/* ---------- Huruf besar automatik ---------- */
+
+// Lajur nama yang ditukar kepada huruf besar sebaik sahaja admin menaip atau menampal.
+const LAJUR_HURUF_BESAR = { [TAB_GURU]: 1, [TAB_PELAJAR]: 2 };
+
+function onEdit(e) {
+  const range = e && e.range;
+  if (!range) return;
+
+  const sheet = range.getSheet();
+  const column = LAJUR_HURUF_BESAR[sheet.getName()];
+  if (!column || column < range.getColumn() || column > range.getLastColumn()) return;
+
+  upperColumn(sheet, column, range.getRow(), range.getNumRows());
+}
+
+function upperColumn(sheet, column, startRow, numRows) {
+  if (startRow < 2) {
+    numRows -= 2 - startRow;
+    startRow = 2;
+  }
+  if (numRows < 1) return;
+
+  const cells = sheet.getRange(startRow, column, numRows, 1);
+  const values = cells.getValues();
+  let changed = false;
+  const upper = values.map(([value]) => {
+    if (typeof value !== "string") return [value];
+    const text = value.replace(/\s+/g, " ").trim().toUpperCase();
+    if (text !== value) changed = true;
+    return [text];
+  });
+  if (changed) cells.setValues(upper);
+}
+
 /* ---------- Bina Google Sheet ---------- */
 
 /**
- * Selamat dijalankan semula: data dalam Rekod Guru dan Guru dikekalkan,
+ * Selamat dijalankan semula: data dalam Rekod Guru, Guru dan Pelajar dikekalkan,
  * manakala tab lain dibina semula.
  */
 function setupLaporanPrestasi() {
   const ss = SpreadsheetApp.getActive();
   ss.setSpreadsheetTimeZone("Asia/Kuala_Lumpur");
 
-  const names = [TAB_PANDUAN, TAB_REKOD, TAB_LAPORAN, TAB_DASHBOARD, TAB_GURU, TAB_SENARAI];
+  const names = [TAB_PANDUAN, TAB_REKOD, TAB_LAPORAN, TAB_DASHBOARD, TAB_GURU, TAB_PELAJAR, TAB_SENARAI];
   const sheets = names.map((name) => ss.getSheetByName(name) || ss.insertSheet(name));
-  const [panduan, rekod, laporan, dashboard, guru, senarai] = sheets;
+  const [panduan, rekod, laporan, dashboard, guru, pelajar, senarai] = sheets;
 
   [panduan, laporan, dashboard, senarai].forEach(resetSheet);
 
   buildRekod(rekod);
   buildGuru(guru);
+  buildPelajar(pelajar);
   buildSenarai(senarai);
   buildPanduan(panduan);
   buildLaporan(laporan, senarai);
@@ -213,8 +275,52 @@ function buildGuru(sheet) {
 
   // Format teks mengekalkan sifar di depan No. IC.
   sheet.getRange(2, 2, sheet.getMaxRows() - 1, 1).setNumberFormat("@");
-  sheet.getRange("D1").setValue("Padam baris guru untuk menarik balik akses. Jangan kongsi tab ini.")
+  upperColumn(sheet, 1, 2, sheet.getLastRow() - 1);
+  sheet.getRange("D1").setValue("Nama ditukar ke huruf besar secara automatik. Padam baris guru untuk menarik balik akses. Jangan kongsi tab ini.")
     .setFontStyle("italic").setFontColor(MUTED);
+}
+
+function buildPelajar(sheet) {
+  const rows = sheet.getMaxRows() - 1;
+  upperColumn(sheet, 2, 2, sheet.getLastRow() - 1);
+
+  sheet.getRange("A1:C1").setValues([["No. IC", "Nama Pelajar", "Darjah / Tingkatan"]])
+    .setBackground(NAVY).setFontColor("#FFFFFF").setFontWeight("bold")
+    .setHorizontalAlignment("center").setVerticalAlignment("middle");
+  sheet.setFrozenRows(1);
+  sheet.setRowHeight(1, 30);
+  [160, 280, 160, 24, 460].forEach((width, index) => sheet.setColumnWidth(index + 1, width));
+
+  // Format teks mengekalkan sifar di depan No. IC.
+  const ic = sheet.getRange(2, 1, rows, 1).setNumberFormat("@");
+  ic.setDataValidation(SpreadsheetApp.newDataValidation()
+    .requireFormulaSatisfied('=OR(A2="",REGEXMATCH(A2,"^\\d{6}-?\\d{2}-?\\d{4}$"))')
+    .setAllowInvalid(true)
+    .setHelpText("No. IC 12 digit, contoh 150301-10-1234")
+    .build());
+
+  const kelas = sheet.getRange(2, 3, rows, 1);
+  kelas.setDataValidation(SpreadsheetApp.newDataValidation()
+    .requireValueInList(KELAS, true)
+    .setAllowInvalid(false)
+    .build());
+
+  const nama = sheet.getRange(2, 2, rows, 1);
+  sheet.setConditionalFormatRules([
+    SpreadsheetApp.newConditionalFormatRule()
+      .whenFormulaSatisfied('=AND($A2<>"",COUNTIF($A$2:$A,$A2)>1)')
+      .setBackground("#F8D7DA").setRanges([ic]).build(),
+    SpreadsheetApp.newConditionalFormatRule()
+      .whenFormulaSatisfied('=AND($B2<>"",COUNTIF($B$2:$B,$B2)>1)')
+      .setBackground("#FFF3CD").setRanges([nama]).build(),
+  ]);
+
+  sheet.getRange("E1:E4").setValues([
+    ["Satu baris bagi setiap pelajar. Nama ditukar ke huruf besar secara automatik."],
+    ["Merah: No. IC berganda. Kuning: nama sama, bezakan ejaan (contoh: tambah bin/binti)."],
+    ["Kemas kini darjah setiap awal tahun. Padam baris pelajar yang telah berhenti."],
+    ["No. IC pelajar tidak dihantar ke website. Jangan kongsi tab ini."],
+  ]).setFontStyle("italic").setFontColor(MUTED).setWrap(true);
 }
 
 function resetSheet(sheet) {
@@ -251,6 +357,9 @@ function buildRekod(sheet) {
   sheet.getRange(2, 1, rows - 1, HEADERS.length).setVerticalAlignment("top");
 
   if (!sheet.getFilter()) sheet.getRange(1, 1, rows, HEADERS.length).createFilter();
+
+  // Nama guru pada rekod lama diseragamkan dengan tab Guru.
+  upperColumn(sheet, 4, 2, sheet.getLastRow() - 1);
 }
 
 function buildSenarai(sheet) {
@@ -281,6 +390,7 @@ function buildPanduan(sheet) {
   const rows = [
     ["TUJUAN", "Satu fail berpusat untuk rekod prestasi pelajar. Laporan ibu bapa menggabungkan semua subjek bagi seorang pelajar."],
     ["GURU", "Admin daftarkan nama dan No. IC guru dalam helaian 'Guru'. Padam baris guru untuk menarik balik akses."],
+    ["PELAJAR", "Admin daftarkan No. IC, nama dan darjah setiap pelajar dalam helaian 'Pelajar'."],
     ["LANGKAH 1", "Guru isi borang Rekod Prestasi Pelajar di website menggunakan No. IC, satu borang bagi setiap subjek."],
     ["LANGKAH 2", "Rekod masuk secara automatik ke helaian 'Rekod Guru'."],
     ["LANGKAH 3", "Admin buka 'Laporan Individu', kemudian pilih nama pelajar di B4 dan tempoh di E4."],
@@ -387,7 +497,8 @@ function buildDashboard(sheet, senarai) {
   section(sheet.getRange("A5:D5"), "RINGKASAN");
   const kpis = [
     ["Jumlah rekod diisi", "=COUNTIF(" + S + "E2:E,\"?*\")", "0"],
-    ["Jumlah pelajar unik", "=IFERROR(COUNTUNIQUE(FILTER(" + S + "E2:E," + S + "E2:E<>\"\")),0)", "0"],
+    // IFERROR di dalam: COUNTUNIQUE mengira ralat "tiada padanan" sebagai satu nilai.
+    ["Jumlah pelajar unik", "=COUNTUNIQUE(IFERROR(FILTER(" + S + "E2:E," + S + "E2:E<>\"\")))", "0"],
     ["Purata markah", "=IFERROR(AVERAGE(" + S + "J2:J),0)", "0.0%"],
     ["Purata kehadiran", "=IFERROR(AVERAGE(" + S + "K2:K),0)", "0.0%"],
   ];

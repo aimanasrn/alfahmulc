@@ -1,11 +1,13 @@
 import { useMemo, useState, type FormEvent } from "react";
 import { ArrowLeft, ClipboardList } from "lucide-react";
 import { Link } from "react-router-dom";
-import { classLevels, getRecentPeriods, recordSubjects } from "../../data/teacherRecord";
+import { findStudent, getRecentPeriods, recordSubjects, type Student } from "../../data/teacherRecord";
 import "./StaffFormsPage.css";
 import "./TeacherRecordFormPage.css";
 
 type Status = "idle" | "sending" | "done" | "error";
+type ListStatus = "idle" | "loading" | "loaded" | "error";
+type SheetResponse = { ok: boolean; error?: string; pelajar?: Student[] };
 
 const studentFields = {
   namaPelajar: "",
@@ -24,30 +26,69 @@ const longFields = [
   ["tindakan", "Tindakan susulan"],
 ] as const;
 
+async function postToSheet(params: Record<string, string>): Promise<SheetResponse> {
+  const endpoint = import.meta.env.VITE_REKOD_GURU_URL;
+  if (!endpoint) {
+    return { ok: false, error: "Borang belum disambungkan ke Google Sheet. Sila hubungi admin." };
+  }
+
+  const response = await fetch(endpoint, { method: "POST", body: new URLSearchParams(params) });
+  return (await response.json()) as SheetResponse;
+}
+
 export default function TeacherRecordFormPage() {
   const periods = useMemo(() => getRecentPeriods(), []);
   const [values, setValues] = useState({
     ...studentFields,
     noIc: "",
-    darjah: "",
     subjek: "",
     tempoh: periods[0],
     website: "",
   });
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
+  const [students, setStudents] = useState<Student[]>([]);
+  const [listStatus, setListStatus] = useState<ListStatus>("idle");
+  const [listError, setListError] = useState("");
+  const selected = findStudent(students, values.namaPelajar);
 
   function update(name: keyof typeof values, value: string) {
     setValues((current) => ({ ...current, [name]: value }));
     if (status === "done") setStatus("idle");
+
+    // IC baharu perlu memuatkan semula senarai pelajar.
+    if (name === "noIc" && listStatus !== "idle") {
+      setStudents([]);
+      setListStatus("idle");
+      setListError("");
+    }
+  }
+
+  async function loadStudents() {
+    const noIc = values.noIc.replace(/\D/g, "");
+    if (noIc.length !== 12 || listStatus === "loading" || listStatus === "loaded") return;
+
+    setListStatus("loading");
+    setListError("");
+
+    try {
+      const result = await postToSheet({ action: "senaraiPelajar", noIc });
+      if (!result.ok) throw new Error(result.error);
+      setStudents(result.pelajar ?? []);
+      setListStatus("loaded");
+    } catch (caught) {
+      setListError(caught instanceof Error && caught.message ? caught.message : "Senarai pelajar tidak dapat dimuatkan. Sila cuba lagi.");
+      setListStatus("error");
+    }
   }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const endpoint = import.meta.env.VITE_REKOD_GURU_URL;
 
-    if (!endpoint) {
-      setError("Borang belum disambungkan ke Google Sheet. Sila hubungi admin.");
+    if (!selected) {
+      setError(listStatus === "loaded"
+        ? "Pilih nama pelajar daripada senarai."
+        : "Masukkan No. IC yang berdaftar untuk memuatkan senarai pelajar.");
       setStatus("error");
       return;
     }
@@ -56,11 +97,7 @@ export default function TeacherRecordFormPage() {
     setError("");
 
     try {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        body: new URLSearchParams(values),
-      });
-      const result = (await response.json()) as { ok: boolean; error?: string };
+      const result = await postToSheet({ ...values, namaPelajar: selected.nama });
 
       if (!result.ok) {
         setError(result.error ?? "Rekod tidak dapat disimpan. Sila cuba lagi.");
@@ -68,7 +105,7 @@ export default function TeacherRecordFormPage() {
         return;
       }
 
-      // Maklumat guru dan kelas dikekalkan untuk rekod pelajar seterusnya.
+      // Maklumat guru, subjek dan tempoh dikekalkan untuk rekod pelajar seterusnya.
       setValues((current) => ({ ...current, ...studentFields }));
       setStatus("done");
     } catch {
@@ -76,6 +113,15 @@ export default function TeacherRecordFormPage() {
       setStatus("error");
     }
   }
+
+  const studentHint = {
+    idle: "Masukkan No. IC guru dahulu untuk memuatkan senarai pelajar.",
+    loading: "Memuatkan senarai pelajar...",
+    loaded: students.length > 0
+      ? "Taip beberapa huruf, kemudian pilih nama daripada senarai."
+      : "Tiada pelajar berdaftar. Sila hubungi admin.",
+    error: listError,
+  }[listStatus];
 
   return (
     <main className="staff-forms">
@@ -91,7 +137,7 @@ export default function TeacherRecordFormPage() {
         <section className="staff-forms__intro" aria-labelledby="teacher-record-title">
           <span className="staff-forms__eyebrow"><ClipboardList size={16} aria-hidden="true" /> LAPORAN PRESTASI</span>
           <h1 id="teacher-record-title">Rekod Prestasi Pelajar</h1>
-          <p>Isi satu borang bagi setiap subjek. Gunakan ejaan nama pelajar yang sama untuk semua subjek.</p>
+          <p>Isi satu borang bagi setiap subjek. Pilih nama pelajar daripada senarai yang didaftarkan oleh admin.</p>
         </section>
 
         <form className="teacher-record" onSubmit={handleSubmit}>
@@ -109,23 +155,39 @@ export default function TeacherRecordFormPage() {
                 title="12 digit No. IC, dengan atau tanpa tanda sempang"
                 value={values.noIc}
                 onChange={(event) => update("noIc", event.target.value)}
+                onBlur={loadStudents}
               />
             </label>
           </fieldset>
 
           <fieldset>
             <legend>Maklumat kelas</legend>
-            <label>
-              Nama pelajar
-              <input autoComplete="off" required maxLength={120} value={values.namaPelajar} onChange={(event) => update("namaPelajar", event.target.value)} />
-            </label>
-            <label>
-              Darjah / Tingkatan
-              <select required value={values.darjah} onChange={(event) => update("darjah", event.target.value)}>
-                <option value="">Pilih</option>
-                {classLevels.map((level) => <option key={level}>{level}</option>)}
-              </select>
-            </label>
+            <div className="teacher-record__student">
+              <label>
+                Nama pelajar
+                <input
+                  list="senarai-pelajar"
+                  autoComplete="off"
+                  required
+                  maxLength={120}
+                  aria-describedby="student-hint"
+                  value={values.namaPelajar}
+                  onChange={(event) => update("namaPelajar", event.target.value.toUpperCase())}
+                  onFocus={loadStudents}
+                />
+              </label>
+              <datalist id="senarai-pelajar">
+                {students.map((student) => (
+                  <option key={student.nama} value={student.nama}>{student.darjah}</option>
+                ))}
+              </datalist>
+              <p
+                id="student-hint"
+                className={listStatus === "error" ? "teacher-record__hint teacher-record__hint--error" : "teacher-record__hint"}
+              >
+                {selected ? `${selected.nama} · ${selected.darjah}` : studentHint}
+              </p>
+            </div>
             <label>
               Subjek
               <select required value={values.subjek} onChange={(event) => update("subjek", event.target.value)}>

@@ -49,5 +49,7 @@ Selepas mengubah skrip, terbitkan versi baharu melalui **Deploy > Manage deploym
 Padam baris guru dalam tab `Guru` untuk menarik balik akses. No. IC tidak disimpan
 dalam `Rekod Guru`, dan nama guru pada rekod diambil daripada tab `Guru`.
 
-Senarai subjek dan darjah berada dalam `src/data/teacherRecord.ts`. Rekod yang sama
+Senarai subjek berada dalam `src/data/teacherRecord.ts`. Nama dan darjah pelajar
+diambil daripada tab `Pelajar` selepas No. IC guru disahkan, dan nama di luar senarai
+ditolak. No. IC pelajar tidak dihantar ke website. Rekod yang sama
 (pelajar, tempoh dan subjek) ditolak, jadi pembetulan dibuat oleh admin dalam Sheet.

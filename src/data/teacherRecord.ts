@@ -1,17 +1,10 @@
-export const classLevels = [
-  "Prasekolah",
-  "Darjah 1",
-  "Darjah 2",
-  "Darjah 3",
-  "Darjah 4",
-  "Darjah 5",
-  "Darjah 6",
-  "Tingkatan 1",
-  "Tingkatan 2",
-  "Tingkatan 3",
-  "Tingkatan 4",
-  "Tingkatan 5",
-] as const;
+export type Student = { nama: string; darjah: string };
+
+// Darjah setiap pelajar diambil daripada tab Pelajar dalam Google Sheet.
+export function findStudent(students: Student[], name: string) {
+  const key = name.replace(/\s+/g, " ").trim().toUpperCase();
+  return key ? students.find((student) => student.nama === key) : undefined;
+}
 
 // Dashboard dikumpulkan ikut ejaan ini, jadi subjek dipilih daripada senarai.
 export const recordSubjects = [

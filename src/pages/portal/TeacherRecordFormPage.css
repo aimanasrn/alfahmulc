@@ -5,6 +5,9 @@
 .teacher-record :is(input, select, textarea) { width: 100%; border: 1px solid #cfdae8; border-radius: 10px; padding: 0.7rem 0.8rem; background: #fff; color: var(--color-text); font: inherit; font-size: 1rem; font-weight: 400; }
 .teacher-record textarea { resize: vertical; }
 .teacher-record :is(input, select, textarea):focus-visible { outline: 3px solid #d99500; outline-offset: 1px; }
+.teacher-record__student { display: grid; gap: 0.4rem; grid-column: 1 / -1; min-width: 0; }
+.teacher-record__hint { margin: 0; color: #627087; font-size: 0.8rem; }
+.teacher-record__hint--error { color: #b3261e; }
 .teacher-record__trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .teacher-record__footer { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
 .teacher-record__footer .staff-forms__primary { min-height: 44px; padding-inline: 1.4rem; font-size: 0.9rem; }
